@@ -1,0 +1,14 @@
+# Netlify redirects. See https://www.netlify.com/docs/redirects/
+{{  range $p := .Site.Pages -}}
+{{ range .Aliases }}
+{{  . | printf "%-35s" }}   {{ $p.RelPermalink -}}
+{{ end -}}
+{{- end -}}
+
+# 404 page
+/* /404.html 404
+
+{{ with $.Site.Params.redirects.netlify }}
+# https://www.netlify.com/docs/redirects/
+{{ . }}* {{ $.Site.BaseURL }}:splat 301!
+{{ end }}

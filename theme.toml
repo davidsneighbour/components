@@ -1,0 +1,12 @@
+name = "Dnb Hugo Garuda"
+license = "Apache 2.0"
+licenselink = "https://github.com/davidsneighbour/dnb-hugo-garuda/blob/master/LICENSE"
+description = "An opinionated and colourful theme for Hugo."
+homepage = "https://github.com/davidsneighbour/dnb-hugo-garuda"
+tags = []
+features = []
+min_version = "0.53"
+
+[author]
+  name = "Patrick Kollitsch"
+  homepage = "David's Neighbour"
