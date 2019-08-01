@@ -3,8 +3,8 @@ license = "Apache 2.0"
 licenselink = "https://github.com/davidsneighbour/dnb-hugo-netlification/blob/master/LICENSE"
 description = "Theme component with Netlify helpers. Make your theme Netlify ready!"
 homepage = "https://github.com/davidsneighbour/dnb-hugo-netlification"
-tags = [netlify, hugo, hugo-theme-component]
-features = []
+tags = ["netlify", "hugo", "hugo-theme-component"]
+features = ["netlify", "redirection", "headers"]
 min_version = "0.56.0"
 
 [author]
