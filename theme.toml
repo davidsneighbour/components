@@ -1,11 +1,11 @@
-name = "Dnb Hugo Garuda"
+name = "Netlification"
 license = "Apache 2.0"
-licenselink = "https://github.com/davidsneighbour/dnb-hugo-garuda/blob/master/LICENSE"
-description = "An opinionated and colourful theme for Hugo."
-homepage = "https://github.com/davidsneighbour/dnb-hugo-garuda"
-tags = []
+licenselink = "https://github.com/davidsneighbour/dnb-hugo-netlification/blob/master/LICENSE"
+description = "Theme component with Netlify helpers. Make your theme Netlify ready!"
+homepage = "https://github.com/davidsneighbour/dnb-hugo-netlification"
+tags = [netlify, hugo, hugo-theme-component]
 features = []
-min_version = "0.53"
+min_version = "0.56.0"
 
 [author]
   name = "Patrick Kollitsch"
