@@ -34,7 +34,7 @@ aliases:
 
 ## Additional Redirects
 
-- A redirect for 404 errors to Hugo's 404 page (/layouts/404.html)
+- A redirect for 404 errors to Hugo's 404 page (`/layouts/404.html`) - no action by you required
 - A redirect for your netlify URL to your live URL (double content... baaaad) via config parameter:
   ```
   [params]
