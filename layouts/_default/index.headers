@@ -1,3 +1,20 @@
+{{/*
+Paths can contain * or :placeholders. A :placeholder matches anything except / while a * matches anything.
+
+*/}}
+
+{{/*
+
+  /* - header rules for all files
+
+*/}}
+{{/*
+
+  / - header rules for root page
+
+*/}}
+
+
 /
   Accept-Encoding: gzip, deflate, br
   Link: </assets/fonts/panton/panton-regular-webfont.woff2>; rel=preload; as=font; crossorigin; type="font/woff2"
@@ -56,3 +73,4 @@
 /images/*
   Expires: Tue, 31-Dec-2020 23:59:59 GMT+0700
   Cache-Control: public, max-age=31536000, immutable
+
