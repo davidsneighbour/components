@@ -1,10 +1,10 @@
 # dnb-hugo-netlification
 
-Theme component with Netlify helpers. Redirection (faster and SEO wise better than Hugo's (we still love you Hugo)). Headers (content security policies, caching, security). And more (soon).
+This is a Hugo theme component with helpers for Netlify redirects and headers. This type of redirection is faster and SEO wise better than Hugo's method of adding `meta-refresh` commands. The default headers added by this component contain proper content security policies, caching directives and improve security. 
 
-# Installation
+## Installation
 
-To make this component work you need to add some lines to your config.toml. This is not too hard, but you should be careful where to add.
+To make this component work you need to add some lines to your config.toml. This is not too complicated, but you need to be careful where to add them. Don't add these lines below the `[params]` or any other section. 
 
 ```
 theme = ["dnb-hugo-netlification", "your-theme"]
@@ -13,15 +13,15 @@ theme = ["dnb-hugo-netlification", "your-theme"]
 home = [ "HTML", "RSS", "REDIR", "HEADERS" ]
 ```
 
-1. `Add "dnb-hugo-netlification"` at the left side of your theme setup. 
+1. Add `dnb-hugo-netlification` at the left side of your theme setup. 
 2. You already have the `[output]` section, add `"REDIR", "HEADERS"` to it.
 3. Done.
 
-# Individual Setup
+## Redirects
 
-## Per post
+### Per post
 
-Redirection takes aliases that are defined in the pages frontmatter and creates a 301 redirect for them. This is done via HTTP headers as opposed to the redirects via HTML meta tags that Hugo is doing. This is faster and better for SEO (which is an opinion, probably not provable).
+Redirection takes aliases that are defined in the pages frontmatter and creates a 301 redirect for them. This is done via HTTP headers as opposed to the redirects via HTML meta tags that Hugo is doing. This is faster and might be better for SEO.
 
 Just keep defining them via frontmatter and let `dnb-hugo-netlification` do the rest. 
 
@@ -32,10 +32,10 @@ aliases:
     - url3
 ```
 
-## Additional Redirects
+### Additional Redirects
 
 - A redirect for 404 errors to Hugo's 404 page (`/layouts/404.html`) - no action by you required
-- A redirect for your netlify URL to your live URL (double content... baaaad) via config parameter:
+- A redirect for your default netlify.com URL to your live URL via config parameter:
   ```
   [params]
   [params.redirects]
