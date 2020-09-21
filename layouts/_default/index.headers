@@ -1,33 +1,9 @@
 {{/*
 Paths can contain * or :placeholders. A :placeholder matches anything except / while a * matches anything.
-
 */}}
-
-{{/*
-
-  /* - header rules for all files
-
-*/}}
-{{/*
-
-  / - header rules for root page
-
-*/}}
-
-
+{{/* header rules for root page */}}
 /
   Accept-Encoding: gzip, deflate, br
-  Link: </assets/fonts/panton/panton-regular-webfont.woff2>; rel=preload; as=font; crossorigin; type="font/woff2"
-  Link: </assets/fonts/panton/panton-regularitalic-webfont.woff2>; rel=preload; as=font; crossorigin; type="font/woff2"
-  Link: </assets/fonts/panton/panton-black-webfont.woff2>; rel=preload; as=font; crossorigin; type="font/woff2"
-  Link: </assets/fonts/panton/panton-blackitalic-webfont.woff2>; rel=preload; as=font; crossorigin; type="font/woff2"
-  Link: </assets/fonts/panton/panton-heavy-webfont.woff2>; rel=preload; as=font; crossorigin; type="font/woff2"
-  {{ with partial "footer/js.html" . }}
-  Link: <{{ .RelPermalink }}>; rel=preload; as=script; integrity='{{ .Data.Integrity }}'
-  {{ end }}
-  {{ with partialCached "head/css.html" . }}
-  Link: <{{ .RelPermalink }}>; rel=preload; as=style; integrity='{{ .Data.Integrity }}'
-  {{ end }}
   Feature-Policy: geolocation 'none'; midi 'none'; sync-xhr 'none'; microphone 'none'; camera 'none'; magnetometer 'none'; gyroscope 'none'; speaker 'none'; fullscreen 'none'; payment 'none'
 
 /*
@@ -41,17 +17,17 @@ Paths can contain * or :placeholders. A :placeholder matches anything except / w
   Accept-Encoding: gzip, deflate, br
 
 /*.manifest
-  Content-Type: application/manifest+json; charset=utf-8  
+  Content-Type: application/manifest+json; charset=utf-8
   Cache-Control: public, max-age=31536000, immutable
   Accept-Encoding: gzip, deflate, br
 
-/script*.js
+/*.js
   Expires: Tue, 31-Dec-2020 23:59:59 GMT+0700
   Content-Type: text/javascript; charset=utf-8
   Cache-Control: public, max-age=31536000, immutable
   Accept-Encoding: gzip, deflate, br
 
-/style*.css
+/*.css
   Expires: Tue, 31-Dec-2020 23:59:59 GMT+0700
   Cache-Control: public, max-age=31536000, immutable
   Accept-Encoding: gzip, deflate, br
@@ -73,4 +49,3 @@ Paths can contain * or :placeholders. A :placeholder matches anything except / w
 /images/*
   Expires: Tue, 31-Dec-2020 23:59:59 GMT+0700
   Cache-Control: public, max-age=31536000, immutable
-
