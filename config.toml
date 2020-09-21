@@ -3,15 +3,15 @@
 ##################################################################################
 # see http://gohugo.io/templates/output-formats/
 # see https://gohugo.io/news/http2-server-push-in-hugo/
-#[outputs]
-#home = [ "HTML", "RSS", "Algolia", "REDIR", "HEADERS" ]
 
 [outputFormats]
+
 [outputFormats.REDIR]
   mediatype = "text/netlify"
   baseName = "_redirects"
   isPlainText = true
   notAlternative = true
+
 [outputFormats.HEADERS]
   mediatype = "text/netlify"
   baseName = "_headers"
@@ -19,6 +19,7 @@
   notAlternative = true
 
 [mediaTypes]
+
 [mediaTypes."text/netlify"]
   suffixes = [""]
   delimiter = ""
