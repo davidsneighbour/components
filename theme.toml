@@ -5,8 +5,8 @@ description = "Theme component with Netlify helpers. Make your theme Netlify rea
 homepage = "https://github.com/davidsneighbour/dnb-hugo-netlification"
 tags = ["netlify", "hugo", "hugo-theme-component"]
 features = ["netlify", "redirection", "headers"]
-min_version = "0.56.0"
+min_version = "0.71.0"
 
 [author]
   name = "Patrick Kollitsch"
-  homepage = "David's Neighbour"
+  homepage = "https://github.com/davidsneighbour/dnb-hugo-netlification/"
