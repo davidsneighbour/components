@@ -1,4 +1,4 @@
-name = "Netlification"
+name = "DNB Netlification"
 license = "Apache 2.0"
 licenselink = "https://github.com/davidsneighbour/dnb-hugo-netlification/blob/master/LICENSE"
 description = "Theme component with Netlify helpers. Make your theme Netlify ready!"
