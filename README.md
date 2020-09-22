@@ -1,4 +1,4 @@
-# dnb-hugo-netlification
+# DNB Netlification
 
 This is a Hugo theme component with helpers for Netlify redirects and headers. This type of redirection is faster and SEO wise better than Hugo's method of adding `meta-refresh` commands. The default headers added by this component contain proper content security policies, caching directives and improve security. 
 
@@ -14,7 +14,7 @@ home = [ "HTML", "RSS", "REDIR", "HEADERS" ]
 ```
 
 1. Add `dnb-hugo-netlification` at the left side of your theme setup. 
-2. You already have the `[output]` section, add `"REDIR", "HEADERS"` to it.
+2. You already should have an `[output]` section, add `"REDIR", "HEADERS"` to it.
 3. Done.
 
 ## Redirects
@@ -47,6 +47,27 @@ aliases:
 ## Headers
 
 Netlification uses considerate caching options. Stylesheets, javascripts, images and other media files are cached for a full year. Netlification expects you to use Hugo pipes to create those files, which will result in unique URLs after you change the content of the files. 
+
+## robots.txt
+
+__(new in 2020.1.2)__
+
+Netlification creates a robots.txt file. The default robots.txt without any interactions looks like the following sample:
+
+```
+User-agent: *
+Allow: /
+Sitemap: https://yourdomain.com/sitemap.xml
+```
+
+Where `yourdomain.com` is the domain name configured in `baseURL` in your configuration. If you want
+to explicitly remove a page from being allowed for robots then add front matter to the page as follows:
+
+```
+robot_disallow: true
+```
+
+and Netlification will add a line `Disallow: URL` to the robots.txt.
 
 ## Note
 

@@ -1,8 +1,9 @@
 ##################################################################################
 # Output formats and structures for Netlify
 ##################################################################################
-# see http://gohugo.io/templates/output-formats/
+# see https://gohugo.io/templates/output-formats/
 # see https://gohugo.io/news/http2-server-push-in-hugo/
+# see https://gohugo.io/hugo-modules/theme-components/
 
 [outputFormats]
 
