@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/davidsneighbour/dnb-hugo#readme",
   "devDependencies": {
-    "lerna": "^3.22.1"
+    "lerna": "3.22.1"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
