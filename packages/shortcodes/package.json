@@ -1,6 +1,6 @@
 {
   "name": "@davidsneighbour/hugo-shortcodes",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Shortcodes for Hugo from David's Neighbour",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
   "homepage": "https://github.com/davidsneighbour/dnb-hugo/tree/master/packages/shortcodes#readme",
