@@ -1,0 +1,25 @@
+{
+  "name": "@dnb-hugo/shortcodes",
+  "version": "2.0.0",
+  "description": "Shortcodes for Hugo from David's Neighbour",
+  "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
+  "homepage": "https://github.com/davidsneighbour/dnb-hugo/tree/master/packages/shortcodes#readme",
+  "license": "MIT",
+  "main": "lib/shortcodes.js",
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidsneighbour/dnb-hugo.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/davidsneighbour/dnb-hugo/issues"
+  }
+}

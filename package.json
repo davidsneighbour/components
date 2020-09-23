@@ -1,0 +1,30 @@
+{
+  "name": "dnb-hugo",
+  "version": "2.0.0",
+  "description": "David's Neighbour's repo of Hugo goodness",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidsneighbour/dnb-hugo.git"
+  },
+  "keywords": [
+    "hugo",
+    "hugo-theme",
+    "hugo-theme-component"
+  ],
+  "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davidsneighbour/dnb-hugo/issues"
+  },
+  "homepage": "https://github.com/davidsneighbour/dnb-hugo#readme",
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
+}

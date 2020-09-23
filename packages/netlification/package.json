@@ -1,0 +1,25 @@
+{
+  "name": "@dnb-hugo/netlification",
+  "version": "2.0.0",
+  "description": "Tools for Hugo on Netlify",
+  "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
+  "homepage": "https://github.com/davidsneighbour/dnb-hugo/tree/master/packages/netlification#readme",
+  "license": "MIT",
+  "main": "lib/netlification.js",
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidsneighbour/dnb-hugo.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/davidsneighbour/dnb-hugo/issues"
+  }
+}
