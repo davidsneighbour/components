@@ -1,0 +1,24 @@
+{
+  "name": "@davidsneighbour/hugo-robots",
+  "version": "2.0.2",
+  "description": "A configurable robots.txt for Hugo",
+  "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
+  "homepage": "https://github.com/davidsneighbour/dnb-hugo/tree/master/packages/hugo-robots#readme",
+  "license": "MIT",
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidsneighbour/dnb-hugo.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/davidsneighbour/dnb-hugo/issues"
+  }
+}

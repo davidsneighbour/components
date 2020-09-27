@@ -1,6 +1,6 @@
 {
-  "name": "dnb-hugo",
-  "version": "2.0.0",
+  "name": "@davidsneighbour/dnb-hugo",
+  "version": "2.0.3",
   "description": "David's Neighbour's repo of Hugo goodness",
   "main": "index.js",
   "scripts": {
@@ -26,5 +26,6 @@
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
-  }
+  },
+  "dependencies": {}
 }
