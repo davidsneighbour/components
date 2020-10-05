@@ -1,11 +1,8 @@
 {
   "name": "@davidsneighbour/dnb-hugo",
-  "version": "2.0.3",
+  "version": "2020.0.0",
   "description": "David's Neighbour's repo of Hugo goodness",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "private": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/davidsneighbour/dnb-hugo.git"
@@ -15,17 +12,55 @@
     "hugo-theme",
     "hugo-theme-component"
   ],
-  "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
+  "author": {
+    "name": "Patrick Kollitsch",
+    "email": "patrick@davids-neighbour.com",
+    "web": "https://davids-neighbour.com"
+  },
+  "contributors": [
+    {
+      "name": "Patrick Kollitsch",
+      "email": "patrick@davids-neighbour.com",
+      "web": "https://davids-neighbour.com"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/davidsneighbour/dnb-hugo/issues"
   },
   "homepage": "https://github.com/davidsneighbour/dnb-hugo#readme",
-  "devDependencies": {
-    "lerna": "3.22.1"
-  },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
-  "dependencies": {}
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    }
+  },
+  "scripts": {
+    "release": "standard-version --release-as patch -a -t \"\" ",
+    "release-next": "standard-version --release-as minor -a -t \"\"",
+    "release-major": "standard-version --release-as major -a -t \"\""
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "3.3.0",
+    "cz-customizable": "6.3.0",
+    "cz-customizable-ghooks": "2.0.0",
+    "standard-version": "9.0.0"
+  },
+  "standard-version": {
+    "skip": {
+      "changelog": true
+    },
+    "bumpFiles": [
+      {
+        "filename": ".version",
+        "type": "plain-text"
+      },
+      {
+        "filename": "package.json",
+        "type": "json"
+      }
+    ]
+  }
 }
