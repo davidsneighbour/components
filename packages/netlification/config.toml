@@ -5,6 +5,10 @@
 # see https://gohugo.io/news/http2-server-push-in-hugo/
 # see https://gohugo.io/hugo-modules/theme-components/
 
+[module.hugoVersion]
+extended = true
+min = "0.70.0"
+
 [outputFormats]
 
 [outputFormats.REDIR]
