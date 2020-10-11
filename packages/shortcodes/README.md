@@ -2,21 +2,39 @@
 
 Shortcodes I use in multiple themes for Hugo
 
-## How to use
+## Installing
 
-This is a theme component. You can add it to your regular theme by adding it **LEFT** of the theme in your `config.toml`.
+Step 1: enable modules in your own repository
 
-Old:
-
-```
-theme = ["mytheme"]
+```shell script
+hugo mod init github.com/username/reponame
 ```
 
-New:
+Step 2: add the module to your required modules in config.toml
 
 ```
-theme = ["dnb-hugo-shortcodes", "mytheme"]
+[module]
+[[module.imports]]
+path = "github.com/davidsneighbour/dnb-hugo/packages/shortcodes"
 ```
+
+The next time you run hugo it will download the latest version of the module.
+
+## Updating
+
+To update this module:
+
+```
+hugo mod get -u github.com/davidsneighbour/dnb-hugo/packages/shortcodes
+```
+
+To update all modules:
+
+```
+hugo mod get -u
+```
+
+## Overriding shortcodes
 
 To override shortcodes just add a file in your own shortcode directory with the name you want to replace.
 

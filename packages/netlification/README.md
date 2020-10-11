@@ -1,21 +1,47 @@
-# DNB Netlification
+# dnb-hugo-netlification
 
 This is a Hugo theme component with helpers for Netlify redirects and headers. This type of redirection is faster and SEO wise better than Hugo's method of adding `meta-refresh` commands. The default headers added by this component contain proper content security policies, caching directives and improve security. 
 
-## Installation
+## Installing
 
-To make this component work you need to add some lines to your config.toml. This is not too complicated, but you need to be careful where to add them. Don't add these lines below the `[params]` or any other section. 
+Step 1: enable modules in your own repository
+
+```shell script
+hugo mod init github.com/username/reponame
+```
+
+Step 2: add the module to your required modules in config.toml
 
 ```
-theme = ["dnb-hugo-netlification", "your-theme"]
+[module]
+[[module.imports]]
+path = "github.com/davidsneighbour/dnb-hugo/packages/robots"
+```
 
+The next time you run hugo it will download the latest version of the module.
+
+Step 3: To make this component work you need to add some lines to your config.toml. This is not too complicated, but you need to be careful where to add them. Don't add these lines below the `[params]` or any other section. 
+
+```
 [outputs]
 home = [ "HTML", "RSS", "REDIR", "HEADERS" ]
 ```
 
-1. Add `dnb-hugo-netlification` at the left side of your theme setup. 
-2. You already should have an `[output]` section, add `"REDIR", "HEADERS"` to it.
-3. Done.
+You already should have an `[output]` section, add `"REDIR", "HEADERS"` to it.
+
+## Updating
+
+To update this module:
+
+```
+hugo mod get -u github.com/davidsneighbour/dnb-hugo/packages/robots
+```
+
+To update all modules:
+
+```
+hugo mod get -u
+```
 
 ## Redirects
 
