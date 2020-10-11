@@ -4,9 +4,9 @@ David's Neighbour's repo of Hugo goodness
 
 ## Available modules and usage instruction
 
-- [Netlification](/davidsneighbour/dnb-hugo/blob/main/packages/netlification/): a collection of tools that optimize your site on Netlify
-- [Shortcodes](/davidsneighbour/dnb-hugo/blob/main/packages/shortcodes/): David's Neighbour's Hugo shortcodes
-- [Robots](/davidsneighbour/dnb-hugo/blob/main/packages/robots/): configure the content of your robots.txt with front matter
+- [Netlification](/davidsneighbour/dnb-hugo/tree/main/packages/netlification): a collection of tools that optimize your site on Netlify
+- [Shortcodes](/davidsneighbour/dnb-hugo/tree/main/packages/shortcodes): David's Neighbour's Hugo shortcodes
+- [Robots](/davidsneighbour/dnb-hugo/tree/main/packages/robots): configure the content of your robots.txt with front matter
 
 ## Installing
 
