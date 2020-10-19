@@ -1,24 +1,31 @@
 {
-  "name": "@davidsneighbour/hugo-robots",
-  "version": "2.0.2",
-  "description": "A configurable robots.txt for Hugo",
+  "name": "@dnb-hugo/robots",
+  "version": "0.0.0",
+  "description": "Configurable robots.txt for Hugo",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
-  "homepage": "https://github.com/davidsneighbour/dnb-hugo/tree/master/hugo-robots#readme",
+  "homepage": "https://github.com/davidsneighbour/dnb-hugo/tree/master/robots",
   "license": "MIT",
-  "files": [
-    "lib"
-  ],
-  "publishConfig": {
-    "access": "public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/davidsneighbour/dnb-hugo.git"
-  },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "release": "standard-version --release-as patch -a -t \"robots/\" && git push --follow-tags origin main && npm publish",
+    "release-next": "standard-version --release-as minor -a -t \"robots/\" && git push --follow-tags origin main && npm publish",
+    "release-major": "standard-version --release-as major -a -t \"robots/\" && git push --follow-tags origin main && npm publish"
   },
   "bugs": {
     "url": "https://github.com/davidsneighbour/dnb-hugo/issues"
-  }
+  },
+  "devDependencies": {
+    "standard-version": "9.0.0"
+  },
+  "standard-version": {
+    "skip": {
+      "changelog": true
+    },
+    "bumpFiles": [
+      {
+        "filename": "package.json",
+        "type": "json"
+      }
+    ]
+  },
+  "private": true
 }

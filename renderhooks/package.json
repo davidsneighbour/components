@@ -1,0 +1,31 @@
+{
+  "name": "@dnb-hugo/renderhooks",
+  "version": "0.0.0",
+  "description": "Render hooks for Hugo",
+  "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
+  "homepage": "https://github.com/davidsneighbour/dnb-hugo/tree/master/renderhooks",
+  "license": "MIT",
+  "scripts": {
+    "release": "standard-version --release-as patch -a -t \"renderhooks/\" && git push --follow-tags origin main && npm publish",
+    "release-next": "standard-version --release-as minor -a -t \"renderhooks/\" && git push --follow-tags origin main && npm publish",
+    "release-major": "standard-version --release-as major -a -t \"renderhooks/\" && git push --follow-tags origin main && npm publish"
+  },
+  "bugs": {
+    "url": "https://github.com/davidsneighbour/dnb-hugo/issues"
+  },
+  "devDependencies": {
+    "standard-version": "9.0.0"
+  },
+  "standard-version": {
+    "skip": {
+      "changelog": true
+    },
+    "bumpFiles": [
+      {
+        "filename": "package.json",
+        "type": "json"
+      }
+    ]
+  },
+  "private": true
+}
