@@ -1,26 +1,30 @@
 {
-  "name": "@davidsneighbour/hugo-netlification",
-  "version": "2.0.2",
+  "name": "@dnb-hugo/netlification",
+  "version": "1.0.1",
   "description": "Tools for Hugo on Netlify",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
-  "homepage": "https://github.com/davidsneighbour/dnb-hugo/tree/master/netlification#readme",
+  "homepage": "https://github.com/davidsneighbour/dnb-hugo/tree/master/netlification",
   "license": "MIT",
-  "main": "lib/netlification.js",
-  "files": [
-    "lib"
-  ],
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/davidsneighbour/dnb-hugo.git"
-  },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "release": "standard-version --release-as patch -a -t \"netlification/\"",
+    "release-next": "standard-version --release-as minor -a -t \"netlification/\"",
+    "release-major": "standard-version --release-as major -a -t \"netlification/\""
   },
   "bugs": {
     "url": "https://github.com/davidsneighbour/dnb-hugo/issues"
   },
-  "gitHead": "897cf4231e35cb68bd038daaf45c5519a28deeac"
+  "devDependencies": {
+    "standard-version": "9.0.0"
+  },
+  "standard-version": {
+    "skip": {
+      "changelog": true
+    },
+    "bumpFiles": [
+      {
+        "filename": "package.json",
+        "type": "json"
+      }
+    ]
+  }
 }
