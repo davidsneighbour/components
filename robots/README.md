@@ -15,7 +15,7 @@ Step 2: add the module to your required modules in config.toml
 ```
 [module]
 [[module.imports]]
-path = "github.com/davidsneighbour/dnb-hugo/packages/robots"
+path = "github.com/davidsneighbour/dnb-hugo/robots"
 ```
 
 The next time you run hugo it will download the latest version of the module.
@@ -25,7 +25,7 @@ The next time you run hugo it will download the latest version of the module.
 To update this module:
 
 ```
-hugo mod get -u github.com/davidsneighbour/dnb-hugo/packages/robots
+hugo mod get -u github.com/davidsneighbour/dnb-hugo/robots
 ```
 
 To update all modules:

@@ -1,11 +1,11 @@
 {
-  "name": "@davidsneighbour/hugo-shortcodes",
+  "name": "@davidsneighbour/hugo-netlification",
   "version": "2.0.2",
-  "description": "Shortcodes for Hugo from David's Neighbour",
+  "description": "Tools for Hugo on Netlify",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
-  "homepage": "https://github.com/davidsneighbour/dnb-hugo/tree/master/packages/shortcodes#readme",
+  "homepage": "https://github.com/davidsneighbour/dnb-hugo/tree/master/netlification#readme",
   "license": "MIT",
-  "main": "lib/shortcodes.js",
+  "main": "lib/netlification.js",
   "files": [
     "lib"
   ],

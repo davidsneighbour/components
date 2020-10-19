@@ -1,16 +1,15 @@
 {
-  "name": "@davidsneighbour/hugo-netlification",
+  "name": "@davidsneighbour/hugo-robots",
   "version": "2.0.2",
-  "description": "Tools for Hugo on Netlify",
+  "description": "A configurable robots.txt for Hugo",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
-  "homepage": "https://github.com/davidsneighbour/dnb-hugo/tree/master/packages/netlification#readme",
+  "homepage": "https://github.com/davidsneighbour/dnb-hugo/tree/master/hugo-robots#readme",
   "license": "MIT",
-  "main": "lib/netlification.js",
   "files": [
     "lib"
   ],
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "access": "public"
   },
   "repository": {
     "type": "git",
@@ -21,6 +20,5 @@
   },
   "bugs": {
     "url": "https://github.com/davidsneighbour/dnb-hugo/issues"
-  },
-  "gitHead": "897cf4231e35cb68bd038daaf45c5519a28deeac"
+  }
 }

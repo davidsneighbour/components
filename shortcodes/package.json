@@ -1,15 +1,16 @@
 {
-  "name": "@davidsneighbour/hugo-robots",
+  "name": "@davidsneighbour/hugo-shortcodes",
   "version": "2.0.2",
-  "description": "A configurable robots.txt for Hugo",
+  "description": "Shortcodes for Hugo from David's Neighbour",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
-  "homepage": "https://github.com/davidsneighbour/dnb-hugo/tree/master/packages/hugo-robots#readme",
+  "homepage": "https://github.com/davidsneighbour/dnb-hugo/tree/master/shortcodes#readme",
   "license": "MIT",
+  "main": "lib/shortcodes.js",
   "files": [
     "lib"
   ],
   "publishConfig": {
-    "access": "public"
+    "registry": "https://npm.pkg.github.com"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,6 @@
   },
   "bugs": {
     "url": "https://github.com/davidsneighbour/dnb-hugo/issues"
-  }
+  },
+  "gitHead": "897cf4231e35cb68bd038daaf45c5519a28deeac"
 }
