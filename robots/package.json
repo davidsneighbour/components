@@ -1,14 +1,14 @@
 {
   "name": "@dnb-hugo/robots",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Configurable robots.txt for Hugo",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
   "homepage": "https://github.com/davidsneighbour/dnb-hugo/tree/master/robots",
   "license": "MIT",
   "scripts": {
-    "release": "standard-version --release-as patch -a -t \"robots/\" && git push --follow-tags origin main && npm publish",
-    "release-next": "standard-version --release-as minor -a -t \"robots/\" && git push --follow-tags origin main && npm publish",
-    "release-major": "standard-version --release-as major -a -t \"robots/\" && git push --follow-tags origin main && npm publish"
+    "release": "standard-version --release-as patch -a -t \"robots/\" && git push --follow-tags origin main",
+    "release-next": "standard-version --release-as minor -a -t \"robots/\" && git push --follow-tags origin main",
+    "release-major": "standard-version --release-as major -a -t \"robots/\" && git push --follow-tags origin main"
   },
   "bugs": {
     "url": "https://github.com/davidsneighbour/dnb-hugo/issues"
