@@ -42,5 +42,9 @@ hugo mod clean && hugo mod tidy
 ### Pack it, ship it
 
 ```bash
+cp package-template.json newmodulename/package.json
+// replace DESCRIPTION and MODULENAME in the new package.json
+npm run release-major (first release, 1.0.0)
+// subsequent releases:
 npm run release
 ```

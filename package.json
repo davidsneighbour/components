@@ -3,35 +3,17 @@
   "version": "1.0.0",
   "description": "David's Neighbour's repo of Hugo goodness",
   "private": true,
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/davidsneighbour/dnb-hugo.git"
-  },
-  "keywords": [
-    "hugo",
-    "hugo-theme",
-    "hugo-theme-component"
-  ],
+  "repository": "davidsneighbour/dnb-hugo.git",
   "author": {
     "name": "Patrick Kollitsch",
     "email": "patrick@davids-neighbour.com",
     "web": "https://davids-neighbour.com"
   },
-  "contributors": [
-    {
-      "name": "Patrick Kollitsch",
-      "email": "patrick@davids-neighbour.com",
-      "web": "https://davids-neighbour.com"
-    }
-  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/davidsneighbour/dnb-hugo/issues"
   },
   "homepage": "https://github.com/davidsneighbour/dnb-hugo#readme",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-customizable"
