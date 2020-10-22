@@ -65,7 +65,8 @@
   },
   "standard-version": {
     "skip": {
-      "changelog": true
+      "changelog": true,
+      "tag": true
     },
     "bumpFiles": [
       {
