@@ -1,11 +1,11 @@
 name = "DNB Hugo Sitemap"
-license = "Apache 2.0"
+license = "MIT"
 licenselink = "https://github.com/davidsneighbour/dnb-hugo/blob/master/sitemap/LICENSE"
 description = "A sitemap for Hugo."
 homepage = "https://github.com/davidsneighbour/dnb-hugo"
 tags = ["sitemap"]
 features = ["sitemap"]
-min_version = "0.70.0"
+min_version = "0.56.0"
 
 [author]
   name = "Patrick Kollitsch"
