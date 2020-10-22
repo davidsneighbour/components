@@ -1,4 +1,4 @@
-# dnb-hugo-netlification
+# DNB Hugo Netlification
 
 This is a Hugo theme component with helpers for Netlify redirects and headers. This type of redirection is faster and SEO wise better than Hugo's method of adding `meta-refresh` commands. The default headers added by this component contain proper content security policies, caching directives and improve security. 
 
@@ -15,16 +15,40 @@ Step 2: add the module to your required modules in config.toml
 ```
 [module]
 [[module.imports]]
-path = "github.com/davidsneighbour/dnb-hugo/robots"
+path = "github.com/davidsneighbour/dnb-hugo/netlification"
 ```
 
 The next time you run hugo it will download the latest version of the module.
 
-Step 3: To make this component work you need to add some lines to your config.toml. This is not too complicated, but you need to be careful where to add them. Don't add these lines below the `[params]` or any other section. 
+Step 3: To make this component work you need to add some lines to your config.toml. 
 
+```toml
+[outputFormats]
+
+[outputFormats.REDIR]
+  mediatype = "text/netlify"
+  baseName = "_redirects"
+  isPlainText = true
+  notAlternative = true
+
+[outputFormats.HEADERS]
+  mediatype = "text/netlify"
+  baseName = "_headers"
+  isPlainText = true
+  notAlternative = true
+
+[mediaTypes]
+
+[mediaTypes."text/netlify"]
+  suffixes = [""]
+  delimiter = ""
 ```
+
+Add REDIR and HEADERS to your home output formats:
+
+```toml
 [outputs]
-home = [ "HTML", "RSS", "REDIR", "HEADERS" ]
+home = [ ... others ... , "REDIR", "HEADERS" ]
 ```
 
 You already should have an `[output]` section, add `"REDIR", "HEADERS"` to it.
@@ -73,27 +97,6 @@ aliases:
 ## Headers
 
 Netlification uses considerate caching options. Stylesheets, javascripts, images and other media files are cached for a full year. Netlification expects you to use Hugo pipes to create those files, which will result in unique URLs after you change the content of the files. 
-
-## robots.txt
-
-__(new in 2020.1.2)__
-
-Netlification creates a robots.txt file. The default robots.txt without any interactions looks like the following sample:
-
-```
-User-agent: *
-Allow: /
-Sitemap: https://yourdomain.com/sitemap.xml
-```
-
-Where `yourdomain.com` is the domain name configured in `baseURL` in your configuration. If you want
-to explicitly remove a page from being allowed for robots then add front matter to the page as follows:
-
-```
-robot_disallow: true
-```
-
-and Netlification will add a line `Disallow: URL` to the robots.txt.
 
 ## Note
 

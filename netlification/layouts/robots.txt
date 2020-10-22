@@ -1,6 +1,0 @@
-User-agent: *
-
-{{ range $p := .Site.RegularPages -}}{{ if isset .Params "robots_disallow" }}Disallow: {{.RelPermalink}}
-{{ end }}{{ end }}
-
-Sitemap: http://localhost:1313/sitemap.xml
