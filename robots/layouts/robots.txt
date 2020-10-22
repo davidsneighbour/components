@@ -1,6 +1,16 @@
+{{/*
+
+Template for robots.txt
+
+- https://gohugo.io/templates/robots/
+- https://discourse.gohugo.io/t/custom-robots-txt-and-sitemap-xml-templates/11869/2
+
+Add "robotsdisallow: true" to frontmatter of entries to be disallowed.
+
+*/}}
 User-agent: *
+{{ range where .Site.RegularPages "Params.robotsdisallow" true }}
+Disallow: {{ .RelPermalink }}
+{{ end }}
 
-{{ range $p := .Site.RegularPages -}}{{ if isset .Params "robots_disallow" }}Disallow: {{.RelPermalink}}
-{{ end }}{{ end }}
-
-Sitemap: http://localhost:1313/sitemap.xml
+Sitemap: {{ "sitemap.xml" | absLangURL }}
