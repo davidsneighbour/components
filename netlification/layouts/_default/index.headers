@@ -4,7 +4,11 @@ Paths can contain * or :placeholders. A :placeholder matches anything except / w
 {{/* header rules for root page */}}
 /
   Accept-Encoding: gzip, deflate, br
+  {{/*
+  feature policy is deprecated.
   Feature-Policy: geolocation 'none'; midi 'none'; sync-xhr 'none'; microphone 'none'; camera 'none'; magnetometer 'none'; gyroscope 'none'; speaker 'none'; fullscreen 'none'; payment 'none'
+  */}}
+  Permission-Policy: geolocation(), midi(), sync-xhr(), microphone(), camera(), magnetometer(), gyroscope(), speaker(), fullscreen(), payment()
 
 /*
   X-Frame-Options: DENY
