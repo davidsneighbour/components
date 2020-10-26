@@ -1,6 +1,6 @@
-{{/* 
-	see 
-	https://laurakalbag.com/processing-responsive-images-with-hugo/ 
+{{/*
+	see
+	https://laurakalbag.com/processing-responsive-images-with-hugo/
 	https://discourse.gohugo.io/t/easy-way-to-serve-responsive-images-with-hugo/16184
 	https://www.adamwills.io/blog/responsive-images-hugo/
 	https://gohugo.io/content-management/image-processing/
@@ -9,7 +9,7 @@
 {{ $src := .Page.Resources.GetMatch (printf "*%s*" (.Get "src")) }}
 <figure {{ with .Get "class" }}class="{{.}}"{{ end }}>
 	{{ with .Get "link" }}<a href="{{.}}">{{ end }}
-	<img 
+	<img
 		width="{{ range first 1 .Site.Params.Imaging.Sizes }}{{ . }}{{ end }}"
 		sizes="{{- range $i, $e := .Site.Params.Imaging.Sizes -}}
 			{{- if $i -}}, {{- end -}}
@@ -24,10 +24,10 @@
 				{{ with $small.RelPermalink }}{{.}} {{ $e }}w{{ end }}
 			{{- end -}}
 		{{- end -}}"
-		src="{{ $src.RelPermalink }}" 	  
+		src="{{ $src.RelPermalink }}"
 		{{- with .Get "alt" -}}alt="{{.}}" {{- end -}}>
 	{{ if .Get "link"}}</a>{{ end }}
 	{{ with .Inner }}
-		<figcaption>{{ . }}</figcaption>
+		<figcaption>{{ . | markdownify }}</figcaption>
 	{{ end }}
 </figure>
