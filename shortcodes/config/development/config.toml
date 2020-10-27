@@ -1,0 +1,20 @@
+##################################################################
+# configuration
+#
+# override by adding your own parameters into your config.toml
+##################################################################
+[module.hugoVersion]
+extended = true
+min = "0.70.0"
+
+[[module.mounts]]
+source = "layouts"
+target = "layouts"
+
+[[module.mounts]]
+source = "static"
+target = "static"
+
+[[module.mounts]]
+source = "content"
+target = "content"
