@@ -48,7 +48,7 @@
       data-src="{{ $src.RelPermalink }}"
     {{ end }}
     width="{{ $img.Width }}" height="{{ $img.Height }}"
-    {{ with .Get "alt" }}alt='{{.}}'{{ end }}>
+    {{ with .Get "alt" }}alt='{{ . | markdownify }}'{{ end }}>
   <noscript>
     <img
       loading="lazy"
@@ -72,6 +72,6 @@
         src="{{ $src.RelPermalink }}"
       {{ end }}
       width="{{ $img.Width }}" height="{{ $img.Height }}"
-      {{ with .Get "alt" }}alt='{{.}}'{{ end }}>
+      {{ with .Get "alt" }}alt='{{ . | markdownify }}'{{ end }}>
   </noscript>
 </div>
