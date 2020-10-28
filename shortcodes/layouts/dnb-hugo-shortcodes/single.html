@@ -1,0 +1,8 @@
+{{ define "main" }}
+<article{{ with .File }} id="x{{ .UniqueID }}"{{ end }}>
+<header class="title">
+    <h2 class="entry-title">{{ .Title }}</h2>
+</header>
+{{ partial "content/content.html" . }}
+</article>
+{{ end }}

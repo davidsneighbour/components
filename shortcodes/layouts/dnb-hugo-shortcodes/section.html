@@ -1,0 +1,13 @@
+{{ define "main" }}
+{{ $archive := where $.Site.RegularPages "Section" "dnb-hugo-shortcodes" }}
+<article>
+    <h2>DNB Hugo Shortcodes</h2>
+    <ul>
+    {{ range $elem_index, $item := sort $archive "Title" }}
+        <li>
+            &lt;<a href="{{ .Permalink }}">{{ .Title }}</a>/&gt;: {{ .Description }}
+        </li>
+    {{ end }}
+    </ul>
+</article>
+{{ end }}
