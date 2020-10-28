@@ -20,7 +20,7 @@ path = "github.com/davidsneighbour/dnb-hugo/shortcodes"
 
 The next time you run hugo it will download the latest version of the module.
 
-This module adds a documentation on development environments under [http://localhost:1313/dnb-hugo-shortcodes/](http://localhost:1313/dnb-hugo-shortcodes/). If your local `hugo server` runs under a different host you can find the documentation of course under *that* host. 
+This module adds a documentation on development environments under [http://localhost:1313/shortcodes/](http://localhost:1313/shortcodes/). If your local `hugo server` runs under a different host you can find the documentation of course under *that* host. 
 
 ## Updating
 
