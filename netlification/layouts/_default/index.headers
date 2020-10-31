@@ -14,7 +14,7 @@ Paths can contain * or :placeholders. A :placeholder matches anything except / w
   X-XSS-Protection: 1; mode=block
   Referrer-Policy: no-referrer
   X-Content-Type-Options: nosniff
-  Content-Security-Policy: default-src 'self' googleads.g.doubleclick.net; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.cloudfront.net utteranc.es pagead2.googlesyndication.com storage.googleapis.com googleads.g.doubleclick.net ajax.googleapis.com www.google-analytics.com www.google.com www.gstatic.com unpkg.com identity.netlify.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: www.google-analytics.com *.cloudfront.net; connect-src *.algolia.net *.algolianet.com; frame-src utteranc.es www.google.com www.youtube.com googleads.g.doubleclick.net; upgrade-insecure-requests; manifest-src 'self'; font-src 'self' fonts.googleapis.com; frame-ancestors 'none'; object-src 'self'
+  Content-Security-Policy: default-src 'self' googleads.g.doubleclick.net; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.cloudfront.net utteranc.es pagead2.googlesyndication.com storage.googleapis.com googleads.g.doubleclick.net ajax.googleapis.com www.google-analytics.com www.google.com www.gstatic.com unpkg.com identity.netlify.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: www.google-analytics.com *.cloudfront.net; connect-src self *.algolia.net *.algolianet.com; frame-src utteranc.es www.google.com www.youtube.com googleads.g.doubleclick.net; upgrade-insecure-requests; manifest-src 'self'; font-src 'self' fonts.googleapis.com; frame-ancestors 'none'; object-src 'self'
 
 /*.html
   Accept-Encoding: gzip, deflate, br
