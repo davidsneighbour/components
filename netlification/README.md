@@ -98,6 +98,10 @@ aliases:
 
 Netlification uses considerate caching options. Stylesheets, javascripts, images and other media files are cached for a full year. Netlification expects you to use Hugo pipes to create those files, which will result in unique URLs after you change the content of the files. 
 
+### Content Security Policy
+
+A quite new feature. Have a look in `data/netlification.toml` to learn more. 
+
 ## Note
 
 This is work in progress, so some points might not work with your site yet. 
