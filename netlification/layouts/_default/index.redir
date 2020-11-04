@@ -1,18 +1,9 @@
-{{/*
-Netlify redirects. See https://www.netlify.com/docs/redirects/
-*/}}
-{{/* range over all pages and create redirects from alias front matter */}}
 {{ range $p := .Site.Pages -}}
 {{ range .Aliases }}
 {{  . | printf "%-35s" }} {{ $p.RelPermalink -}}
 {{ end -}}
 {{- end -}}
-{{/* 404 page */}}
 /* /404.html 404
-{{/*
-    see https://www.netlify.com/docs/redirects/
-    redirection from the site configuration in config.toml
-*/}}
 {{ with $.Site.Params.redirects.netlify }}
 {{ . }}* {{ $.Site.BaseURL }}:splat 301!
 {{ end }}
