@@ -1,0 +1,84 @@
+################################################################################
+# Content Security Policy setup for the DNB Hugo Netlification module
+################################################################################
+# Copy to /data/csp.toml and edit to your needs. Lines with # in the beginning
+# are comments and can be removed.
+################################################################################
+[csp]
+################################################################################
+# see https://content-security-policy.com/ for info about CSP
+# see https://report-uri.com/account/setup/ for a reporting tool
+################################################################################
+# Reporting is a feature of CSP that sends the evaluation of CSP lines to a
+# server address. This is useful if you want to see, what activities are blocked
+# due to your resulting settings.
+# Set reportOnly to true to leave the "normal" website running as if no CSP is
+# in place. This will show you what the current setup might prohibit and lets
+# you fine tune the ruleset. Comment out or remove once you are done
+# reportOnly = true
+# Reporting URI - if reportOnly is not set it will report fails to the URI
+reportUri = "affa541aef76f236be4c918be5f4828c.report-uri.com"
+# Force https even if http links are called
+upgradeInsecureRequests = true
+################################################################################
+# Rulesets
+#
+# Each CSP ruleset (also future rules that are not in this sample yet) can be
+# added by camelcasing the rule (default-src > defaultSrc etc.). Then add the
+# hosts as an array. Keywords like self, eval-inline etc. need to be set in
+# additional hyphens ("'self'").
+################################################################################
+defaultSrc = [
+    "'self'",
+    "googleads.g.doubleclick.net"
+]
+scriptSrc = [
+    "'self'",
+    "*.cloudfront.net",
+    "www.clarity.ms",
+    "utteranc.es",
+    "pagead2.googlesyndication.com",
+    "storage.googleapis.com",
+    "googleads.g.doubleclick.net",
+    "ajax.googleapis.com",
+    "www.google-analytics.com",
+    "www.google.com",
+    "www.gstatic.com",
+    "unpkg.com",
+    "identity.netlify.com"
+]
+style-src = [
+    "'self'"
+]
+img-src = [
+    "'self'",
+    "data: www.google-analytics.com",
+    "*.cloudfront.net",
+    "i.ytimg.com"
+]
+connect-src = [
+    "'self'",
+    "*.algolia.net",
+    "*.algolianet.com"
+]
+frame-src = [
+    "'self'",
+    "utteranc.es",
+    "www.google.com",
+    "www.youtube.com",
+    "www.youtube-nocookie.com",
+    "googleads.g.doubleclick.net"
+]
+manifest-src = [
+    "'self'"
+]
+font-src = [
+    "'self'",
+    "fonts.googleapis.com"
+]
+frame-ancestors = [
+    "'none'"
+]
+object-src = [
+    "'self'"
+]
