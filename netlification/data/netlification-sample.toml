@@ -1,8 +1,24 @@
 ################################################################################
-# Content Security Policy setup for the DNB Hugo Netlification module
+# |\| [- ~|~ |_ | /= | ( /\ ~|~ | () |\|
+# Setup for the DNB Hugo Netlification module
 ################################################################################
-# Copy to /data/csp.toml and edit to your needs. Lines with # in the beginning
-# are comments and can be removed.
+# Copy to /data/netlification.toml and edit to your needs. Lines with # in the
+# beginning are comments and can be removed.
+################################################################################
+
+################################################################################
+# Caching Setup
+################################################################################
+[cache.duration]
+################################################################################
+# set the amount of years/months/days that static assets should be cached for
+################################################################################
+years = 1
+months = 0
+days = 0
+
+################################################################################
+# Content Security Policy Setup
 ################################################################################
 [csp]
 ################################################################################

@@ -2,6 +2,9 @@
 Paths can contain * or :placeholders. A :placeholder matches anything except / while a * matches anything.
 */}}
 {{/* header rules for root page */}}
+{{- $cacheYears := int $.Site.Data.netlification.cache.duration.years | default 1 -}}
+{{- $cacheMonths := int $.Site.Data.netlification.cache.duration.months | default 0 -}}
+{{- $cacheDays := int $.Site.Data.netlification.cache.duration.days | default 0 -}}
 /
   Accept-Encoding: gzip, deflate, br
   Permissions-Policy: geolocation(), midi(), sync-xhr(), microphone(), camera(), magnetometer(), gyroscope(), speaker(), fullscreen(), payment()
@@ -39,30 +42,30 @@ Paths can contain * or :placeholders. A :placeholder matches anything except / w
   Accept-Encoding: gzip, deflate, br
 
 /*.js
-  Expires: {{ now.AddDate 1 0 0 | dateFormat "Mon, 02-Jan-2006 15:04:05 GMT-0700" }}
+  Expires: {{ now.AddDate $cacheYears $cacheMonths $cacheDays | dateFormat "Mon, 02-Jan-2006 15:04:05 GMT-0700" }}
   Content-Type: text/javascript; charset=utf-8
   Cache-Control: public, max-age=31536000, immutable
   Accept-Encoding: gzip, deflate, br
 
 /*.css
-  Expires: {{ now.AddDate 1 0 0 | dateFormat "Mon, 02-Jan-2006 15:04:05 GMT-0700" }}
+  Expires: {{ now.AddDate $cacheYears $cacheMonths $cacheDays | dateFormat "Mon, 02-Jan-2006 15:04:05 GMT-0700" }}
   Cache-Control: public, max-age=31536000, immutable
   Accept-Encoding: gzip, deflate, br
 
 /*.jpg
-  Expires: {{ now.AddDate 1 0 0 | dateFormat "Mon, 02-Jan-2006 15:04:05 GMT-0700" }}
+  Expires: {{ now.AddDate $cacheYears $cacheMonths $cacheDays | dateFormat "Mon, 02-Jan-2006 15:04:05 GMT-0700" }}
   Cache-Control: public, max-age=31536000, immutable
   Accept-Encoding: gzip, deflate, br
 
 /*.png
-  Expires: {{ now.AddDate 1 0 0 | dateFormat "Mon, 02-Jan-2006 15:04:05 GMT-0700" }}
+  Expires: {{ now.AddDate $cacheYears $cacheMonths $cacheDays | dateFormat "Mon, 02-Jan-2006 15:04:05 GMT-0700" }}
   Cache-Control: public, max-age=31536000, immutable
   Accept-Encoding: gzip, deflate, br
 
 /assets/*
-  Expires: {{ now.AddDate 1 0 0 | dateFormat "Mon, 02-Jan-2006 15:04:05 GMT-0700" }}
+  Expires: {{ now.AddDate $cacheYears $cacheMonths $cacheDays | dateFormat "Mon, 02-Jan-2006 15:04:05 GMT-0700" }}
   Cache-Control: public, max-age=31536000, immutable
 
 /images/*
-  Expires: {{ now.AddDate 1 0 0 | dateFormat "Mon, 02-Jan-2006 15:04:05 GMT-0700" }}
+  Expires: {{ now.AddDate $cacheYears $cacheMonths $cacheDays | dateFormat "Mon, 02-Jan-2006 15:04:05 GMT-0700" }}
   Cache-Control: public, max-age=31536000, immutable

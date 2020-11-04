@@ -100,7 +100,7 @@ Netlification uses considerate caching options. Stylesheets, javascripts, images
 
 ### Content Security Policy
 
-A quite new feature. Have a look in `data/netlification.toml` to learn more. 
+A quite new feature. Have a look in [data/netlification.toml](https://github.com/davidsneighbour/dnb-hugo/blob/main/netlification/data/netlification-sample.toml) to learn more. 
 
 ## Note
 
