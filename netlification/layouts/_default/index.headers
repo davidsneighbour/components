@@ -7,7 +7,7 @@ Paths can contain * or :placeholders. A :placeholder matches anything except / w
 {{- $cacheDays := int $.Site.Data.netlification.cache.duration.days | default 0 -}}
 /
   Accept-Encoding: gzip, deflate, br
-  Permissions-Policy: geolocation=(self), camera=(), fullscreen=*, geolocation(), microphone()
+  Permissions-Policy: geolocation=(self), camera=(), fullscreen=*
 
 /*
   X-Frame-Options: DENY
