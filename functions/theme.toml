@@ -1,0 +1,12 @@
+name = "DNB Hugo Netlification"
+license = "MIT"
+licenselink = "https://github.com/davidsneighbour/dnb-hugo/blob/master/netlification/LICENSE"
+description = "Theme component with Netlify helpers. Make your theme Netlify ready!"
+homepage = "https://github.com/davidsneighbour/dnb-hugo"
+tags = ["netlify", "hugo", "hugo-theme-component"]
+features = ["netlify", "redirection", "headers"]
+min_version = "0.56.0"
+
+[author]
+  name = "Patrick Kollitsch"
+  homepage = "https://github.com/davidsneighbour/dnb-hugo/"

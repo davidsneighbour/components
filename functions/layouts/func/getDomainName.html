@@ -1,0 +1,3 @@
+{{ $url := urls.Parse . }}
+{{ $name := split $url.Host "." }}
+{{ return index $name 1 }}
