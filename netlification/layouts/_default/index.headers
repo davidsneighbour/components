@@ -2,9 +2,9 @@
 Paths can contain * or :placeholders. A :placeholder matches anything except / while a * matches anything.
 */}}
 {{/* header rules for root page */}}
-{{- $cacheYears := int $.Site.Data.netlification.cache.duration.years | default 1 -}}
-{{- $cacheMonths := int $.Site.Data.netlification.cache.duration.months | default 0 -}}
-{{- $cacheDays := int $.Site.Data.netlification.cache.duration.days | default 0 -}}
+{{- $cacheYears := int $.Site.Data.dnb.netlification.configuration.cache.duration.years | default 1 -}}
+{{- $cacheMonths := int $.Site.Data.dnb.netlification.configuration.cache.duration.months | default 0 -}}
+{{- $cacheDays := int $.Site.Data.dnb.netlification.configuration.cache.duration.days | default 0 -}}
 /
   Accept-Encoding: gzip, deflate, br
   Permissions-Policy: geolocation=(self), camera=(), fullscreen=*
@@ -14,23 +14,23 @@ Paths can contain * or :placeholders. A :placeholder matches anything except / w
   X-XSS-Protection: 1; mode=block
   Referrer-Policy: no-referrer
   X-Content-Type-Options: nosniff
-  {{ with $.Site.Data.netlification.csp -}}
+  {{ with $.Site.Data.dnb.netlification.configuration.csp -}}
       {{ if (eq .reportOnly true) -}}
       Content-Security-Policy-Report-Only: {{ else -}}
       Content-Security-Policy: {{ end -}}
       {{- $nonrules := slice "upgradeInsecureRequests" "reportUri" "reportOnly" -}}
-      {{- range $key, $values := $.Site.Data.netlification.csp -}}
+      {{- range $key, $values := $.Site.Data.dnb.netlification.configuration.csp -}}
           {{- if not (in $nonrules $key) -}}
               {{ replace ($key | humanize | lower) " " "-" -}}
-              {{- range (index $.Site.Data.netlification.csp $key) }} {{ . }}{{ end }};
+              {{- range (index $.Site.Data.dnb.netlification.configuration.csp $key) }} {{ . }}{{ end }};
           {{- end -}}
       {{- end }}
-      {{- with $.Site.Data.netlification.csp.upgradeInsecureRequests -}}
-          {{- if (eq $.Site.Data.netlification.csp.upgradeInsecureRequests true) -}}
+      {{- with $.Site.Data.dnb.netlification.configuration.csp.upgradeInsecureRequests -}}
+          {{- if (eq $.Site.Data.dnb.netlification.configuration.csp.upgradeInsecureRequests true) -}}
               upgrade-insecure-requests;
           {{- end -}}
       {{- end -}}
-      {{- with $.Site.Data.netlification.csp.reportUri }} report-uri {{ . }};{{- end -}}
+      {{- with $.Site.Data.dnb.netlification.configuration.csp.reportUri }} report-uri {{ . }};{{- end -}}
   {{- end }}
 
 /*.html

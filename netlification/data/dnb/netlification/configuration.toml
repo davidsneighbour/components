@@ -1,0 +1,10 @@
+[csp]
+# ATTENTION: This is a sample, replace with your own setup!
+# https://content-security-policy.com/
+# https://report-uri.com/account/setup/
+# reportOnly = true
+# reportUri = ""
+defaultSrc = [
+  "'self'"
+]
+upgradeInsecureRequests = true
