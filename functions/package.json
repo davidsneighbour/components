@@ -1,6 +1,6 @@
 {
   "name": "@dnb-hugo/functions",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Template functions for Hugo",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
   "homepage": "https://github.com/davidsneighbour/dnb-hugo/tree/master/functions",
