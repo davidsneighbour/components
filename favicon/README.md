@@ -20,6 +20,23 @@ path = "github.com/davidsneighbour/dnb-hugo/favicons"
 
 The next time you run hugo it will download the latest version of the module.
 
+Step 3: set up individual favicon
+
+```shell script
+npm install -D cli-real-favicon
+```
+
+Step 4: setup npm scripts to (re)create favicons. Add the following lines to your package.json:
+
+```json
+{
+    "scripts": {  
+        "favicon-create": "real-favicon generate faviconDescription.json ./resources/_gen/assets/faviconData.json static/images/favicon/",
+        "favicon-update": "real-favicon check-for-update --fail-on-update ./resources/_gen/assets/faviconData.json"
+    }
+}
+```
+
 ## Updating
 
 To update this module:

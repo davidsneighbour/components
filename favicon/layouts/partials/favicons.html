@@ -1,10 +1,12 @@
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png?v=alJyL0x4z6">
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png?v=alJyL0x4z6">
-<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png?v=alJyL0x4z6">
-<link rel="manifest" href="/assets/images/favicons/site.webmanifest?v=alJyL0x4z6">
-<link rel="mask-icon" href="/assets/images/favicons/safari-pinned-tab.svg?v=alJyL0x4z6" color="#5bbad5">
-<link rel="shortcut icon" href="/assets/images/favicons/favicon.ico?v=alJyL0x4z6">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="msapplication-TileImage" content="/assets/images/favicons/mstile-144x144.png?v=alJyL0x4z6">
-<meta name="msapplication-config" content="/assets/images/favicons/browserconfig.xml?v=alJyL0x4z6">
-<meta name="theme-color" content="#ffffff">
+{{ $favicon := getJSON "faviconDescription.json" }}
+{{ $random := partialCached "func/getRandomString" (dict "limit" 8) }}
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png?v={{ $random }}">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png?v={{ $random }}">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png?v={{ $random }}">
+<link rel="manifest" href="/images/favicon/site.webmanifest?v={{ $random }}">
+<link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg?v={{ $random }}" color="{{ $favicon.design.desktopBrowser.backgroundColor }}">
+<link rel="shortcut icon" href="/images/favicon/favicon.ico?v={{ $random }}">
+<meta name="msapplication-TileColor" content="{{ $favicon.design.windows.backgroundColor }}">
+<meta name="msapplication-TileImage" content="/images/favicon/mstile-144x144.png?v={{ $random }}">
+<meta name="msapplication-config" content="/images/favicon/browserconfig.xml?v={{ $random }}">
+<meta name="theme-color" content="{{ $favicon.design.androidChrome.themeColor }}">

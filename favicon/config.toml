@@ -1,7 +1,11 @@
 [module.hugoVersion]
-extended = true
+extended = false
 min = "0.56.0"
 
 [[module.mounts]]
 source = "layouts"
 target = "layouts"
+
+[[module.imports]]
+path = "github.com/davidsneighbour/dnb-hugo/functions"
+disabled = false
