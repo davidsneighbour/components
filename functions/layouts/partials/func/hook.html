@@ -1,0 +1,14 @@
+{{ $partialHook := printf "partials/hooks/%s.html" . }}
+{{ $partialHookCached := printf "partials/hooks/%s-cached.html" . }}
+{{ $loaded := false }}
+{{ if templates.Exists $partialHook }}
+    {{ partial $partialHook $ }}
+    {{ $loaded = true }}
+{{ end }}
+{{ if templates.Exists $partialHookCached }}
+    {{ partial $partialHookCached $ }}
+    {{ $loaded = true }}
+{{ end }}
+{{ if eq $loaded false }}
+    {{ warnf "Unused hook available for %s (see %s)" . site.Data.dnb.garuda.configuration.hooklink }}
+{{ end }}
