@@ -1,6 +1,6 @@
 {
   "name": "@dnb-hugo/netlification",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "Tools for Hugo on Netlify",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
   "homepage": "https://github.com/davidsneighbour/dnb-hugo/tree/master/netlification",
@@ -32,19 +32,29 @@
   },
   "private": true,
   "commitlint": {
-    "extends": ["@commitlint/config-conventional"],
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
     "rules": {
-      "body-max-line-length": [0, "always", 100],
-      "type-enum": [0, "always", [
-        "feat",
-        "fix",
-        "layouts",
-        "refactor",
-        "test",
-        "chore",
-        "wip",
-        "content"
-      ]]
+      "body-max-line-length": [
+        0,
+        "always",
+        100
+      ],
+      "type-enum": [
+        0,
+        "always",
+        [
+          "feat",
+          "fix",
+          "layouts",
+          "refactor",
+          "test",
+          "chore",
+          "wip",
+          "content"
+        ]
+      ]
     }
   }
 }
