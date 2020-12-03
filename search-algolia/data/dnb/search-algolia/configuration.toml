@@ -1,0 +1,4 @@
+plugins = [
+  "js/instantsearch.js",
+  "js/search-algolia.js"
+]

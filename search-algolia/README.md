@@ -41,6 +41,27 @@ home = [ ... others ... , "Algolia" ]
 
 You already should have an `[output]` section, add `"Algolia"` to it. Do not add it anywhere other than in the `home` directive.
 
+Step 4: Adding the search to your layouts:
+
+Search page content:
+
+```gotemplate
+{{< search >}}
+```
+
+Step 5: Add your items to the search index
+
+Once you configured your search index at algolia you can add new items in your deploy script. Add the following lines to your package.json (the sections might exist, so don't re-create them). After running `hugo` to create your site run `npm run algolia`:
+
+```
+"scripts": {
+    "algolia": "hugo --quiet && atomic-algolia && rm -rf public"
+},
+"dependencies": {
+    "atomic-algolia": "0.3.19"
+}
+```
+
 ## Updating
 
 To update this module:
