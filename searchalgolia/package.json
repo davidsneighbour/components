@@ -1,14 +1,14 @@
 {
-  "name": "@dnb-hugo/search-algolia",
+  "name": "@dnb-hugo/searchalgolia",
   "version": "0.0.0",
   "description": "Algolia search for Hugo",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
-  "homepage": "https://github.com/davidsneighbour/dnb-hugo/tree/master/search-algolia",
+  "homepage": "https://github.com/davidsneighbour/dnb-hugo/tree/master/searchalgolia",
   "license": "MIT",
   "scripts": {
-    "release": "standard-version --release-as patch -a -t \"search-algolia/v\" && git push --follow-tags origin main",
-    "release-next": "standard-version --release-as minor -a -t \"search-algolia/v\" && git push --follow-tags origin main",
-    "release-major": "standard-version --release-as major -a -t \"search-algolia/v\" && git push --follow-tags origin main"
+    "release": "standard-version --release-as patch -a -t \"searchalgolia/v\" && git push --follow-tags origin main",
+    "release-next": "standard-version --release-as minor -a -t \"searchalgolia/v\" && git push --follow-tags origin main",
+    "release-major": "standard-version --release-as major -a -t \"searchalgolia/v\" && git push --follow-tags origin main"
   },
   "bugs": {
     "url": "https://github.com/davidsneighbour/dnb-hugo/issues"

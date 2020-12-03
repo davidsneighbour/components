@@ -1,4 +1,4 @@
-module github.com/davidsneighbour/dnb-hugo/favicon
+module github.com/davidsneighbour/dnb-hugo/searchalgolia
 
 go 1.15
 

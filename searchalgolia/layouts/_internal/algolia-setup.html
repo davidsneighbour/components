@@ -1,0 +1,18 @@
+{{- with $.Site.Data.dnb.searchalgolia.configuration.appId -}}
+const appId = "{{ . }}";
+{{ else }}
+  {{ errorf "appId parameter for search-algolia undefined" }}
+{{ end -}}
+{{ with $.Site.Data.dnb.searchalgolia.configuration.apiKey -}}
+const apiKey = "{{ . }}";
+{{ else }}
+{{ errorf "apiKey parameter for search-algolia undefined" }}
+{{ end -}}
+{{ with $.Site.Data.dnb.searchalgolia.configuration.indexName -}}
+const indexName = "{{ . }}";
+{{ else }}
+{{ errorf "indexName parameter for search-algolia undefined" }}
+{{ end -}}
+{{ with $.Site.Data.dnb.searchalgolia.configuration.numberLocale -}}
+const numberLocale = "{{ . | default "en" }}";
+{{ end -}}
