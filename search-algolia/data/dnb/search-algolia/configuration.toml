@@ -9,5 +9,5 @@ js = [
   "js/search-algolia.js"
 ]
 jsTemplates = [
-  "js/algolia-setup.html"
+  "js/algolia-setup.js"
 ]
