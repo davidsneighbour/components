@@ -1,3 +1,3 @@
-module github.com/davidsneighbour/dnb-hugo/sitemap
+module github.com/dnb-hugo/components/sitemap
 
 go 1.15

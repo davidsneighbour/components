@@ -15,5 +15,5 @@ source = "layouts"
 target = "layouts"
 
 [[module.imports]]
-path = "github.com/davidsneighbour/dnb-hugo/functions"
+path = "github.com/dnb-hugo/components/functions"
 disabled = false

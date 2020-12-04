@@ -6,7 +6,7 @@
 
 ```bash
 mkdir newmodulename && cd newmodulename
-hugo mod init github.com/davidsneighbour/dnb-hugo-libs/newmodulename
+hugo mod init github.com/dnb-hugo/components/newmodulename
 npm init
 ```
 

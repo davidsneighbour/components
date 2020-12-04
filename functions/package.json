@@ -3,7 +3,7 @@
   "version": "1.0.2",
   "description": "Template functions for Hugo",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
-  "homepage": "https://github.com/davidsneighbour/dnb-hugo/tree/master/functions",
+  "homepage": "https://github.com/dnb-hugo/components/tree/master/functions",
   "license": "MIT",
   "scripts": {
     "release": "standard-version --release-as patch -a -t \"functions/v\" && git push --follow-tags origin main",
@@ -11,7 +11,7 @@
     "release-major": "standard-version --release-as major -a -t \"functions/v\" && git push --follow-tags origin main"
   },
   "bugs": {
-    "url": "https://github.com/davidsneighbour/dnb-hugo/issues"
+    "url": "https://github.com/dnb-hugo/components/issues"
   },
   "devDependencies": {
     "standard-version": "9.0.0",

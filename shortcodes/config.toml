@@ -8,13 +8,17 @@ extended = true
 min = "0.56.0"
 
 [[module.mounts]]
-source = "layouts"
-target = "layouts"
-
-[[module.mounts]]
 source = "content"
 target = "content"
 
 [[module.mounts]]
+source = "data"
+target = "data"
+
+[[module.mounts]]
 source = "static"
 target = "static"
+
+[[module.mounts]]
+source = "layouts"
+target = "layouts"

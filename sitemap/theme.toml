@@ -1,8 +1,8 @@
 name = "DNB Hugo Sitemap"
 license = "MIT"
-licenselink = "https://github.com/davidsneighbour/dnb-hugo/blob/master/sitemap/LICENSE"
+licenselink = "https://github.com/dnb-hugo/components/blob/master/sitemap/LICENSE"
 description = "A sitemap for Hugo."
-homepage = "https://github.com/davidsneighbour/dnb-hugo"
+homepage = "https://github.com/dnb-hugo/components"
 tags = ["sitemap"]
 features = ["sitemap"]
 min_version = "0.56.0"

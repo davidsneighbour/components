@@ -1,9 +1,9 @@
 {
-  "name": "@davidsneighbour/dnb-hugo",
+  "name": "@dnb-hugo/components",
   "version": "1.0.0",
   "description": "David's Neighbour's repo of Hugo goodness",
   "private": true,
-  "repository": "davidsneighbour/dnb-hugo.git",
+  "repository": "dnb-hugo/components.git",
   "author": {
     "name": "Patrick Kollitsch",
     "email": "patrick@davids-neighbour.com",
@@ -11,9 +11,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/davidsneighbour/dnb-hugo/issues"
+    "url": "https://github.com/dnb-hugo/components/issues"
   },
-  "homepage": "https://github.com/davidsneighbour/dnb-hugo#readme",
+  "homepage": "https://github.com/dnb-hugo/components#readme",
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-customizable"
@@ -32,36 +32,8 @@
     "cz-customizable": "6.3.0",
     "cz-customizable-ghooks": "2.0.0",
     "standard-version": "9.0.0",
-    "@textlint-rule/textlint-rule-no-invalid-control-character": "1.2.0",
-    "@textlint-rule/textlint-rule-no-unmatched-pair": "1.0.7",
     "commitizen": "4.2.1",
-    "remark-cli": "^8.0.1",
-    "remark-frontmatter": "1.3.3",
-    "remark-lint": "^7.0.1",
-    "remark-preset-lint-markdown-style-guide": "^3.0.1",
-    "remark-preset-lint-recommended": "^4.0.1",
-    "remark-validate-links": "^10.0.2",
-    "textlint": "11.7.6",
-    "textlint-plugin-html": "0.2.0",
-    "textlint-rule-abbr-within-parentheses": "1.0.2",
-    "textlint-rule-alex": "3.0.0",
-    "textlint-rule-apostrophe": "2.0.0",
-    "textlint-rule-common-misspellings": "1.0.1",
-    "textlint-rule-date-weekday-mismatch": "1.0.5",
-    "textlint-rule-en-capitalization": "2.0.2",
-    "textlint-rule-en-spell": "1.1.1",
-    "textlint-rule-footnote-order": "1.0.3",
-    "textlint-rule-max-comma": "1.0.4",
-    "textlint-rule-no-dead-link": "4.7.0",
-    "textlint-rule-no-empty-section": "1.1.0",
-    "textlint-rule-no-exclamation-question-mark": "1.1.0",
-    "textlint-rule-no-start-duplicated-conjunction": "2.0.2",
-    "textlint-rule-no-todo": "2.0.1",
-    "textlint-rule-rousseau": "1.4.6",
-    "textlint-rule-spelling": "0.2.0",
-    "textlint-rule-stop-words": "2.0.7",
-    "textlint-rule-terminology": "2.1.4",
-    "textlint-rule-unexpanded-acronym": "1.2.4"
+    "remark-preset-lint-dnb": "github:dnb-hugo/remark-preset-lint-dnb"
   },
   "standard-version": {
     "skip": {

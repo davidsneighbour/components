@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "DESCRIPTION",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
-  "homepage": "https://github.com/davidsneighbour/dnb-hugo/tree/master/MODULENAME",
+  "homepage": "https://github.com/dnb-hugo/components/tree/master/MODULENAME",
   "license": "MIT",
   "scripts": {
     "release": "standard-version --release-as patch -a -t \"MODULENAME/v\" && git push --follow-tags origin main",
@@ -11,7 +11,7 @@
     "release-major": "standard-version --release-as major -a -t \"MODULENAME/v\" && git push --follow-tags origin main"
   },
   "bugs": {
-    "url": "https://github.com/davidsneighbour/dnb-hugo/issues"
+    "url": "https://github.com/dnb-hugo/components/issues"
   },
   "devDependencies": {
     "standard-version": "9.0.0"

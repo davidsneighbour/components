@@ -15,7 +15,7 @@ Step 2: add the module to your required modules in config.toml
 ```
 [module]
 [[module.imports]]
-path = "github.com/davidsneighbour/dnb-hugo/netlification"
+path = "github.com/dnb-hugo/components/netlification"
 ```
 
 The next time you run hugo it will download the latest version of the module.
@@ -67,7 +67,7 @@ Once you configured your search index at algolia you can add new items in your d
 To update this module:
 
 ```
-hugo mod get -u github.com/davidsneighbour/dnb-hugo/robots
+hugo mod get -u github.com/dnb-hugo/components/robots
 ```
 
 To update all modules:

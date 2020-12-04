@@ -1,3 +1,3 @@
-module github.com/davidsneighbour/dnb-hugo/shortcodes
+module github.com/dnb-hugo/components/shortcodes
 
 go 1.15

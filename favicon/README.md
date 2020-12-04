@@ -13,7 +13,7 @@ hugo mod init github.com/username/reponame
 ```toml
 [module]
 [[module.imports]]
-path = "github.com/davidsneighbour/dnb-hugo/favicons"
+path = "github.com/dnb-hugo/components/favicons"
 ```
 
 The next time you run hugo it will download the latest version of the module.
@@ -52,7 +52,7 @@ Step 6: Either create your favicon-set manually by running `npm run favicon-gene
 To update this module:
 
 ```
-hugo mod get -u github.com/davidsneighbour/dnb-hugo/robots
+hugo mod get -u github.com/dnb-hugo/components/robots
 ```
 
 To update all modules:

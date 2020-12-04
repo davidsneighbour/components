@@ -4,18 +4,6 @@
     "strong": "*"
   },
   "plugins": [
-    "remark-frontmatter",
-    "remark-preset-lint-recommended",
-    "remark-preset-lint-markdown-style-guide",
-    "remark-validate-links",
-    [
-      "remark-lint-list-item-indent",
-      false
-    ],
-    [
-      "remark-lint-no-file-name-irregular-characters",
-      false
-    ],
-    ["remark-lint-maximum-line-length", 1000]
+    "remark-preset-lint-dnb"
   ]
 }

@@ -15,7 +15,7 @@ Step 2: add the module to your required modules in config.toml
 ```
 [module]
 [[module.imports]]
-path = "github.com/davidsneighbour/dnb-hugo/netlification"
+path = "github.com/dnb-hugo/components/netlification"
 ```
 
 The next time you run hugo it will download the latest version of the module.
@@ -58,7 +58,7 @@ You already should have an `[output]` section, add `"REDIR", "HEADERS"` to it.
 To update this module:
 
 ```
-hugo mod get -u github.com/davidsneighbour/dnb-hugo/robots
+hugo mod get -u github.com/dnb-hugo/components/robots
 ```
 
 To update all modules:
@@ -100,7 +100,7 @@ Netlification uses considerate caching options. Stylesheets, javascripts, images
 
 ### Content Security Policy
 
-A quite new feature. Have a look in [data/netlification.toml](https://github.com/davidsneighbour/dnb-hugo/blob/main/netlification/data/netlification-sample.toml) to learn more. 
+A quite new feature. Have a look in [data/netlification.toml](https://github.com/dnb-hugo/components/blob/main/netlification/data/netlification-sample.toml) to learn more. 
 
 ## Sample Configuration
 

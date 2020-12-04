@@ -1,3 +1,3 @@
-module github.com/davidsneighbour/dnb-hugo/netlification
+module github.com/dnb-hugo/components/netlification
 
 go 1.15

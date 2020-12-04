@@ -6,9 +6,10 @@ public_folder: /img
 collections:
   - name: 'posts'
     label: 'Posts'
-    folder: 'content/posts'
+    folder: 'content/posts{{year}}/{{month}}'
+    path: '{{slug}}/index.md'
     create: true
-    slug: '{{year}}/{{month}}/{{slug}}'
+    slug: ''
     editor:
       preview: false
     fields:

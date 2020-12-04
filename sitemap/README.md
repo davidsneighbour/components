@@ -15,7 +15,7 @@ Step 2: add this module to your required modules in config.toml
 ```
 [module]
 [[module.imports]]
-path = "github.com/davidsneighbour/dnb-hugo/sitemap"
+path = "github.com/dnb-hugo/components/sitemap"
 ```
 
 The next time you run hugo it will download the latest version of the module.
@@ -25,7 +25,7 @@ The next time you run hugo it will download the latest version of the module.
 To update this module:
 
 ```
-hugo mod get -u github.com/davidsneighbour/dnb-hugo/sitemap
+hugo mod get -u github.com/dnb-hugo/components/sitemap
 ```
 
 To update all modules:
