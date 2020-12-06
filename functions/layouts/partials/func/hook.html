@@ -10,5 +10,5 @@
     {{ $loaded = true }}
 {{ end }}
 {{ if eq $loaded false }}
-    {{ warnf "Unused hook available for %s (see %s)" . site.Data.dnb.garuda.configuration.hooklink }}
+    {{ warnf "Unused hook available for %s (see %s)" . site.Data.dnb.garuda.config.hooklink }}
 {{ end }}

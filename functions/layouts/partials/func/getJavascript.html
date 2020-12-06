@@ -1,0 +1,44 @@
+{{ $js1 := resources.Get "js/libs/jquery.js" }}
+{{ $js2 := resources.Get "js/ready.js" }}
+{{ $js3 := resources.Get "js/libs/moment.js" }}
+{{ $js5 := resources.Get "js/youtube.js" }}
+{{ $js6 := resources.Get "js/progress-indicator.js" }}
+
+{{/* add scripts */}}
+{{ $collection := slice $js1 $js2 $js3 $js5 $js6 }}
+
+{{/* load plugged in templated scripts from modules */}}
+{{ range $.Site.Data.dnb }}
+  {{ if (and (isset . "config") (isset .config "jsTemplates")) }}
+    {{ range .config.jsTemplates }}
+      {{ . }}
+      {{ $template := . }}
+      {{ $js := resources.Get $template | resources.ExecuteAsTemplate (print now.Unix $template) . }}
+      {{ $collection = $collection | append ($js) }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{/* load plugged in scripts from modules */}}
+{{ range $.Site.Data.dnb }}
+  {{ if (and (isset . "config") (isset .config "js")) }}
+    {{ range .config.js }}
+      {{ $collection = $collection | append (resources.Get .) }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{/* add last global script */}}
+{{ $js8 := resources.Get "js/script.js" }}
+{{ $collection = $collection | append $js8 }}
+
+{{/*<!--{{ $js := resources.Get "test.js" }}
+{{ $jsm := $js | js.Build (dict "minify" true) }}-->*/}}
+
+{{/* add local script */}}
+{{ $jsLocal := resources.Get (printf "%s/%s" "js" ($.Param "dnb.javascript")) }}
+{{ $collection = $collection | append $jsLocal }}
+
+{{/* create and return javascript */}}
+{{ $js := $collection | resources.Concat "script.js" | resources.Minify | resources.Fingerprint "sha384" }}
+{{ return $js }}
