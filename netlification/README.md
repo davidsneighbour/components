@@ -1,8 +1,12 @@
 # DNB Hugo Netlification
 
-This is a Hugo theme component with helpers for Netlify redirects and headers. This type of redirection is faster and SEO wise better than Hugo's method of adding `meta-refresh` commands. The default headers added by this component contain proper content security policies, caching directives and improve security. 
+This is a Hugo theme component with helpers for hosting your site on [Netlify](https://www.netlify.com/). 
 
-## Installing
+**Redirects:** Adds redirects via HTTP headers. This type of redirection is faster and SEO wise better than Hugo's method of adding `meta-refresh` commands in dedicated files. 
+
+**Headers:** Adds headers that contain content security policies, caching directives and improves security and speed. 
+
+## Installation
 
 Step 1: enable modules in your own repository
 
@@ -44,6 +48,8 @@ Step 3: To make this component work you need to add some lines to your config.to
   delimiter = ""
 ```
 
+Careful: Do not add a second `[outputFormats]` or `[mediaTypes]` section. If you already have one of these sections then add the subitems to the existing sections. 
+
 Add REDIR and HEADERS to your home output formats:
 
 ```toml
@@ -51,25 +57,13 @@ Add REDIR and HEADERS to your home output formats:
 home = [ ... others ... , "REDIR", "HEADERS" ]
 ```
 
-You already should have an `[output]` section, add `"REDIR", "HEADERS"` to it.
+You should already have an `[output]` section, add `"REDIR", "HEADERS"` to it. Add them only to the `home` parameter.
 
-## Updating
+## Configuration
 
-To update this module:
+### Redirects
 
-```
-hugo mod get -u github.com/dnb-hugo/components/robots
-```
-
-To update all modules:
-
-```
-hugo mod get -u
-```
-
-## Redirects
-
-### Per post
+#### Per post
 
 Redirection takes aliases that are defined in the pages frontmatter and creates a 301 redirect for them. This is done via HTTP headers as opposed to the redirects via HTML meta tags that Hugo is doing. This is faster and might be better for SEO.
 
@@ -82,7 +76,7 @@ aliases:
     - url3
 ```
 
-### Additional Redirects
+#### Additional Redirects
 
 - A redirect for 404 errors to Hugo's 404 page (`/layouts/404.html`) - no action by you required
 - A redirect for your default netlify.com URL to your live URL via config parameter:
@@ -94,23 +88,25 @@ aliases:
   The URL will be redirected to your baseURL.
   Right now this feature requires a trailing slash on both, baseURL and netlify parameter
 
-## Headers
+### Headers
 
 Netlification uses considerate caching options. Stylesheets, javascripts, images and other media files are cached for a full year. Netlification expects you to use Hugo pipes to create those files, which will result in unique URLs after you change the content of the files. 
 
-### Content Security Policy
+#### Content Security Policy
 
 A quite new feature. Have a look in [data/netlification.toml](https://github.com/dnb-hugo/components/blob/main/netlification/data/netlification-sample.toml) to learn more. 
 
 ## Sample Configuration
 
+Add your configuration in `data/dnb/netlification/config.toml`. 
+
 ```toml
 ################################################################################
 # |\| [- ~|~ |_ | /= | ( /\ ~|~ | () |\|
-# Setup for the DNB Hugo Netlification module
+# Setup for the DNB Hugo Netlification component
 ################################################################################
-# Copy to /data/netlification.toml and edit to your needs. Lines with # in the
-# beginning are comments and can be removed.
+# Copy to /data/dnb/netlification/config.toml and edit to your needs. Lines with 
+# hash (#) in the beginning are comments and can be removed or will be ignored.
 ################################################################################
 
 ################################################################################
@@ -161,4 +157,18 @@ upgradeInsecureRequests = true
 defaultSrc = [
     "'self'"
 ]
+```
+
+## Updating
+
+To update this module:
+
+```
+hugo mod get -u github.com/dnb-hugo/components/robots
+```
+
+To update all modules:
+
+```
+hugo mod get -u
 ```
