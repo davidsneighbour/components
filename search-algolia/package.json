@@ -6,9 +6,9 @@
   "homepage": "https://github.com/dnb-hugo/components/tree/master/search-algolia",
   "license": "MIT",
   "scripts": {
-    "release": "standard-version --release-as patch -a -t \"search-algolia/v\" && git push --follow-tags origin main",
-    "release-next": "standard-version --release-as minor -a -t \"search-algolia/v\" && git push --follow-tags origin main",
-    "release-major": "standard-version --release-as major -a -t \"search-algolia/v\" && git push --follow-tags origin main"
+    "release": "standard-version --release-as patch -a -t \"search-algolia/v\" --releaseCommitMessageFormat \"chore(release): search-algolia/v{{currentTag}}\" && git push --follow-tags origin main",
+    "release-next": "standard-version --release-as minor -a -t \"search-algolia/v\" --releaseCommitMessageFormat \"chore(release): search-algolia/v{{currentTag}}\" && git push --follow-tags origin main",
+    "release-major": "standard-version --release-as major -a -t \"search-algolia/v\" --releaseCommitMessageFormat \"chore(release): search-algolia/v{{currentTag}}\" && git push --follow-tags origin main"
   },
   "bugs": {
     "url": "https://github.com/dnb-hugo/components/issues"
