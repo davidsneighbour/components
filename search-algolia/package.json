@@ -1,6 +1,6 @@
 {
   "name": "@dnb-hugo/search-algolia",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Algolia search for Hugo",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
   "homepage": "https://github.com/dnb-hugo/components/tree/master/search-algolia",
