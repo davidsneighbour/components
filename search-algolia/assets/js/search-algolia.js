@@ -36,7 +36,7 @@ ready(function () {
     template += '</h2>';
     template += '<div class="meta">';
     template += '<div class="row">';
-    template += '<span class="col text-sm-left text-xs-left text-md-right">';
+    template += '<span class="col text-sm-left text-xs-left text-md-end">';
     template += '<time class="post-date updated timestamp" datetime="{{{publishdate}}}">';
     template += '{{{date}}}';
     template += '</time>';

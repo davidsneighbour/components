@@ -11,3 +11,5 @@ js = [
 jsTemplates = [
   "js/algolia-setup.js"
 ]
+css = []
+cssTemplates = []
