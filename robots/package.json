@@ -6,9 +6,9 @@
   "homepage": "https://github.com/dnb-hugo/components/tree/master/robots",
   "license": "MIT",
   "scripts": {
-    "release": "standard-version --release-as patch -a -t \"robots/v\" && git push --follow-tags origin main",
-    "release-next": "standard-version --release-as minor -a -t \"robots/v\" && git push --follow-tags origin main",
-    "release-major": "standard-version --release-as major -a -t \"robots/v\" && git push --follow-tags origin main"
+    "release": "standard-version --release-as patch -a -t \"robots/v\" --releaseCommitMessageFormat \"chore(release): robots/v{{currentTag}}\" && git push --follow-tags origin main",
+    "release-next": "standard-version --release-as minor -a -t \"robots/v\" --releaseCommitMessageFormat \"chore(release): robots/v{{currentTag}}\" && git push --follow-tags origin main",
+    "release-major": "standard-version --release-as major -a -t \"robots/v\" --releaseCommitMessageFormat \"chore(release): robots/v{{currentTag}}\" && git push --follow-tags origin main"
   },
   "bugs": {
     "url": "https://github.com/dnb-hugo/components/issues"
