@@ -1,0 +1,11 @@
+{{- define "main" -}}
+{{- "<!-- search/section.html //-->" | safeHTML -}}
+<article{{- with .File }} id="x{{ .UniqueID }}"{{ end -}}>
+<header class="title">
+    <h2 class="entry-title">{{ .Title }}</h2>
+</header>
+<div class="text entry-content">
+  {{ .Content }}
+</div>
+</article>
+{{- end -}}

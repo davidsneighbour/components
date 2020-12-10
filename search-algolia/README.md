@@ -12,7 +12,7 @@ hugo mod init github.com/username/reponame
 
 Step 2: add the module to your required modules in config.toml
 
-```
+```toml
 [module]
 [[module.imports]]
 path = "github.com/dnb-hugo/components/netlification"
@@ -41,37 +41,49 @@ home = [ ... others ... , "Algolia" ]
 
 You already should have an `[output]` section, add `"Algolia"` to it. Do not add it anywhere other than in the `home` directive.
 
-Step 4: Adding the search to your layouts:
+Step 4: Adding the search to your content
 
-Search page content:
+`content/search/index.md`
 
-```gotemplate
+```markdown
+---
+title: Search
+description: Search in all articles
+url: /search
+---
+
 {{< search >}}
 ```
 
 Step 5: Add your items to the search index
 
-Once you configured your search index at algolia you can add new items in your deploy script. Add the following lines to your package.json (the sections might exist, so don't re-create them). After running `hugo` to create your site run `npm run algolia`:
+Install `atomic-algolia`:
 
+```shell
+npm install -D atomic-algolia
 ```
-"scripts": {
+
+Once you configured your search index at algolia you can add new items in your deploy script. Add the following lines to your package.json (the sections might exist, so don't re-create them). 
+
+Add a script to your package.json configuration
+
+```json
+{
+  "scripts": {
     "algolia": "hugo --quiet && atomic-algolia && rm -rf public"
-},
-"dependencies": {
-    "atomic-algolia": "0.3.19"
+  }
 }
+```
+
+Add the index creation to your deployment process:
+
+```shell
+npm run algolia
 ```
 
 ## Updating
 
-To update this module:
-
-```
+```shell
 hugo mod get -u github.com/dnb-hugo/components/robots
-```
-
-To update all modules:
-
-```
-hugo mod get -u
+hugo mod get -u # update all modules
 ```
