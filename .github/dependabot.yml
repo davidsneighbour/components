@@ -8,7 +8,7 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-      time: "22:15"
+      time: "07:00"
       timezone: "Asia/Bangkok"
     allow:
       - dependency-type: "production"
@@ -24,7 +24,7 @@ updates:
     directory: "/favicon"
     schedule:
       interval: "daily"
-      time: "22:15"
+      time: "07:00"
       timezone: "Asia/Bangkok"
     allow:
       - dependency-type: "production"
@@ -40,7 +40,7 @@ updates:
     directory: "/functions"
     schedule:
       interval: "daily"
-      time: "22:15"
+      time: "07:00"
       timezone: "Asia/Bangkok"
     allow:
       - dependency-type: "production"
@@ -56,7 +56,7 @@ updates:
     directory: "/netlification"
     schedule:
       interval: "daily"
-      time: "22:15"
+      time: "07:00"
       timezone: "Asia/Bangkok"
     allow:
       - dependency-type: "production"
@@ -72,7 +72,7 @@ updates:
     directory: "/renderhooks"
     schedule:
       interval: "daily"
-      time: "22:15"
+      time: "07:00"
       timezone: "Asia/Bangkok"
     allow:
       - dependency-type: "production"
@@ -88,7 +88,7 @@ updates:
     directory: "/robots"
     schedule:
       interval: "daily"
-      time: "22:15"
+      time: "07:00"
       timezone: "Asia/Bangkok"
     allow:
       - dependency-type: "production"
@@ -104,7 +104,7 @@ updates:
     directory: "/search-algolia"
     schedule:
       interval: "daily"
-      time: "22:15"
+      time: "07:00"
       timezone: "Asia/Bangkok"
     allow:
       - dependency-type: "production"
@@ -120,7 +120,7 @@ updates:
     directory: "/sitemap"
     schedule:
       interval: "daily"
-      time: "22:15"
+      time: "07:00"
       timezone: "Asia/Bangkok"
     allow:
       - dependency-type: "production"
