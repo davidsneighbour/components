@@ -1,15 +1,18 @@
-# dnb-hugo
+## DNB Hugo Components
 
-David's Neighbour's repo of Hugo goodness
+DNB Hugo's repo of Hugo components.
 
-## Available modules and usage instruction
+### Available modules and usage instruction
 
-- [Netlification](/netlification): a collection of tools that optimize your site on Netlify
-- [Render Hooks](/renderhooks): render hooks for Markdown markup
-- [Robots](/robots): configure the content of your robots.txt with front matter
-- [Shortcodes](/shortcodes): DNB's Hugo shortcodes
+-   [favicon](https://github.com/dnb-hugo/components/tree/main/favicon)
+-   [functions](https://github.com/dnb-hugo/components/tree/main/functions)
+-   [netlification](https://github.com/dnb-hugo/components/tree/main/netlification): a collection of tools that optimize your site on Netlify
+-   [renderhooks](https://github.com/dnb-hugo/components/tree/main/renderhooks): render hooks for Markdown markup
+-   [robots](https://github.com/dnb-hugo/components/tree/main/robots): configure the content of your robots.txt with front matter
+-   [search-algolia](https://github.com/dnb-hugo/components/tree/main/search-algolia)
+-   [sitemap](https://github.com/dnb-hugo/components/tree/main/sitemap)
 
-## Other elements in DNB Hugo
+### Other elements in DNB Hugo
 
 DNB Hugo are the elements that enhance and simplify your daily work with [Hugo, the world's fastest framework for building websites](https://gohugo.io/). Included are:
 
