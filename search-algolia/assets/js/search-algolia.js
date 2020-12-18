@@ -1,14 +1,9 @@
 ready(function () {
-  'use strict';
+  "use strict";
 
-  var elementExists = document.getElementById('search-box');
+  var elementExists = document.getElementById("search-box");
 
   if (elementExists) {
-
-    console.log(appId);
-    console.log(apiKey);
-    console.log(indexName);
-    console.log(numberLocale);
 
     var search = instantsearch({
       appId: appId,
@@ -20,54 +15,54 @@ ready(function () {
         /**
          * do not render a search on page load
          */
-        // if (helper.state.query === '') {
+        // if (helper.state.query === "") {
         // 	return;
         // }
         helper.search();
       }
     });
 
-    let template = '<article id="{{{objectID}}}">';
-    template += '<header class="title">';
-    template += '<h2 class="entry-title">';
-    template += '<a href="{{{permalink}}}">';
-    template += '{{{title}}}';
-    template += '</a>';
-    template += '</h2>';
-    template += '<div class="meta">';
-    template += '<div class="row">';
-    template += '<span class="col text-sm-left text-xs-left text-md-end">';
-    template += '<time class="post-date updated timestamp" datetime="{{{publishdate}}}">';
-    template += '{{{date}}}';
-    template += '</time>';
-    template += '</span>';
-    template += '</div>';
-    template += '</div>';
-    template += '</header>';
-    template += '<div class="text entry-content">';
-    template += '{{{summary}}}';
-    template += '</div>';
-    template += '</article>';
+    let template = "<article id=\"{{{objectID}}}\">";
+    template += "<header class=\"title\">";
+    template += "<h2 class=\"entry-title\">";
+    template += "<a href=\"{{{permalink}}}\">";
+    template += "{{{title}}}";
+    template += "</a>";
+    template += "</h2>";
+    template += "<div class=\"meta\">";
+    template += "<div class=\"row\">";
+    template += "<span class=\"col text-sm-left text-xs-left text-md-end\">";
+    template += "<time class=\"post-date updated timestamp\" datetime=\"{{{publishdate}}}\">";
+    template += "{{{date}}}";
+    template += "</time>";
+    template += "</span>";
+    template += "</div>";
+    template += "</div>";
+    template += "</header>";
+    template += "<div class=\"text entry-content\">";
+    template += "{{{summary}}}";
+    template += "</div>";
+    template += "</article>";
 
     /*
      * @see https://community.algolia.com/instantsearch.js/v2/widgets/searchBox.html
      */
     search.addWidget(
       instantsearch.widgets.searchBox({
-        container: '#search-box',
-        placeholder: 'Weblog durchsuchen...',
+        container: "#search-box",
+        placeholder: "Weblog durchsuchen...",
         magnifier: false,
         loadingIndicator: false,
         poweredBy: true,
         reset: false,
         wrapInput: false,
         cssClasses: {
-          input: 'form-control'
+          input: "form-control"
         },
         render: function () {
-          jQuery('.timestamp').each(function () {
+          jQuery(".timestamp").each(function () {
             var $this = jQuery(this);
-            moment.locale('de');
+            moment.locale("de");
             var day = moment.unix($this.text);
             $this.text = "Am " + day.format("dddd, MMMM Do YYYY, h:mm:ss a");
           });
@@ -82,11 +77,11 @@ ready(function () {
     // 	instantsearch.widgets.analytics({
     // 		pushFunction: function(formattedParameters, state, results) {
     // 			// Google Analytics
-    // 			// window.ga('set', 'page', '/suche/?query=' + state.query + '&' + formattedParameters + '&numberOfHits=' + results.nbHits);
-    // 			// window.ga('send', 'pageView');
+    // 			// window.ga("set", "page", "/suche/?query=" + state.query + "&" + formattedParameters + "&numberOfHits=" + results.nbHits);
+    // 			// window.ga("send", "pageView");
     //
     // 			// GTM
-    // 			//dataLayer.push({'event': 'search', 'query': state.query, 'parameters': formattedParameters, 'hits': results.nbHits});
+    // 			//dataLayer.push({"event": "search", "query": state.query, "parameters": formattedParameters, "hits": results.nbHits});
     // 		}
     // 	})
     // );
@@ -96,21 +91,21 @@ ready(function () {
      */
     search.addWidget(
       instantsearch.widgets.pagination({
-        container: '.pagination-container',
+        container: ".pagination-container",
         maxPages: 20,
         scrollTo: false,
         showFirstLast: false,
         cssClasses: {
-          root: 'pagination justify-content-center',
-          item: 'page-item',
-          link: 'page-link',
-          page: '',
-          previous: '',
-          next: '',
-          first: '',
-          last: '',
-          active: 'page-item active',
-          disabled: 'page-item disabled'
+          root: "pagination justify-content-center",
+          item: "page-item",
+          link: "page-link",
+          page: "",
+          previous: "",
+          next: "",
+          first: "",
+          last: "",
+          active: "page-item active",
+          disabled: "page-item disabled"
         }
       })
     );
@@ -120,9 +115,9 @@ ready(function () {
      */
     search.addWidget(
       instantsearch.widgets.hits({
-        container: '#hits',
+        container: "#hits",
         templates: {
-          empty: 'No results',
+          empty: "No results",
           item: template
         }
       })
@@ -133,14 +128,14 @@ ready(function () {
      */
     search.addWidget(
       instantsearch.widgets.hitsPerPageSelector({
-        container: '#hits-per-page-selector',
+        container: "#hits-per-page-selector",
         items: [
-          { value: 10, label: '10 pro Seite', default: true },
-          { value: 20, label: '20 pro Seite' },
-          { value: 30, label: '30 pro Seite' },
+          { value: 10, label: "10 pro Seite", default: true },
+          { value: 20, label: "20 pro Seite" },
+          { value: 30, label: "30 pro Seite" },
         ],
         cssClasses: {
-          select: 'form-control'
+          select: "form-control"
         },
         autoHideContainer: false
       })
@@ -151,7 +146,7 @@ ready(function () {
      */
     search.addWidget(
       instantsearch.widgets.stats({
-        container: '#stats-container'
+        container: "#stats-container"
       })
     );
 
