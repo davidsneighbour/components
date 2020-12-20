@@ -21,6 +21,22 @@ updates:
     open-pull-requests-limit: 999
 
   - package-ecosystem: "npm"
+    directory: "/.template"
+    schedule:
+      interval: "daily"
+      time: "07:00"
+      timezone: "Asia/Bangkok"
+    allow:
+      - dependency-type: "production"
+      - dependency-type: "development"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+
+  - package-ecosystem: "npm"
     directory: "/favicon"
     schedule:
       interval: "daily"
