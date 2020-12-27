@@ -4,6 +4,6 @@
 {{ end -}}
 {{- end -}}
 /* /404.html 404
-{{ with $.Site.Params.redirects.netlify }}
-{{ . }}* {{ $.Site.BaseURL }}:splat 301!
+{{ with site.Data.dnb.netlification.config.redirects.netlify }}
+    {{ . }}* {{ site.BaseURL }}:splat 301!
 {{ end }}
