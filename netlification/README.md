@@ -1,4 +1,4 @@
-# DNB Hugo Netlification
+## DNB Hugo Netlification
 
 This is a Hugo theme component with helpers for hosting your site on [Netlify](https://www.netlify.com/). 
 
@@ -6,7 +6,7 @@ This is a Hugo theme component with helpers for hosting your site on [Netlify](h
 
 **Headers:** Adds headers that contain content security policies, caching directives and improves security and speed. 
 
-## Installation
+### Installation
 
 Step 1: enable modules in your own repository
 
@@ -59,11 +59,11 @@ home = [ ... others ... , "REDIR", "HEADERS" ]
 
 You should already have an `[output]` section, add `"REDIR", "HEADERS"` to it. Add them only to the `home` parameter.
 
-## Configuration
+### Configuration
 
-### Redirects
+#### Redirects
 
-#### Per post
+**Per post**
 
 Redirection takes aliases that are defined in the pages frontmatter and creates a 301 redirect for them. This is done via HTTP headers as opposed to the redirects via HTML meta tags that Hugo is doing. This is faster and might be better for SEO.
 
@@ -76,27 +76,26 @@ aliases:
     - url3
 ```
 
-#### Additional Redirects
+**Additional Redirects**
 
 - A redirect for 404 errors to Hugo's 404 page (`/layouts/404.html`) - no action by you required
-- A redirect for your default netlify.com URL to your live URL via config parameter:
+- A redirect for your default netlify.com URL to your live URL via data configuration in `data/dnb/netlification/config.toml`
   ```
-  [params]
-  [params.redirects]
+  [redirects]
   netlify = "https://eloquent-morse-196fd2.netlify.com/"
   ```
   The URL will be redirected to your baseURL.
   Right now this feature requires a trailing slash on both, baseURL and netlify parameter
 
-### Headers
+#### Headers
 
 Netlification uses considerate caching options. Stylesheets, javascripts, images and other media files are cached for a full year. Netlification expects you to use Hugo pipes to create those files, which will result in unique URLs after you change the content of the files. 
 
-#### Content Security Policy
+##### Content Security Policy
 
-A quite new feature. Have a look in [data/dnb/netlification/config.toml](https://github.com/dnb-hugo/components/blob/main/netlification/data/dnb/netlification/config.toml) or [data/dnb/netlification/sample-config.toml](https://github.com/dnb-hugo/components/blob/main/netlification/data/dnb/netlification/sample-config.toml) to learn more. 
+Have a look in [data/dnb/netlification/config.toml](https://github.com/dnb-hugo/components/blob/main/netlification/data/dnb/netlification/config.toml) or [data/dnb/netlification/sample-config.toml](https://github.com/dnb-hugo/components/blob/main/netlification/data/dnb/netlification/sample-config.toml) to learn more. 
 
-## Sample Configuration
+### Sample Configuration
 
 Add your configuration in `data/dnb/netlification/config.toml`. 
 
@@ -157,18 +156,27 @@ upgradeInsecureRequests = true
 defaultSrc = [
     "'self'"
 ]
+
+################################################################################
+# Redirects
+# 
+# Manual redirects. Netlify redirect is for the internal netlify-URL to be 
+# redirected to the live site URL
+################################################################################
+[redirects]
+netlify = ""
 ```
 
 ## Updating
 
 To update this module:
 
-```
+```shell
 hugo mod get -u github.com/dnb-hugo/components/robots
 ```
 
 To update all modules:
 
-```
+```shell
 hugo mod get -u
 ```
