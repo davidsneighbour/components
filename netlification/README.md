@@ -10,13 +10,13 @@ This is a Hugo theme component with helpers for hosting your site on [Netlify](h
 
 Step 1: enable modules in your own repository
 
-```shell script
+```bash
 hugo mod init github.com/username/reponame
 ```
 
 Step 2: add the module to your required modules in config.toml
 
-```
+```toml
 [module]
 [[module.imports]]
 path = "github.com/dnb-hugo/components/netlification"
@@ -69,7 +69,7 @@ Redirection takes aliases that are defined in the pages frontmatter and creates 
 
 Just keep defining them via frontmatter and let `dnb-hugo-netlification` do the rest. 
 
-```
+```yaml
 aliases:
     - url1
     - url2
