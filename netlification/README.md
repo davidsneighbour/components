@@ -63,7 +63,7 @@ You should already have an `[output]` section, add `"REDIR", "HEADERS"` to it. A
 
 #### Redirects
 
-**Per post**
+##### Per post
 
 Redirection takes aliases that are defined in the pages frontmatter and creates a 301 redirect for them. This is done via HTTP headers as opposed to the redirects via HTML meta tags that Hugo is doing. This is faster and might be better for SEO.
 
@@ -76,16 +76,24 @@ aliases:
     - url3
 ```
 
-**Additional Redirects**
+##### Additional Redirects
 
 - A redirect for 404 errors to Hugo's 404 page (`/layouts/404.html`) - no action by you required
 - A redirect for your default netlify.com URL to your live URL via data configuration in `data/dnb/netlification/config.toml`
-  ```
-  [redirects]
+  ```toml
+  [[redirects]]
   netlify = "https://eloquent-morse-196fd2.netlify.com/"
   ```
-  The URL will be redirected to your baseURL.
+  The URL will be redirected to your `baseURL`.
   Right now this feature requires a trailing slash on both, baseURL and netlify parameter
+- Add more redirects as required. Each redirect requires a header `[[redirects]]` followed by at least the parameters `from` and `to`:
+  ```toml
+  [[redirects]]
+  from = "/old-contact-form/"
+  to = "/contact/"
+  status = 200
+  ```
+  You can add a status property, if you wish to output any other code than 301 for the redirect. The status property is absolutely optional and should be only used for special redirect cases.
 
 #### Headers
 
