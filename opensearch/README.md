@@ -82,6 +82,10 @@ To update all modules:
 hugo mod get -u
 ```
 
+### Troubleshooting
+
+... to be written ...
+
 ### Other components in DNB Hugo components
 
 -   [favicon](https://github.com/dnb-hugo/components/tree/main/favicon)
