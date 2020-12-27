@@ -1,6 +1,6 @@
 {
   "name": "@dnb-hugo/opensearch",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Opensearch configuration for Hugo",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
   "homepage": "https://github.com/dnb-hugo/components/tree/master/favicon",
