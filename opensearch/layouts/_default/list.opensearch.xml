@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
+                       xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+{{- $config := site.Data.dnb.opensearch.config }}
+{{- $autoupdate := $config.enable_autoupdate | default true }}
+{{- $title := $config.title | default (printf "%s" .Site.Title) }}
+{{- if gt (len $title) 16 }}
+  {{- warnf "OpenSearch: parameter %s must be 16 or less characters (see %s)" "title" $config.hookLink }}
+{{- end }}
+{{- $description := $config.description | default (printf "%s %s" "Search on" .Site.Title) }}
+{{- if gt (len $description) 1024 }}
+  {{- warnf "OpenSearch: parameter %s must be 1024 or less characters (see %s)" "description" $config.hookLink }}
+{{- end }}
+{{- $searchUrl := "" }}
+{{- with $config.query_url }}
+  {{- $searchUrl = printf "%s%s" $.Site.BaseURL . }}
+{{- else }}
+  {{- $searchUrl = printf "%s%s" $.Site.BaseURL "search/?q={searchTerms}" }}
+  {{- warnf "OpenSearch: using default site search URL (see %s)" $config.hookLink }}
+{{- end }}
+{{- $searchForm := "" }}
+{{- with $config.search_form }}
+  {{- $searchForm = printf "%s%s" $.Site.BaseURL . }}
+{{- else }}
+  {{- $searchForm = printf "%s%s" $.Site.BaseURL "search/" }}
+  {{- warnf "OpenSearch: using default site search form URL (see %s)" $config.hookLink }}
+{{- end }}
+{{- $image := "" }}
+{{- with $config.image }}
+  {{- $image = printf "%s%s" $.Site.BaseURL . }}
+{{- else }}
+  {{- $image = printf "%s%s" $.Site.BaseURL "favicon.png" }}
+  {{- warnf "OpenSearch: using default site search icon (see %s)" $config.hookLink }}
+{{- end }}
+<ShortName>{{ $title }}</ShortName>
+<Description>{{ $description }}</Description>
+<Url type="text/html" method="get" template="{{ $searchUrl }}"/>
+<Image height="32" width="32" type="image/png">{{ $image }}</Image>
+<moz:SearchForm>{{ $searchForm }}</moz:SearchForm>
+<OutputEncoding>{{ $config.output_encoding | default "UTF-8" }}</OutputEncoding>
+<InputEncoding>{{ $config.input_encoding | default "UTF-8" }}</InputEncoding>
+{{ if $autoupdate -}}
+  <Url type="application/opensearchdescription+xml" rel="self" template="{{ .Site.BaseURL }}opensearch.xml" />
+{{- end }}
+</OpenSearchDescription>
