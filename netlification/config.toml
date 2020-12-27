@@ -12,3 +12,7 @@ min = "0.56.0"
 [[module.mounts]]
 source = "layouts"
 target = "layouts"
+
+[[module.mounts]]
+source = "data/dnb/netlification"
+target = "data/dnb/netlification"
