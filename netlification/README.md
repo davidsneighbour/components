@@ -95,6 +95,10 @@ aliases:
   ```
   You can add a status property, if you wish to output any other code than 301 for the redirect. The status property is absolutely optional and should be only used for special redirect cases.
 
+##### Disable internal alias creation in Hugo
+
+If you are using Netlification you can speed up Hugo's page creation process a little bit by setting the config variable `disableAliases` to `true`. This will disable the default behaviour of creating an HTML file per alias to redirect via meta tags. 
+
 #### Headers
 
 Netlification uses considerate caching options. Stylesheets, javascripts, images and other media files are cached for a full year. Netlification expects you to use Hugo pipes to create those files, which will result in unique URLs after you change the content of the files. 
