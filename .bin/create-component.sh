@@ -39,6 +39,8 @@ else
   sed -i "s/+++pLACEHOLDER+++/${1^}/g" *
   sed -i "s/+++PLACEHOLDER+++/${1,,}/g" *
 
+  rm -rf partials
+
   # initialize release system
   npm install
   git add ./
@@ -47,6 +49,11 @@ else
   cd ..
 
 fi
+
+echo "Next Tasks:"
+echo "- add the new component to .github/dependabot.yml"
+echo "- write README.md of the component"
+echo "- add component files (obviously)"
 
 # done and out
 echo "Completed in ${SECONDS}s"
