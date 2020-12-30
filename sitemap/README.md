@@ -2,7 +2,7 @@
 
 This is a Hugo theme component with layouts to add a configurable sitemap to your website. Hugo itself has internal templates that add sitemaps, but this component has additional setup options per page.
 
-## Installing
+### Installing
 
 Step 1: enable modules in your own repository:
 
@@ -20,21 +20,14 @@ path = "github.com/dnb-hugo/components/sitemap"
 
 The next time you run `hugo` it will download the latest version of the module.
 
-## Updating
+### Updating
 
-To update this module:
-
-```
-hugo mod get -u github.com/dnb-hugo/components/sitemap
-```
-
-To update all modules:
-
-```
-hugo mod get -u ./...
+```shell
+hugo mod get -u github.com/dnb-hugo/components/robots
+hugo mod get -u # update all modules
 ```
 
-## Usage
+### Usage
 
 There is no need to configure anything if you don't have any special needs. Add the module to your repository structure and run it. Once you ran `hugo` you will find a file `sitemap.xml` in your `public` directory. This is the file you want to submit to search engines. 
 
