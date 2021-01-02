@@ -1,6 +1,6 @@
 {
   "name": "@dnb-hugo/favicon",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Favicons for Hugo",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
   "homepage": "https://github.com/dnb-hugo/components/tree/master/favicon",
