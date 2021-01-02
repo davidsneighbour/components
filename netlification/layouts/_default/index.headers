@@ -32,6 +32,9 @@ Paths can contain * or :placeholders. A :placeholder matches anything except / w
       {{- end -}}
       {{- with $.Site.Data.dnb.netlification.config.csp.reportUri }} report-uri {{ . }};{{- end -}}
   {{- end }}
+  {{- range $.Site.Data.dnb.netlification.config.headers }}
+  {{ . }}
+  {{- end }}
 
 /*.html
   Accept-Encoding: gzip, deflate, br
