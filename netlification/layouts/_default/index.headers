@@ -1,10 +1,15 @@
 {{/*
 Paths can contain * or :placeholders. A :placeholder matches anything except / while a * matches anything.
 */}}
+{{- $day := 60 -}}
+{{- $month := 2628000 -}}
+{{- $year := 31536000 -}}
+{{- $configuration := $.Site.Data.dnb.netlification.config -}}
+{{- $cacheYears := int $configuration.cache.duration.years | default 1 -}}
+{{- $cacheMonths := int $configuration.cache.duration.months | default 0 -}}
+{{- $cacheDays := int $configuration.cache.duration.days | default 0 -}}
+{{- $cacheSeconds := add (mul $cacheDays $day) (add (mul $cacheMonths $month) (mul $cacheYears $year)) -}}
 {{/* header rules for root page */}}
-{{- $cacheYears := int $.Site.Data.dnb.netlification.config.cache.duration.years | default 1 -}}
-{{- $cacheMonths := int $.Site.Data.dnb.netlification.config.cache.duration.months | default 0 -}}
-{{- $cacheDays := int $.Site.Data.dnb.netlification.config.cache.duration.days | default 0 -}}
 /
   Accept-Encoding: gzip, deflate, br
   Permissions-Policy: geolocation=(self), camera=(), fullscreen=*
@@ -14,25 +19,25 @@ Paths can contain * or :placeholders. A :placeholder matches anything except / w
   X-XSS-Protection: 1; mode=block
   Referrer-Policy: no-referrer
   X-Content-Type-Options: nosniff
-  {{ with $.Site.Data.dnb.netlification.config.csp -}}
+  {{ with $configuration.csp -}}
       {{ if (eq .reportOnly true) -}}
       Content-Security-Policy-Report-Only: {{ else -}}
       Content-Security-Policy: {{ end -}}
       {{- $nonrules := slice "upgradeInsecureRequests" "reportUri" "reportOnly" -}}
-      {{- range $key, $values := $.Site.Data.dnb.netlification.config.csp -}}
+      {{- range $key, $values := $configuration.csp -}}
           {{- if not (in $nonrules $key) -}}
               {{ replace ($key | humanize | lower) " " "-" -}}
-              {{- range (index $.Site.Data.dnb.netlification.config.csp $key) }} {{ . }}{{ end }};
+              {{- range (index $configuration.csp $key) }} {{ . }}{{ end }};
           {{- end -}}
       {{- end }}
-      {{- with $.Site.Data.dnb.netlification.config.csp.upgradeInsecureRequests -}}
-          {{- if (eq $.Site.Data.dnb.netlification.config.csp.upgradeInsecureRequests true) -}}
+      {{- with $configuration.csp.upgradeInsecureRequests -}}
+          {{- if (eq $configuration.csp.upgradeInsecureRequests true) -}}
               upgrade-insecure-requests;
           {{- end -}}
       {{- end -}}
-      {{- with $.Site.Data.dnb.netlification.config.csp.reportUri }} report-uri {{ . }};{{- end -}}
+      {{- with $configuration.csp.reportUri }} report-uri {{ . }};{{- end -}}
   {{- end }}
-  {{- range $.Site.Data.dnb.netlification.config.headers }}
+  {{- range $configuration.headers }}
   {{ . }}
   {{- end }}
 
@@ -41,34 +46,49 @@ Paths can contain * or :placeholders. A :placeholder matches anything except / w
 
 /*.manifest
   Content-Type: application/manifest+json; charset=utf-8
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age={{- $cacheSeconds -}}, immutable
   Accept-Encoding: gzip, deflate, br
 
 /*.js
   Expires: {{ now.AddDate $cacheYears $cacheMonths $cacheDays | dateFormat "Mon, 02-Jan-2006 15:04:05 GMT-0700" }}
   Content-Type: text/javascript; charset=utf-8
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age={{- $cacheSeconds -}}, immutable
+  Accept-Encoding: gzip, deflate, br
+
+/*.ico
+  Expires: {{ now.AddDate $cacheYears $cacheMonths $cacheDays | dateFormat "Mon, 02-Jan-2006 15:04:05 GMT-0700" }}
+  Cache-Control: public, max-age={{- $cacheSeconds -}}, immutable
   Accept-Encoding: gzip, deflate, br
 
 /*.css
   Expires: {{ now.AddDate $cacheYears $cacheMonths $cacheDays | dateFormat "Mon, 02-Jan-2006 15:04:05 GMT-0700" }}
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age={{- $cacheSeconds -}}, immutable
   Accept-Encoding: gzip, deflate, br
 
 /*.jpg
   Expires: {{ now.AddDate $cacheYears $cacheMonths $cacheDays | dateFormat "Mon, 02-Jan-2006 15:04:05 GMT-0700" }}
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age={{- $cacheSeconds -}}, immutable
+  Accept-Encoding: gzip, deflate, br
+
+/*.jpeg
+  Expires: {{ now.AddDate $cacheYears $cacheMonths $cacheDays | dateFormat "Mon, 02-Jan-2006 15:04:05 GMT-0700" }}
+  Cache-Control: public, max-age={{- $cacheSeconds -}}, immutable
   Accept-Encoding: gzip, deflate, br
 
 /*.png
   Expires: {{ now.AddDate $cacheYears $cacheMonths $cacheDays | dateFormat "Mon, 02-Jan-2006 15:04:05 GMT-0700" }}
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age={{- $cacheSeconds -}}, immutable
+  Accept-Encoding: gzip, deflate, br
+
+/*.gif
+  Expires: {{ now.AddDate $cacheYears $cacheMonths $cacheDays | dateFormat "Mon, 02-Jan-2006 15:04:05 GMT-0700" }}
+  Cache-Control: public, max-age={{- $cacheSeconds -}}, immutable
   Accept-Encoding: gzip, deflate, br
 
 /assets/*
   Expires: {{ now.AddDate $cacheYears $cacheMonths $cacheDays | dateFormat "Mon, 02-Jan-2006 15:04:05 GMT-0700" }}
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age={{- $cacheSeconds -}}, immutable
 
 /images/*
   Expires: {{ now.AddDate $cacheYears $cacheMonths $cacheDays | dateFormat "Mon, 02-Jan-2006 15:04:05 GMT-0700" }}
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age={{- $cacheSeconds -}}, immutable
