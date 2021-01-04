@@ -85,6 +85,12 @@ Paths can contain * or :placeholders. A :placeholder matches anything except / w
   Cache-Control: public, max-age={{- $cacheSeconds -}}, immutable
   Accept-Encoding: gzip, deflate, br
 
+/*.eot
+  Accept-Encoding: gzip, deflate, br
+
+/*.ttf
+  Accept-Encoding: gzip, deflate, br
+
 /assets/*
   Expires: {{ now.AddDate $cacheYears $cacheMonths $cacheDays | dateFormat "Mon, 02-Jan-2006 15:04:05 GMT-0700" }}
   Cache-Control: public, max-age={{- $cacheSeconds -}}, immutable
