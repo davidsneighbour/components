@@ -1,11 +1,5 @@
-{{ $js1 := resources.Get "js/libs/jquery.js" }}
-{{ $js2 := resources.Get "js/ready.js" }}
-{{ $js3 := resources.Get "js/libs/moment.js" }}
-{{ $js5 := resources.Get "js/youtube.js" }}
-{{ $js6 := resources.Get "js/progress-indicator.js" }}
-
-{{/* add scripts */}}
-{{ $collection := slice $js1 $js2 $js3 $js5 $js6 }}
+{{/* create collection */}}
+{{ $collection := slice }}
 
 {{/* load plugged in templated scripts from modules */}}
 {{ range $.Site.Data.dnb }}
@@ -29,11 +23,7 @@
 {{ end }}
 
 {{/* add last global script */}}
-{{ $js8 := resources.Get "js/script.js" }}
-{{ $collection = $collection | append $js8 }}
-
-{{/*<!--{{ $js := resources.Get "test.js" }}
-{{ $jsm := $js | js.Build (dict "minify" true) }}-->*/}}
+{{ $collection = $collection | append (resources.Get "js/script.js") }}
 
 {{/* add local script */}}
 {{ $jsLocal := resources.Get (printf "%s/%s" "js" ($.Param "dnb.javascript")) }}
