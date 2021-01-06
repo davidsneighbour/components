@@ -22,7 +22,10 @@
   {{ end }}
 {{ end }}
 
-{{/* add last global script */}}
+{{/* add webpack script */}}
+{{ $collection = $collection | append (resources.Get "theme.js") }}
+
+{{/* add global script */}}
 {{ $collection = $collection | append (resources.Get "js/script.js") }}
 
 {{/* add local script */}}
