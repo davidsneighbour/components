@@ -23,7 +23,7 @@
 {{ end }}
 
 {{/* add webpack script */}}
-{{ $collection = $collection | append (resources.Get "theme.js") }}
+{{ $collection = $collection | append (resources.Get "main.js") }}
 
 {{/* add global script */}}
 {{ $collection = $collection | append (resources.Get "js/script.js") }}
