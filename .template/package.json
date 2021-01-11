@@ -18,12 +18,12 @@
     "@commitlint/cli": "11.0.0",
     "@commitlint/config-conventional": "11.0.0",
     "husky": "4.3.7",
-    "@dnb-hugo/browserslist-config-dnb": "github:dnb-hugo/browserslist-config-dnb",
-    "@dnb-hugo/commitlint-config-dnb": "github:dnb-hugo/commitlint-config-dnb",
-    "@dnb-hugo/remark-preset-lint-dnb": "github:dnb-hugo/remark-preset-lint-dnb",
-    "@dnb-hugo/standard-version-config-dnb": "github:dnb-hugo/standard-version-config-dnb",
-    "@dnb-hugo/stylelint-config-dnb": "github:dnb-hugo/stylelint-config-dnb",
-    "@dnb-hugo/textlint-config-dnb": "github:dnb-hugo/textlint-config-dnb"
+    "@dnb-hugo/browserslist-config": "github:dnb-hugo/browserslist-config",
+    "@dnb-hugo/commitlint-config": "github:dnb-hugo/commitlint-config",
+    "@dnb-hugo/remark-preset-lint": "github:dnb-hugo/remark-preset-lint",
+    "@dnb-hugo/standard-version-config": "github:dnb-hugo/standard-version-config",
+    "@dnb-hugo/stylelint-config": "github:dnb-hugo/stylelint-config",
+    "@dnb-hugo/textlint-config": "github:dnb-hugo/textlint-config"
   },
   "standard-version": {
     "skip": {
