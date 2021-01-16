@@ -5,7 +5,6 @@
 {{ range $.Site.Data.dnb }}
   {{ if (and (isset . "config") (isset .config "jsTemplates")) }}
     {{ range .config.jsTemplates }}
-      {{ . }}
       {{ $template := . }}
       {{ $js := resources.Get $template | resources.ExecuteAsTemplate (print now.Unix $template) . }}
       {{ $collection = $collection | append ($js) }}
