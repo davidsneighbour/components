@@ -8,3 +8,7 @@ min = "0.71.0"
 [[module.mounts]]
 source = "layouts"
 target = "layouts"
+
+[[module.mounts]]
+source = "data/dnb/renderhooks"
+target = "data/dnb/renderhooks"
