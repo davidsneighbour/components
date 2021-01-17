@@ -5,36 +5,6 @@ version: 2
 updates:
 
   - package-ecosystem: "npm"
-    directory: "/"
-    schedule:
-      interval: "daily"
-      time: "18:00"
-      timezone: "Asia/Bangkok"
-    assignees:
-      - "davidsneighbour"
-    reviewers:
-      - "davidsneighbour"
-    target-branch: "main"
-    open-pull-requests-limit: 999
-    pull-request-branch-name:
-      separator: "/"
-
-  - package-ecosystem: "npm"
-    directory: "/.template"
-    schedule:
-      interval: "daily"
-      time: "18:00"
-      timezone: "Asia/Bangkok"
-    assignees:
-      - "davidsneighbour"
-    reviewers:
-      - "davidsneighbour"
-    target-branch: "main"
-    open-pull-requests-limit: 999
-    pull-request-branch-name:
-      separator: "/"
-
-  - package-ecosystem: "npm"
     directory: "/favicon"
     schedule:
       interval: "daily"
@@ -141,6 +111,21 @@ updates:
 
   - package-ecosystem: "npm"
     directory: "/sitemap"
+    schedule:
+      interval: "daily"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+
+  - package-ecosystem: "npm"
+    directory: "/social"
     schedule:
       interval: "daily"
       time: "18:00"
