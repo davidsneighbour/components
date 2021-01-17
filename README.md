@@ -11,6 +11,7 @@ DNB Hugo's repo of Hugo components.
 -   [robots](https://github.com/dnb-hugo/components/tree/main/robots): configure the content of your robots.txt with front matter
 -   [search-algolia](https://github.com/dnb-hugo/components/tree/main/search-algolia)
 -   [sitemap](https://github.com/dnb-hugo/components/tree/main/sitemap)
+-   [social](https://github.com/dnb-hugo/components/tree/main/social)
 
 ### Other elements in DNB Hugo
 

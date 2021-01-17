@@ -1,9 +1,0 @@
-{
-  "settings": {
-    "emphasis": "*",
-    "strong": "*"
-  },
-  "plugins": [
-    "remark-preset-lint-dnb"
-  ]
-}
