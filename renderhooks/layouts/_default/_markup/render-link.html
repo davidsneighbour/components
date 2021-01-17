@@ -14,8 +14,8 @@ call via:
 [Text](Destination "Title")
 
 */ -}}
-{{- $config := site.Data.dnb.renderhooks -}}
-{{ if eq (index $config "link").disabled false}}
+{{- $config := site.Data.dnb.renderhooks.link -}}
+{{ if eq $config.disabled false}}
   {{- $link := .Destination -}}
   {{- $isRemote := strings.HasPrefix $link "http" -}}
   {{- if not $isRemote -}}

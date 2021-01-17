@@ -14,8 +14,8 @@ available values:
 ![Text](Destination "Title")
 
 */}}
-{{- $config := site.Data.dnb.renderhooks -}}
-{{ if eq (index $config "image").disabled false}}
+{{- $config := site.Data.dnb.renderhooks.image -}}
+{{ if eq $config.disabled false}}
   {{ $image := .Page.Resources.GetMatch (printf "%s" (.Destination | safeURL)) }}
   {{ if $image -}}
     {{ $alt := .PlainText | safeHTML }}
