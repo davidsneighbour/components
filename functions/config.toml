@@ -14,5 +14,5 @@ source = "layouts"
 target = "layouts"
 
 [[module.mounts]]
-source = "data/dnb/functions/readingtime"
-target = "data/dnb/functions/readingtime"
+source = "data"
+target = "data"

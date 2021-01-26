@@ -2,9 +2,11 @@
 {{ $collection := slice }}
 
 {{/* load plugged in templated scripts from modules */}}
-{{ range $.Site.Data.dnb }}
-  {{ if (and (isset . "config") (isset .config "jsTemplates")) }}
-    {{ range .config.jsTemplates }}
+{{ range $key, $value := $.Site.Data.dnb }}
+  {{ warnf "Loading data configuration %s" $key }}
+  {{ if (and (isset $value "config") (isset $value.config "jsTemplates")) }}
+    {{ range $value.config.jsTemplates }}
+      {{ warnf "Loading JSTemplate %s" . }}
       {{ $template := . }}
       {{ $js := resources.Get $template | resources.ExecuteAsTemplate (print now.Unix $template) . }}
       {{ $collection = $collection | append ($js) }}
@@ -14,8 +16,11 @@
 
 {{/* load plugged in scripts from modules */}}
 {{ range $.Site.Data.dnb }}
+  {{ partial "debugprint" . }}
   {{ if (and (isset . "config") (isset .config "js")) }}
     {{ range .config.js }}
+      {{ warnf "Loading JSFile %s" . }}
+      {{ partial "debugprint" . }}
       {{ $collection = $collection | append (resources.Get .) }}
     {{ end }}
   {{ end }}
@@ -23,13 +28,16 @@
 
 {{/* add webpack script */}}
 {{ $collection = $collection | append (resources.Get "main.js") }}
+{{ warnf "Loading %s" "main.js" }}
 
 {{/* add global script */}}
 {{ $collection = $collection | append (resources.Get "js/script.js") }}
+{{ warnf "Loading %s" "js/script.js" }}
 
 {{/* add local script */}}
 {{ $jsLocal := resources.Get (printf "%s/%s" "js" ($.Param "dnb.javascript")) }}
 {{ $collection = $collection | append $jsLocal }}
+{{ warnf "Loading %s" $jsLocal }}
 
 {{/* create and return javascript */}}
 {{ $js := $collection | resources.Concat "script.js" | resources.Minify | resources.Fingerprint "sha384" }}

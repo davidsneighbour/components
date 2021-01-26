@@ -4,7 +4,7 @@
 ```
 {{/*
 {{- $random := partialCached "func/getRandomString" (dict "limit" 8) -}}
-{{- $random := partialCached "func/getRandomString" -}}
+{{- $random := partialCached "func/getRandomString" . -}}
 */}}
 ```
 
@@ -13,5 +13,5 @@
 -->
 {{ $seed := printf "%s%s" site.Title now.Unix }}
 {{ $random := delimit (shuffle (split (md5 $seed) "" )) "" }}
-{{ $limit := .limit | default 12 }}
+{{ $limit := 12 }}
 {{ return substr $random 0 $limit }}
