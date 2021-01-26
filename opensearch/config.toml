@@ -3,8 +3,8 @@ extended = false
 min = "0.56.0"
 
 [[module.mounts]]
-source = "data/dnb/opensearch"
-target = "data/dnb/opensearch"
+source = "data"
+target = "data"
 
 [[module.mounts]]
 source = "layouts"
