@@ -6,9 +6,9 @@ extended = false
 min = "0.71.0"
 
 [[module.mounts]]
-source = "layouts"
-target = "layouts"
+source = "data"
+target = "data"
 
 [[module.mounts]]
-source = "data/dnb/renderhooks"
-target = "data/dnb/renderhooks"
+source = "layouts"
+target = "layouts"
