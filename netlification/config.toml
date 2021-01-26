@@ -14,5 +14,5 @@ source = "layouts"
 target = "layouts"
 
 [[module.mounts]]
-source = "data/dnb/netlification"
-target = "data/dnb/netlification"
+source = "data"
+target = "data"
