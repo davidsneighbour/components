@@ -4,6 +4,7 @@ apiKey = ""
 indexName = ""
 numberLocale = ""
 
+[plugins]
 js = [
   "js/instantsearch.js",
   "js/search-algolia.js"
