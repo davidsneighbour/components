@@ -4,8 +4,8 @@
 {{/* load plugged in templated scripts from modules */}}
 {{ range $key, $value := $.Site.Data.dnb }}
   {{ warnf "Loading data configuration %s" $key }}
-  {{ if (and (isset $value "config") (isset $value.config "jsTemplates")) }}
-    {{ range $value.config.jsTemplates }}
+  {{ if (and (isset $value "config") (isset $value.config "plugins") (isset $value.config.plugins "jsTemplates")) }}
+    {{ range $value.config.plugins.jsTemplates }}
       {{ warnf "Loading JSTemplate %s" . }}
       {{ $template := . }}
       {{ $js := resources.Get $template | resources.ExecuteAsTemplate (print now.Unix $template) . }}
@@ -15,10 +15,10 @@
 {{ end }}
 
 {{/* load plugged in scripts from modules */}}
-{{ range $.Site.Data.dnb }}
-  {{ partial "debugprint" . }}
-  {{ if (and (isset . "config") (isset .config "js")) }}
-    {{ range .config.js }}
+{{ range $key, $value := $.Site.Data.dnb }}
+  {{ warnf "Loading data configuration %s" $key }}
+  {{ if (and (isset $value "config") (isset $value.config "plugins") (isset $value.config.plugins "js")) }}
+    {{ range $value.config.plugins.js }}
       {{ warnf "Loading JSFile %s" . }}
       {{ partial "debugprint" . }}
       {{ $collection = $collection | append (resources.Get .) }}
