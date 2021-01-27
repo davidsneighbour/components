@@ -1,3 +1,14 @@
+{{- /* parameters for jsBuild */ -}}
+{{ $params := dict }}
+{{ range $key, $value := $.Site.Data.dnb }}
+  {{ if (and (isset $value "config") (isset $value.config "plugins") (isset $value.config.plugins "esBuildParams")) }}
+    {{ warnf "Loading esBuildParams configuration %s" $key }}
+    {{ range $esKey, $esValue := $value.config.plugins.esBuildParams }}
+      {{ $params = $params | merge (dict $esKey $esValue) }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
 {{- /* options for jsBuild */ -}}
 {{- /* 0.78.0 */ -}}
 {{ $minify := true }}
@@ -10,5 +21,11 @@
 {{ $format := "iife" }}{{- /* The output format. One of: iife, cjs, esm. Default is iife, a self-executing function,
           suitable for inclusion as a tag. */ -}}
 {{ $sourceMap := "inline" }}{{- /* Whether to generate source maps. Enum, currently only inline (we will improve that). */ -}}
-{{ $js := resources.Get "js/theme.js" | js.Build ( dict "minify" $minify "avoidTDZ" $avoidTDZ "target" $target "externals" $externals "defines" $defines "format" $format "sourceMap" $sourceMap )}}
+{{ $options := ( dict "params" $params "minify" $minify "avoidTDZ" $avoidTDZ "target" $target "externals" $externals "defines" $defines "format" $format "sourceMap" $sourceMap ) }}
+
+{{ $js := resources.Get "js/theme.js" | js.Build $options}}
+{{ $js = $js | resources.Fingerprint "sha384"}}
+
 <script src="{{ $js.Permalink }}"></script>
+
+{{/*{{ return $js }}*/}}
