@@ -27,8 +27,8 @@
 {{ end }}
 
 {{/* add webpack script */}}
-{{ $collection = $collection | append (resources.Get "main.js") }}
-{{ warnf "Loading %s" "main.js" }}
+{{/*{{ $collection = $collection | append (resources.Get "main.js") }}*/}}
+{{/*{{ warnf "Loading %s" "main.js" }}*/}}
 
 {{/* add global script */}}
 {{ $collection = $collection | append (resources.Get "js/script.js") }}
