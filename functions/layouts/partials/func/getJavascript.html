@@ -20,7 +20,6 @@
   {{ if (and (isset $value "config") (isset $value.config "plugins") (isset $value.config.plugins "js")) }}
     {{ range $value.config.plugins.js }}
       {{ warnf "Loading JSFile %s" . }}
-      {{ partial "debugprint" . }}
       {{ $collection = $collection | append (resources.Get .) }}
     {{ end }}
   {{ end }}
