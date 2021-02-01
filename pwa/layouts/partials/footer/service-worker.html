@@ -1,0 +1,13 @@
+{{ $js := resources.Get "service-worker.js" }}
+{{ $js = $js | resources.Fingerprint "sha384" }}
+<script nonce="{{ $js.Data.Integrity }}">
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('{{ $js.Permalink }}').then(registration => {
+      console.log('SW registered: ', registration);
+    }).catch(registrationError => {
+      console.log('SW registration failed: ', registrationError);
+    });
+  });
+}
+</script>
