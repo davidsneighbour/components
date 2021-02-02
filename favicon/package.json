@@ -1,5 +1,5 @@
 {
-  "name": "@dnb-hugo/favicon",
+  "name": "@dnb-hugo-components/favicon",
   "description": "Favicons for Hugo",
   "version": "1.0.15",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
@@ -37,16 +37,5 @@
     "release": "standard-version --release-as patch -a -t \"favicon/v\" --releaseCommitMessageFormat \"chore(release): favicon/v{{currentTag}}\" && ./bin/release-hook-postrelease.sh",
     "release-major": "standard-version --release-as major -a -t \"favicon/v\" --releaseCommitMessageFormat \"chore(release): favicon/v{{currentTag}}\" && ./bin/release-hook-postrelease.sh",
     "release-next": "standard-version --release-as minor -a -t \"favicon/v\" --releaseCommitMessageFormat \"chore(release): favicon/v{{currentTag}}\" && ./bin/release-hook-postrelease.sh"
-  },
-  "standard-version": {
-    "skip": {
-      "changelog": true
-    },
-    "bumpFiles": [
-      {
-        "filename": "package.json",
-        "type": "json"
-      }
-    ]
   }
 }
