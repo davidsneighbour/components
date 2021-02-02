@@ -1,18 +1,15 @@
 {
   "name": "@dnb-hugo-components/functions",
-  "version": "1.0.15",
   "description": "Template functions for Hugo",
+  "version": "1.0.16",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
-  "homepage": "https://github.com/dnb-hugo/components/tree/master/functions",
-  "license": "MIT",
-  "scripts": {
-    "commitlint": "commitlint --from=HEAD~1",
-    "release": "standard-version --release-as patch -a -t \"favicon/v\" --releaseCommitMessageFormat \"chore(release): favicon/v{{currentTag}}\" && ./bin/release-hook-postrelease.sh",
-    "release-major": "standard-version --release-as major -a -t \"favicon/v\" --releaseCommitMessageFormat \"chore(release): favicon/v{{currentTag}}\" && ./bin/release-hook-postrelease.sh",
-    "release-next": "standard-version --release-as minor -a -t \"favicon/v\" --releaseCommitMessageFormat \"chore(release): favicon/v{{currentTag}}\" && ./bin/release-hook-postrelease.sh"
-  },
   "bugs": {
     "url": "https://github.com/dnb-hugo/components/issues"
+  },
+  "commitlint": {
+    "extends": [
+      "@dnb-hugo/commitlint-config"
+    ]
   },
   "devDependencies": {
     "@commitlint/cli": "11.0.0",
@@ -27,15 +24,18 @@
     "husky": "4.3.8",
     "standard-version": "9.1.0"
   },
+  "homepage": "https://github.com/dnb-hugo/components/tree/master/functions",
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
+  "license": "MIT",
   "private": true,
-  "commitlint": {
-    "extends": [
-      "@dnb-hugo/commitlint-config"
-    ]
+  "scripts": {
+    "commitlint": "commitlint --from=HEAD~1",
+    "release": "standard-version --release-as patch -a -t \"functions/v\" --releaseCommitMessageFormat \"chore(release): functions/v{{currentTag}}\" && ./bin/release-hook-postrelease.sh",
+    "release-major": "standard-version --release-as major -a -t \"functions/v\" --releaseCommitMessageFormat \"chore(release): functions/v{{currentTag}}\" && ./bin/release-hook-postrelease.sh",
+    "release-next": "standard-version --release-as minor -a -t \"functions/v\" --releaseCommitMessageFormat \"chore(release): functions/v{{currentTag}}\" && ./bin/release-hook-postrelease.sh"
   }
 }
