@@ -35,6 +35,21 @@ updates:
       separator: "/"
 
   - package-ecosystem: "npm"
+    directory: "/humans.txt"
+    schedule:
+      interval: "daily"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+
+  - package-ecosystem: "npm"
     directory: "/netlification"
     schedule:
       interval: "daily"
@@ -51,6 +66,21 @@ updates:
 
   - package-ecosystem: "npm"
     directory: "/opensearch"
+    schedule:
+      interval: "daily"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+
+  - package-ecosystem: "npm"
+    directory: "/pwa"
     schedule:
       interval: "daily"
       time: "18:00"
@@ -96,6 +126,21 @@ updates:
 
   - package-ecosystem: "npm"
     directory: "/search-algolia"
+    schedule:
+      interval: "daily"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+
+  - package-ecosystem: "npm"
+    directory: "/search-lunrjs"
     schedule:
       interval: "daily"
       time: "18:00"
