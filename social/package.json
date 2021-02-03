@@ -1,60 +1,40 @@
 {
   "name": "@dnb-hugo/social",
-  "version": "0.0.1",
   "description": "Social Media support for Hugo",
+  "version": "0.0.2",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
-  "homepage": "https://github.com/dnb-hugo/components/tree/master/social",
-  "license": "MIT",
-  "scripts": {
-    "release": "standard-version --release-as patch -a -t \"social/v\" --releaseCommitMessageFormat \"chore(release): sitemap/v{{currentTag}}\" && git push --follow-tags origin main",
-    "release-next": "standard-version --release-as minor -a -t \"social/v\" --releaseCommitMessageFormat \"chore(release): sitemap/v{{currentTag}}\" && git push --follow-tags origin main",
-    "release-major": "standard-version --release-as major -a -t \"social/v\" --releaseCommitMessageFormat \"chore(release): sitemap/v{{currentTag}}\" && git push --follow-tags origin main"
-  },
   "bugs": {
     "url": "https://github.com/dnb-hugo/components/issues"
   },
-  "devDependencies": {
-    "standard-version": "9.1.0",
-    "@commitlint/cli": "11.0.0",
-    "@commitlint/config-conventional": "11.0.0",
-    "husky": "4.3.8"
-  },
-  "standard-version": {
-    "skip": {
-      "changelog": true
-    },
-    "bumpFiles": [
-      {
-        "filename": "package.json",
-        "type": "json"
-      }
-    ]
-  },
-  "private": true,
   "commitlint": {
     "extends": [
-      "@commitlint/config-conventional"
-    ],
-    "rules": {
-      "body-max-line-length": [
-        0,
-        "always",
-        100
-      ],
-      "type-enum": [
-        0,
-        "always",
-        [
-          "feat",
-          "fix",
-          "layouts",
-          "refactor",
-          "test",
-          "chore",
-          "wip",
-          "content"
-        ]
-      ]
+      "@dnb-hugo/commitlint-config"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "11.0.0",
+    "@commitlint/config-conventional": "11.0.0",
+    "@dnb-hugo/browserslist-config": "github:dnb-hugo/browserslist-config",
+    "@dnb-hugo/commitlint-config": "github:dnb-hugo/commitlint-config",
+    "@dnb-hugo/eslint-config": "github:dnb-hugo/eslint-config",
+    "@dnb-hugo/remark-preset-lint": "github:dnb-hugo/remark-preset-lint",
+    "@dnb-hugo/standard-version-config": "github:dnb-hugo/standard-version-config",
+    "@dnb-hugo/stylelint-config": "github:dnb-hugo/stylelint-config",
+    "@dnb-hugo/textlint-config": "github:dnb-hugo/textlint-config",
+    "husky": "4.3.8",
+    "standard-version": "9.1.0"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
+  },
+  "homepage": "https://github.com/dnb-hugo/components/tree/master/social",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "release": "standard-version --release-as patch -a -t \"social/v\" --releaseCommitMessageFormat \"chore(release): sitemap/v{{currentTag}}\" && ./bin/release-hook-postrelease.sh",
+    "release-major": "standard-version --release-as major -a -t \"social/v\" --releaseCommitMessageFormat \"chore(release): sitemap/v{{currentTag}}\" && ./bin/release-hook-postrelease.sh",
+    "release-next": "standard-version --release-as minor -a -t \"social/v\" --releaseCommitMessageFormat \"chore(release): sitemap/v{{currentTag}}\" && ./bin/release-hook-postrelease.sh"
   }
 }
