@@ -1,6 +1,6 @@
 {
   "name": "@dnb-hugo/robots",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Configurable robots.txt for Hugo",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
   "homepage": "https://github.com/dnb-hugo/components/tree/master/robots",
@@ -14,10 +14,17 @@
     "url": "https://github.com/dnb-hugo/components/issues"
   },
   "devDependencies": {
-    "standard-version": "9.1.0",
     "@commitlint/cli": "11.0.0",
     "@commitlint/config-conventional": "11.0.0",
-    "husky": "4.3.8"
+    "@dnb-hugo/browserslist-config": "github:dnb-hugo/browserslist-config",
+    "@dnb-hugo/commitlint-config": "github:dnb-hugo/commitlint-config",
+    "@dnb-hugo/eslint-config": "github:dnb-hugo/eslint-config",
+    "@dnb-hugo/remark-preset-lint": "github:dnb-hugo/remark-preset-lint",
+    "@dnb-hugo/standard-version-config": "github:dnb-hugo/standard-version-config",
+    "@dnb-hugo/stylelint-config": "github:dnb-hugo/stylelint-config",
+    "@dnb-hugo/textlint-config": "github:dnb-hugo/textlint-config",
+    "husky": "4.3.8",
+    "standard-version": "9.1.0"
   },
   "standard-version": {
     "skip": {
