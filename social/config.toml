@@ -8,3 +8,7 @@ min = "0.56.0"
 [[module.mounts]]
 source = "layouts"
 target = "layouts"
+
+[[module.mounts]]
+source = "i18n"
+target = "i18n"

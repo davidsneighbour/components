@@ -1,0 +1,15 @@
+# DNB Hugo Components / Social / German template strings
+[share_title]
+other = "Teilen"
+
+[share_facebook]
+other = "Auf Facebook teilen"
+
+[share_twitter]
+other = "Auf Twitter teilen"
+
+[share_linkedin]
+other = "Auf LinkedIn teilen"
+
+[socialmedia_sidebar]
+other = "Social Media"
