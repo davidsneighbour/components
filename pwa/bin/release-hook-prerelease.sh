@@ -23,3 +23,6 @@ if test -f "$SCRIPTPATH"/replacements; then
     go mod edit -replace ${__[0]}=${__[1]}
   done < "$SCRIPTPATH"/replacements
 fi
+
+rm static/*
+npm run build:serviceworker
