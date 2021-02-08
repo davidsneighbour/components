@@ -26,3 +26,4 @@ fi
 
 rm static/*
 npm run build:serviceworker
+git add static
