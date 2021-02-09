@@ -1,6 +1,6 @@
 {
   "name": "@dnb-hugo-components/pwa",
-  "version": "0.0.7",
+  "version": "1.0.0",
   "description": "PWA for Hugo",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
   "homepage": "https://github.com/dnb-hugo/components/tree/master/pwa",

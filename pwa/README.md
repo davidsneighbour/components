@@ -78,7 +78,7 @@ In your themes header (before `</head>`):
 {{ partialCached "head/pwa.html" . }}
 ```
 
-This will add a link to the automatically created webmanifest with options to install the PWA. Check [Detailled configuration](#detailled_configuration) for information how to configure the contents of this file.
+This will add a link to the automatically created webmanifest with options to install the PWA. Check [Detailed configuration](#detailed-configuration) for information how to configure the contents of this file.
 
 In your footer layout (before `</body>`):
 
@@ -93,7 +93,7 @@ Notes:
 - both layouts can be cached and contain no page-individual information
 - check out the [todo section of the readme](#todo) for missing parts or open an issue.
 
-#### Detailled configuration
+#### Detailed configuration
 
 ... to be written ...
 
@@ -113,7 +113,7 @@ hugo mod get -u # update all modules
 - Add configuration system
 - make sure, that Lighthouse shows full PWA capabilities (currently only installability shows up)
 - improve configuration of implemented functionality in the service worker 
-- add detailled documentation for all configuration options
+- add detailed documentation for all configuration options
 
 ### Available modules and usage instruction
 
