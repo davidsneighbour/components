@@ -1,23 +1,17 @@
 {
   "name": "@dnb-hugo-components/pwa",
-  "version": "1.0.0",
   "description": "PWA for Hugo",
+  "version": "1.0.1",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
-  "homepage": "https://github.com/dnb-hugo/components/tree/master/pwa",
-  "license": "MIT",
-  "scripts": {
-    "release": "standard-version --release-as patch -a -t \"pwa/v\" --releaseCommitMessageFormat \"chore(release): pwa/v{{currentTag}}\" && git push --follow-tags origin main",
-    "release-next": "standard-version --release-as minor -a -t \"pwa/v\" --releaseCommitMessageFormat \"chore(release): pwa/v{{currentTag}}\" && git push --follow-tags origin main",
-    "release-major": "standard-version --release-as major -a -t \"pwa/v\" --releaseCommitMessageFormat \"chore(release): pwa/v{{currentTag}}\" && git push --follow-tags origin main",
-    "build": "npm run build:serviceworker",
-    "build:serviceworker": "cross-env NODE_ENV=production webpack --config webpack.serviceworker.js"
-  },
   "bugs": {
     "url": "https://github.com/dnb-hugo/components/issues"
   },
+  "commitlint": {
+    "extends": [
+      "@dnb-hugo/commitlint-config"
+    ]
+  },
   "devDependencies": {
-    "@commitlint/cli": "11.0.0",
-    "@commitlint/config-conventional": "11.0.0",
     "@dnb-hugo/browserslist-config": "github:dnb-hugo/browserslist-config",
     "@dnb-hugo/commitlint-config": "github:dnb-hugo/commitlint-config",
     "@dnb-hugo/eslint-config": "github:dnb-hugo/eslint-config",
@@ -26,14 +20,27 @@
     "@dnb-hugo/stylelint-config": "github:dnb-hugo/stylelint-config",
     "@dnb-hugo/textlint-config": "github:dnb-hugo/textlint-config",
     "cross-env": "7.0.3",
-    "husky": "4.3.8",
+    "husky": "5.0.9",
     "standard-version": "9.1.0",
-    "webpack": "^4.46.0",
-    "webpack-cli": "^4.5.0",
-    "workbox-precaching": "^6.1.0",
-    "workbox-routing": "^6.1.0",
-    "workbox-strategies": "^6.1.0",
-    "workbox-webpack-plugin": "^6.1.0"
+    "webpack": "5.21.2",
+    "webpack-cli": "4.5.0",
+    "workbox-cacheable-response": "6.1.0",
+    "workbox-core": "^6.1.0",
+    "workbox-expiration": "6.1.0",
+    "workbox-precaching": "6.1.0",
+    "workbox-routing": "6.1.0",
+    "workbox-strategies": "6.1.0",
+    "workbox-webpack-plugin": "6.1.0"
+  },
+  "homepage": "https://github.com/dnb-hugo/components/tree/master/pwa",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "npm run build:serviceworker",
+    "build:serviceworker": "cross-env NODE_ENV=production webpack --config webpack.serviceworker.js",
+    "release": "standard-version --release-as patch -a -t \"pwa/v\" --releaseCommitMessageFormat \"chore(release): pwa/v{{currentTag}}\" && git push --follow-tags origin main",
+    "release-major": "standard-version --release-as major -a -t \"pwa/v\" --releaseCommitMessageFormat \"chore(release): pwa/v{{currentTag}}\" && git push --follow-tags origin main",
+    "release-next": "standard-version --release-as minor -a -t \"pwa/v\" --releaseCommitMessageFormat \"chore(release): pwa/v{{currentTag}}\" && git push --follow-tags origin main"
   },
   "standard-version": {
     "skip": {
@@ -44,42 +51,6 @@
         "filename": "package.json",
         "type": "json"
       }
-    ]
-  },
-  "private": true,
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ],
-    "rules": {
-      "body-max-line-length": [
-        0,
-        "always",
-        100
-      ],
-      "type-enum": [
-        0,
-        "always",
-        [
-          "feat",
-          "fix",
-          "layouts",
-          "refactor",
-          "test",
-          "chore",
-          "wip",
-          "content"
-        ]
-      ]
-    }
-  },
-  "remarkConfig": {
-    "plugins": [
-      "remark-preset-lint-dnb",
-      [
-        "remark-lint-write-good",
-        false
-      ]
     ]
   }
 }
