@@ -1,11 +1,5 @@
-{{ $favicon := getJSON "faviconDescription.json" }}
-{{ $random := partialCached "func/getRandomString" . "favicon" }}
-<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png?v={{ $random }}">
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png?v={{ $random }}">
-<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png?v={{ $random }}">
-<link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg?v={{ $random }}" color="{{ $favicon.design.desktopBrowser.backgroundColor }}">
-<link rel="shortcut icon" href="/images/favicon/favicon.ico?v={{ $random }}">
-<meta name="msapplication-TileColor" content="{{ $favicon.design.windows.backgroundColor }}">
-<meta name="msapplication-TileImage" content="/images/favicon/mstile-144x144.png?v={{ $random }}">
-<meta name="msapplication-config" content="/images/favicon/browserconfig.xml?v={{ $random }}">
-<meta name="theme-color" content="{{ $favicon.design.androidChrome.themeColor }}">
+{{- $icon := resources.Get "favicon/favicon.png" -}}
+<link rel="apple-touch-icon" sizes="180x180" href="{{- ($icon.Resize "180x180").Permalink -}}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{- ($icon.Resize "32x32").Permalink -}}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{- ($icon.Resize "16x16").Permalink -}}">
+<link rel="mask-icon" href="{{- ($icon.Resize "192x192").Permalink -}}" color="#ffffff">

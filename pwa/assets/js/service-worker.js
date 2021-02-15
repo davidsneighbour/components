@@ -1,22 +1,26 @@
 // console.log('Hello from service-worker.js');
 
-import {
-  registerRoute,
-  setCatchHandler
-} from 'workbox-routing';
-import {
-  NetworkFirst,
-  StaleWhileRevalidate,
-  CacheFirst
-} from 'workbox-strategies';
-import {
-  precacheAndRoute,
-  matchPrecache
-} from 'workbox-precaching';
+import { registerRoute, setCatchHandler } from 'workbox-routing';
+import { CacheFirst, NetworkFirst, StaleWhileRevalidate } from 'workbox-strategies';
+import { matchPrecache, precacheAndRoute } from 'workbox-precaching';
 // Used for filtering matches based on status code, header, or both
 import { CacheableResponsePlugin } from 'workbox-cacheable-response';
 // Used to limit entries in cache, remove entries after a certain period of time
 import { ExpirationPlugin } from 'workbox-expiration';
+import { setCacheNameDetails } from 'workbox-core';
+
+setCacheNameDetails({
+  prefix: 'dnb-hugo-pwa',
+  suffix: 'v1'
+});
+
+registerRoute(
+  ({request}) => request.destination === 'script' ||
+    request.destination === 'style',
+  new StaleWhileRevalidate({
+    cacheName: 'static-resources',
+  })
+);
 
 // Cache page navigations (html) with a Network First strategy
 registerRoute(
