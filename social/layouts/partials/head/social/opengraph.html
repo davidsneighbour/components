@@ -1,17 +1,98 @@
+{{- warnf "calculating open graph data" -}}
+{{- $page := false -}}
+{{- if .IsPage -}}{{- $page = true -}}{{- end -}}
+<!-- Open Graph meta data generation.
+     see https://ogp.me/ for details                                                                                 -->
+<!-- *************************************************************************************************************** -->
+<!-- Basic Metadata                                                                                                  -->
+<!-- *************************************************************************************************************** -->
+<!-- og:title       the title of your object as it should appear within the graph                                    -->
+<meta property="og:title" content="{{ if ne .IsHome }}{{ .Title }} - {{ end }}{{ site.Title }}" />
+<!-- og:type        the type of your object. Depending on the type, other properties may also be required            -->
+<meta property="og:type" content="{{ if .IsHome }}website{{ else }}{{ .Params.opengraph.type | default "article" }}{{ end }}" />
+<!-- og:image       an image URL which should represent tje object within the graph                                  -->
+<!-- og:url         canonical URL, will be used as its permanent ID in the graph                                     -->
+<meta property="og:url" content="{{ .Permalink }}" />
+<!-- *************************************************************************************************************** -->
+<!-- Optional Metadata                                                                                               -->
+<!-- *************************************************************************************************************** -->
+<!-- og:audio              A URL to an audio file to accompany this object.                                          -->
+<!-- og:description        A one to two sentence description of your object.                                         -->
+<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
+<!-- og:determiner         The word that appears before this object's title in a sentence. An enum of (a, an, the, "", auto). If auto is chosen, the consumer of your data should chose between "a" or "an". Default is "" (blank). -->
+<!-- og:locale             the locale these tags are marked up in, format language_TERRITORY                         -->
+<meta property="og:locale" content="{{ site.LanguageCode | default "en_US" }}">
+<!-- og:locale:alternate   An array of other locales this page is available in.                                      -->
+<!-- og:site_name          the name which should be displayed for the overall site                                   -->
+<meta property="og:site_name" content="{{ site.Title }}" />
+<!-- og:video              A URL to a video file that complements this object.                                       -->
+
+
+
+{{/*{{ with .Params.images }}*/}}
+{{/*  {{ range first 1 . }}*/}}
+{{/*    <meta property="og:image" content="{{ . | absURL }}" />*/}}
+{{/*  {{ end }}*/}}
+{{/*{{ end }}*/}}
+
+
+{{ if $page }}
+  <!-- If it is part of a series, link to related articles -->
+  {{ $permalink := .Permalink }}
+  {{ $siteSeries := .Site.Taxonomies.series }}
+  {{ with .Params.series }}
+    {{ range $name := . }}
+      {{ $series := index $siteSeries $name }}
+      {{ range $page := first 6 $series.Pages }}
+        {{ if ne $page.Permalink $permalink }}
+          <meta property="og:see_also" content="{{ $page.Permalink }}" />
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  <meta property="article:modified_time" content="{{ .Date }}" />
+  <meta property="article:section" content="{{ .Section }}" />
+  <meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}" />
+  {{ with .Params.og_images }}
+    {{ range first 6 . }}
+      <meta property="og:image" content="{{ . }}" />
+    {{ end }}
+  {{ end }}
+  <meta property="og:image" content="{{ .Params.og_image }}" />
+  <meta property="og:image:url" content="{{ .Params.og_image }}" />
+  {{ range .Params.tags }}
+    <meta property="article:tag" content="{{ . }}" />
+  {{ end }}
+{{ else }}
+  <meta property="og:type" content="blog" />
+  <meta property="og:image" content="{{ .Site.Params.og_image }}" />
+  <meta property="og:image:url" content="{{ .Site.Params.og_image }}" />
+{{ end }}
+
+
+
 <!--
-<meta property='og:locale' content='en_US' />
-<meta property='og:image:height' content='630' />
-<meta property='og:image:width' content='1200' />
-<meta property='og:site_name' content='...' />
-<meta property='og:image:alt' content='...' />
+image/video/audio (audio does not have width or height, obviously)
+og:image:url - Identical to og:image.
+og:image:secure_url - An alternate url to use if the webpage requires HTTPS.
+og:image:type - A MIME type for this image.
+og:image:width - The number of pixels wide.
+og:image:height - The number of pixels high.
+og:image:alt - A description of what is in the image (not a caption). If the page specifies an og:image it should specify og:image:alt.
+
+article:published_time - datetime - When the article was first published.
+article:modified_time - datetime - When the article was last changed.
+article:expiration_time - datetime - When the article is out of date after.
+article:author - profile array - Writers of the article.
+article:section - string - A high-level section name. E.g. Technology
+article:tag - string array - Tag words associated with this article.
+
 //-->
 
-<meta property="og:title" content="{{ .Title }}" />
-<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
-<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
-<meta property="og:url" content="{{ .Permalink }}" />
-{{ with $.Params.images }}
-  {{ range first 6 . -}}
+
+{{ if $.Params.images }}
+  {{ range first 6 $.Params.images -}}
     <meta property="og:image" content="{{ . | absURL }}" />
   {{ end }}
 {{ else -}}
@@ -30,7 +111,7 @@
 {{ end }}
 
 {{- $iso8601 := "2006-01-02T15:04:05-07:00" -}}
-{{- if .IsPage }}
+{{- if $page }}
   {{- if not .PublishDate.IsZero }}
     <meta property="article:published_time" {{ .PublishDate.Format $iso8601 | printf "content=%q" | safeHTMLAttr }} />
   {{ else if not .Date.IsZero }}
@@ -74,7 +155,7 @@
   {{ end }}
 {{ end }}
 
-{{- if .IsPage }}
+{{- if $page }}
   {{- range .Site.Authors }}
     {{ with .Social.facebook }}
       <meta property="article:author" content="https://www.facebook.com/{{ . }}" />
@@ -91,7 +172,12 @@
   {{- end }}
 {{ end }}
 
-{{- /* Facebook Page Admin ID for Domain Insights */}}
-{{- with .Site.Social.facebook_admin }}
-  <meta property="fb:admins" content="{{ . }}" />
-{{ end }}
+<!-- *************************************************************************************************************** -->
+<!-- Facebook specific meta data                                                                                     -->
+<!-- *************************************************************************************************************** -->
+{{- with site.Params.fb_appid -}}
+  <meta property="fb:app_id" content="{{- . -}}" />
+{{- end -}}
+{{- with site.Social.facebook_admin -}}
+  <meta property="fb:admins" content="{{- . -}}" />
+{{- end -}}
