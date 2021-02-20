@@ -1,6 +1,6 @@
 {
-  "name": "@dnb-hugo-components/seo",
-  "description": "SEO functionality for Hugo",
+  "name": "@dnb-hugo-components/auditor",
+  "description": "SEO and performance checks for Hugo",
   "version": "0.0.1",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
   "bugs": {
