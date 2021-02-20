@@ -21,7 +21,7 @@
     "@dnb-hugo/textlint-config": "github:dnb-hugo/textlint-config",
     "cross-env": "7.0.3",
     "husky": "5.0.9",
-    "standard-version": "9.1.0",
+    "standard-version": "9.1.1",
     "webpack": "5.21.2",
     "webpack-cli": "4.5.0",
     "workbox-cacheable-response": "6.1.0",
