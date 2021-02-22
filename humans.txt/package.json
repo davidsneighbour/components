@@ -21,7 +21,7 @@
     "@dnb-hugo/standard-version-config": "github:dnb-hugo/standard-version-config",
     "@dnb-hugo/stylelint-config": "github:dnb-hugo/stylelint-config",
     "@dnb-hugo/textlint-config": "github:dnb-hugo/textlint-config",
-    "husky": "4.3.8",
+    "husky": "5.1.0",
     "standard-version": "9.1.0"
   },
   "homepage": "https://github.com/dnb-hugo/components/tree/master/humans.txt",
