@@ -39,7 +39,7 @@ module.exports = {
 
   output: {
     path: path.join(__dirname, 'static'),
-    filename: '[name].[hash].js',
+    filename: '[name].[fullhash].js',
   },
 
   performance: {
