@@ -19,8 +19,12 @@
   {{ warnf "Loading data configuration %s" $key }}
   {{ if (and (isset $value "config") (isset $value.config "plugins") (isset $value.config.plugins "js")) }}
     {{ range $value.config.plugins.js }}
-      {{ warnf "Loading JSFile %s" . }}
-      {{ $collection = $collection | append (resources.Get .) }}
+{{/*      {{ if fileExists (printf "assets/%s" .) }}*/}}
+        {{ warnf "Loading JSFile %s" . }}
+        {{ $collection = $collection | append (resources.Get .) }}
+{{/*      {{ else }}*/}}
+{{/*        {{ errorf (printf "File %s can't be found" .) }}*/}}
+{{/*      {{ end }}*/}}
     {{ end }}
   {{ end }}
 {{ end }}
