@@ -23,7 +23,7 @@
     "standard-version": "9.1.1",
     "webpack": "5.24.1",
     "webpack-cli": "4.5.0",
-    "workbox-cacheable-response": "6.1.1",
+    "workbox-cacheable-response": "6.1.2",
     "workbox-core": "^6.1.1",
     "workbox-expiration": "6.1.1",
     "workbox-precaching": "6.1.1",
