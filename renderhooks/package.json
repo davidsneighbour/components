@@ -15,7 +15,7 @@
     "@commitlint/cli": "11.0.0",
     "@dnb-hugo/commitlint-config": "github:dnb-hugo/commitlint-config",
     "@dnb-hugo/standard-version-config": "github:dnb-hugo/standard-version-config",
-    "standard-version": "9.1.0"
+    "standard-version": "9.1.1"
   },
   "homepage": "https://github.com/dnb-hugo/components/tree/master/renderhooks",
   "license": "MIT",
