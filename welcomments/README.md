@@ -19,7 +19,7 @@ Then add this module to your required modules in `config.toml`:
 ```toml
 [module]
 [[module.imports]]
-path = "github.com/dnb-hugo/components/pwa"
+path = "github.com/dnb-hugo/components/welcomments"
 disabled = false
 ```
 
@@ -27,7 +27,7 @@ or in `config/_default/module.toml`:
 
 ```toml
 [[imports]]
-path = "github.com/dnb-hugo/components/pwa"
+path = "github.com/dnb-hugo/components/welcomments"
 disabled = false
 ```
 
