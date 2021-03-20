@@ -1,0 +1,15 @@
+
+css = true # set to false if you use your own styles and don't require welcomments styles
+javascript = true # set to false if you use your own scripts and don't require welcomments scripts
+
+[avatar]
+server = "https://ui-avatars.com/api/" # selected avatar server
+size = 128 # avatar image size in pixels. between: 16 and 512. Default: 64
+font-size = 0.5 # font size in percentage of size. between 0.1 and 1. Default: 0.5
+length = 2 # length of the generated initials. Default: 2
+rounded = false # boolean specifying if the returned image should be a circle. Default: false
+bold = false # boolean specifying if the returned letters should use a bold font. Default: false
+background = "f0e9e9" # hex color or random for the image background, without the hash (#). Default: f0e9e9
+color = "8b5d5d" # hex color or random for the font, without the hash (#). Default: 8b5d5d
+uppercase = true # decide if the API should uppercase the name/initials. Default: true
+format = "svg" # decide if the API should return SVG or PNG. Default: svg if the Accept header includes image/svg+xml, png otherwise
