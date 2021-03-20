@@ -1,6 +1,11 @@
-
-css = true # set to false if you use your own styles and don't require welcomments styles
-javascript = true # set to false if you use your own scripts and don't require welcomments scripts
+# note: if you wish to change one configuration parameter, you need to copy ALL
+#       parameters into a local copy of this file. The local copy will replace
+#       this one, not extend or override.
+css = false # set to false if you use your own styles and don't require welcomments styles
+javascript = false # set to false if you use your own scripts and don't require welcomments scripts
+apiUrl = "https://welcomments.io/api"
+cdnUrl = "https://cdn.welcomments.io/"
+dataDirectory = "welcomments/comments"
 
 [avatar]
 server = "https://ui-avatars.com/api/" # selected avatar server

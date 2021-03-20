@@ -1,20 +1,17 @@
-{{ $apiUrl := (cond (ne (.apiUrl) nil) .apiUrl "https://welcomments.io/api") }}
+{{ $apiUrl := (cond (ne (.apiUrl) nil) .apiUrl site.Data.dnb.welcomments.config.apiUrl) }}
 {{ $websiteId := .websiteId }}
 {{ $slug := index (last 1 (split (delimit (split .context.RelPermalink "/") "," "") ",")) 0 }}
 {{ $slug = cond (ne (eq $slug "")) $slug "___root___" }}
-
 <div id="welcomments__container" class="welcomments__container">
   {{ $allComments := dict }}
-  {{ if isset .context.Site.Data.welcomments $slug }}
-    {{ $allComments = index .context.Site.Data.welcomments $slug }}
+  {{ if isset (index site.Data site.Data.dnb.welcomments.config.dataDirectory $slug) }}
+    {{ $allComments = index site.Data site.Data.dnb.welcomments.config.dataDirectory $slug }}
   {{ end }}
-
   {{ if gt $allComments 0 }}
     <h3 id="welcomments__comment-count-title" class="welcomments__comments-title">{{ len $allComments }} Kommentar{{ if gt $allComments 1 }}e{{ end }}</h3>
   {{ else }}
     <h3 id="welcomments__comment-count-title" class="welcomments__comments-title">Noch keine Kommentare...</h3>
   {{ end }}
-
   <section id="welcomments__comment-container" class="welcomments__comment-container">
     {{- range $allComments -}}
       {{- if eq (index . "replying_to") nil -}}
@@ -23,34 +20,17 @@
       {{- end -}}
     {{- end -}}
   </section>
-
   {{ $context := (dict "apiUrl" $apiUrl "websiteId" $websiteId "permalink" .context.Permalink "slug" $slug) }}
   {{ partial "welcomments/comment_form" $context }}
 </div>
-
-<!--
-  Contains some basic comment section styling, so that you can get started quickly
-  without having to come up with your own CSS if you don't want to.
-                                                                               -->
-<link rel="stylesheet" href="https://cdn.welcomments.io/welcomments.css" />
-
-<!--
-  Includes the optional Welcomments Javascript file. It enhances the user experience
-  by sending the comment form fields without the user having to leave your site.
-
-  It also saves the comment to the local storage while your site is being rebuilt so
-  that your users don't get confused and resubmit the same comment multiple times. If
-  there are comments that other users posted that haven't been rebuilt as a part of your
-  site yet, this script also "fills in" them from the Welcomments Pending Comments API.
-
-  It's gzipped and weighs just about 2.1kB. If you want, you can just delete this line
-  and your comment form works just fine but is a bit less interactive! :-)
-                                                                               -->
-<script defer id="welcomments__script" src="https://cdn.welcomments.io/welcomments.js"></script>
+{{ with site.Data.dnb.welcomments.config.css }}                                                                               -->
+<link rel="stylesheet" href="{{ printf "%s%s" site.Data.dnb.welcomments.config.cdnUrl "welcomments.css"}}" />
+{{ end }}
+{{ with site.Data.dnb.welcomments.config.css }}
+<script defer id="welcomments__script" src="{{ printf "%s%s" site.Data.dnb.welcomments.config.cdnUrl "welcomments.js"}}"></script>
 <script type="text/javascript">
   welcomments = {
     apiUrl: {{ $apiUrl }},
-
     // Updates the "x comments" title when there are comments that are dynamically loaded.
     // By default, the result of this function becomes the innerText of an element with the
     // id "welcomments__comment-count-title". It's okay if that element doesn't exist.
@@ -58,7 +38,6 @@
       if (commentCount === 0) {
         return "Noch keine Kommentare...";
       }
-
       return commentCount === 1 ? "1 Kommentar" : `${commentCount} Kommentare`;
     },
 
@@ -91,3 +70,4 @@
     },
   };
 </script>
+{{ end }}

@@ -52,6 +52,8 @@ welcommentsId = "welcomments id"
 
 Your comments are good to go. Give it a try!
 
+Note: Currently you have to contact Iiro at welcomments.io to set the data directory path to another directory. I have set it hard to `data/welcomments/comments` here, because it clashes with all my other modules for Hugo. If you are using only welcomments then set `dataDirectory` to "welcomments" and go with it. If you are using any other plugin or module that is mounting inside of the data directory then you need to change the path to the data directory.
+
 #### Detailed configuration
 
 The system has an easy overridable data configuration setup with sensible defaults for unexperienced users. If you wish to change the setup, then copy the complete file `data/dnb/welcomments/config.toml` into your own data folder (at the same location, `data/dnb/welcomments/config.toml`).
