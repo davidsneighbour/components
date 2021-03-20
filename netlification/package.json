@@ -25,7 +25,7 @@
     "@dnb-hugo/stylelint-config": "github:dnb-hugo/stylelint-config",
     "@dnb-hugo/textlint-config": "github:dnb-hugo/textlint-config",
     "husky": "4.3.8",
-    "standard-version": "9.1.0"
+    "standard-version": "9.1.1"
   },
   "private": true,
   "husky": {
