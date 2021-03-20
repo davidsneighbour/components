@@ -1,0 +1,32 @@
+[author-url]
+other = "Webseite"
+
+[author-email]
+other = "Email"
+
+[email-notice]
+other = "Wenn du deine email adresse angibst, erh&auml;ltst du eine Email, wenn jemand auf deinen Kommentar antwortet. Du kannst jederzeit die Notifikationen abstellen, indem du den Link am Ende der Benachrichtigungsemail anklickst."
+
+[optional-notice]
+other = "(freiwillig)"
+
+[submit-button]
+other = "Kommentar abschicken"
+
+[markdown-notice]
+other = "<a href=\"https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet\" target=\"_blank\">GitHub-flavored Markdown</a> ist erlaubt."
+
+[placeholder-url]
+other = "https://example.com"
+
+[placeholder-email]
+other = "johndoe@example.com"
+
+[placeholder-message]
+other = "Dein Kommentar..."
+
+[placeholder-name]
+other = "Dein Name"
+
+[author-name]
+other = "Name"

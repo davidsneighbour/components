@@ -4,23 +4,23 @@
   <input type="hidden" name="permalink" id="permalink" value="{{ .permalink }}"/>
   <input type="hidden" name="page-slug" id="page-slug" value="{{ .slug }}"/>
   <div class="welcomments__form-group">
-    <label for="author-name">Name</label>
-    <input type="text" id="author-name" name="author-name" required spellcheck="false" placeholder="Dein Name"/>
+    <label for="author-name">{{ i18n "author-name" }}</label>
+    <input type="text" id="author-name" name="author-name" required spellcheck="false" placeholder="{{ i18n "placeholder-name" }}"/>
   </div>
   <div class="welcomments__form-group">
-    <textarea rows="10" name="message" id="message" required spellcheck="true" placeholder="Dein Kommentar..."></textarea>
-    <p class="welcomments__markdown-notice"><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" target="_blank">GitHub-flavored Markdown</a> ist erlaubt.</p>
+    <textarea rows="10" name="message" id="message" required spellcheck="true" placeholder="{{ i18n "placeholder-message" }}"></textarea>
+    <p class="welcomments__markdown-notice">{{ i18n "markdown-notice" }}</p>
   </div>
   <div class="welcomments__form-group welcomments__flex">
     <div class="welcomments__column-left">
-      <label for="author-url">Webseite <span class="welcomments__optional-notice">(freiwillig)</span></label>
-      <input type="url" id="author-url" name="author-url" placeholder="https://example.com"/>
+      <label for="author-url">{{ i18n "author-url" }} <span class="welcomments__optional-notice">{{ i18n "optional-notice" }}</span></label>
+      <input type="url" id="author-url" name="author-url" placeholder="{{ i18n "placeholder-url" }}"/>
     </div>
     <div class="welcomments__column-right">
-      <label for="author-email">Email <span class="welcomments__optional-notice">(freiwillig)</span></label>
-      <input type="email" id="author-email" name="author-email" placeholder="johndoe@example.com"/>
+      <label for="author-email">{{ i18n "author-email" }} <span class="welcomments__optional-notice">{{ i18n "optional-notice" }}</span></label>
+      <input type="email" id="author-email" name="author-email" placeholder="{{ i18n "placeholder-email" }}"/>
     </div>
   </div>
-  <p class="welcomments__email-notice">Wenn du deine email adresse angibst, erh&auml;ltst du eine Email, wenn jemand auf deinen Kommentar antwortet. Du kannst jederzeit die Notifikationen abstellen, indem du den Link am Ende der Benachrichtigungsemail anklickst.</p>
-  <button type="submit" class="welcomments__submit-button" id="welcomments__submit-button">Kommentar abschicken</button>
+  <p class="welcomments__email-notice">{{ i18n "email-notice" }}</p>
+  <button type="submit" class="welcomments__submit-button" id="welcomments__submit-button">{{ i18n "submit-button" }}</button>
 </form>
