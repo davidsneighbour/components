@@ -1,18 +1,16 @@
 {{- $config := site.Data.dnb.pwa.config -}}
 {{- /*
-
 see
-
 - https://web.dev/add-manifest/
 - https://maskable.app/editor
-
 */ -}}
 {{- $manifest := dict -}}
 {{- $manifest = merge $manifest (dict "name" site.Title "short_name" ($config.short_name | default site.Title)) -}}
 {{- $manifest = merge $manifest (dict "theme_color" ($config.theme_color | default "#ffffff")) -}}
 {{- $manifest = merge $manifest (dict "background_color" ($config.background_color | default "#ffffff")) -}}
 {{- $manifest = merge $manifest (dict "display" ($config.display | default "minimal-ui")) -}}
-{{- $manifest = merge $manifest (dict "start_url" ($config.start_url | default "/")) -}}
+{{- $manifest = merge $manifest (dict "start_url" ($config.start_url | default "/?source=pwa")) -}}
+{{- $manifest = merge $manifest (dict "description" ($config.description | default site.Params.Description)) -}}
 
 {{- $sizes := slice 36 48 72 96 144 192 256 384 512 -}}
 {{- $icon := resources.Get "favicon/favicon.png" -}}
@@ -28,5 +26,24 @@ see
   {{- $icons = $icons | append $sizedIcon -}}
 {{- end -}}
 {{- $manifest = merge $manifest (dict "icons" $icons) -}}
+
+{{- $sizes := slice 320 800 1200 1600 2000 2800 -}}
+{{- with $config.screenshots -}}
+  {{- $screenshots := slice -}}
+  {{- range . -}}
+    {{- $icon := resources.Get . -}}
+    {{- $images := slice -}}
+    {{- range $sizes -}}
+      {{- $resize := $icon.Resize (printf "%dx%d" . .) -}}
+      {{- $sizedIcon := dict -}}
+      {{- $sizedIcon = merge $sizedIcon (dict "src" $resize.Permalink) -}}
+      {{- $sizedIcon = merge $sizedIcon (dict "sizes" (printf "%dx%d" . .)) -}}
+      {{- $sizedIcon = merge $sizedIcon (dict "type" (printf "%s/%s" $resize.MediaType.MainType $resize.MediaType.SubType)) -}}
+      {{- $images = $images | append $sizedIcon -}}
+    {{ end }}
+    {{ $screenshots = $screenshots | append $icons }}
+  {{- end -}}
+  {{- $manifest = merge $manifest (dict "screenshots" $screenshots) -}}
+{{- end -}}
 
 {{- $manifest | jsonify -}}
