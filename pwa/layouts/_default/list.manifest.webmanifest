@@ -15,15 +15,17 @@ see
 {{- $sizes := slice 36 48 72 96 144 192 256 384 512 -}}
 {{- $icon := resources.Get "favicon/favicon.png" -}}
 {{- $icons := slice -}}
-{{- range $sizes -}}
-  {{- $resize := $icon.Resize (printf "%dx%d" . .) -}}
-  {{- $sizedIcon := dict -}}
-  {{- $sizedIcon = merge $sizedIcon (dict "src" $resize.Permalink) -}}
-  {{- $sizedIcon = merge $sizedIcon (dict "sizes" (printf "%dx%d" . .)) -}}
-  {{- $sizedIcon = merge $sizedIcon (dict "type" (printf "%s/%s" $resize.MediaType.MainType $resize.MediaType.SubType)) -}}
-  {{- $sizedIcon = merge $sizedIcon (dict "density" 0.75) -}}
-  {{- $sizedIcon = merge $sizedIcon (dict "purpose" "any maskable") -}}
-  {{- $icons = $icons | append $sizedIcon -}}
+{{- if ne nil $icon -}}
+  {{- range $sizes -}}
+    {{- $resize := $icon.Resize (printf "%dx%d" . .) -}}
+    {{- $sizedIcon := dict -}}
+    {{- $sizedIcon = merge $sizedIcon (dict "src" $resize.Permalink) -}}
+    {{- $sizedIcon = merge $sizedIcon (dict "sizes" (printf "%dx%d" . .)) -}}
+    {{- $sizedIcon = merge $sizedIcon (dict "type" (printf "%s/%s" $resize.MediaType.MainType $resize.MediaType.SubType)) -}}
+    {{- $sizedIcon = merge $sizedIcon (dict "density" 0.75) -}}
+    {{- $sizedIcon = merge $sizedIcon (dict "purpose" "any maskable") -}}
+    {{- $icons = $icons | append $sizedIcon -}}
+  {{- end -}}
 {{- end -}}
 {{- $manifest = merge $manifest (dict "icons" $icons) -}}
 
@@ -40,8 +42,8 @@ see
       {{- $sizedIcon = merge $sizedIcon (dict "sizes" (printf "%dx%d" . .)) -}}
       {{- $sizedIcon = merge $sizedIcon (dict "type" (printf "%s/%s" $resize.MediaType.MainType $resize.MediaType.SubType)) -}}
       {{- $images = $images | append $sizedIcon -}}
-    {{ end }}
-    {{ $screenshots = $screenshots | append $icons }}
+    {{- end -}}
+    {{- $screenshots = $screenshots | append $icons -}}
   {{- end -}}
   {{- $manifest = merge $manifest (dict "screenshots" $screenshots) -}}
 {{- end -}}
