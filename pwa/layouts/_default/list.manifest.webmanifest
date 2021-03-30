@@ -14,8 +14,8 @@ see
 
 {{- $sizes := slice 36 48 72 96 144 192 256 384 512 -}}
 {{- $icon := resources.Get "favicon/favicon.png" -}}
-{{- $icons := slice -}}
 {{- if ne nil $icon -}}
+  {{- $icons := slice -}}
   {{- range $sizes -}}
     {{- $resize := $icon.Resize (printf "%dx%d" . .) -}}
     {{- $sizedIcon := dict -}}
@@ -26,8 +26,8 @@ see
     {{- $sizedIcon = merge $sizedIcon (dict "purpose" "any maskable") -}}
     {{- $icons = $icons | append $sizedIcon -}}
   {{- end -}}
+  {{- $manifest = merge $manifest (dict "icons" $icons) -}}
 {{- end -}}
-{{- $manifest = merge $manifest (dict "icons" $icons) -}}
 
 {{- $sizes := slice 320 800 1200 1600 2000 2800 -}}
 {{- with $config.screenshots -}}
@@ -43,7 +43,7 @@ see
       {{- $sizedIcon = merge $sizedIcon (dict "type" (printf "%s/%s" $resize.MediaType.MainType $resize.MediaType.SubType)) -}}
       {{- $images = $images | append $sizedIcon -}}
     {{- end -}}
-    {{- $screenshots = $screenshots | append $icons -}}
+    {{- $screenshots = $screenshots | append $images -}}
   {{- end -}}
   {{- $manifest = merge $manifest (dict "screenshots" $screenshots) -}}
 {{- end -}}
