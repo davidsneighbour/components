@@ -16,3 +16,7 @@ target = "layouts"
 [[module.mounts]]
 source = "data"
 target = "data"
+
+[[module.mounts]]
+source = "static"
+target = "static"
