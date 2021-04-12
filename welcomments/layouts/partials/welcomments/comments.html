@@ -1,7 +1,9 @@
-{{ $apiUrl := (cond (ne (.apiUrl) nil) .apiUrl site.Data.dnb.welcomments.config.apiUrl) }}
-{{ $websiteId := .websiteId }}
-{{ $slug := index (last 1 (split (delimit (split .context.RelPermalink "/") "," "") ",")) 0 }}
-{{ $slug = cond (ne (eq $slug "")) $slug "___root___" }}
+{{- $apiUrl := (cond (ne (.apiUrl) nil) .apiUrl site.Data.dnb.welcomments.config.apiUrl) -}}
+{{- $websiteId := .websiteId -}}
+{{- $slug := index (last 1 (split (delimit (split .context.RelPermalink "/") "," "") ",")) 0 -}}
+{{- $slug = cond (ne (eq $slug "")) $slug "___root___" -}}
+{{- $config := site.Data.dnb.welcomments.config -}}
+
 <div id="welcomments__container" class="welcomments__container">
   {{ $allComments := dict }}
   {{ if isset (index site.Data site.Data.dnb.welcomments.config.dataDirectory $slug) }}
@@ -46,27 +48,29 @@
     // the resulting HTML as a child element into the correct position in an element with the
     // id "welcomments__comment-container".
     placeholderCommentFactory: function (comment) {
-      var year = new Intl.DateTimeFormat("en", {year: "numeric"}).format(comment.date);
-      var month = new Intl.DateTimeFormat("en", {month: "long"}).format(comment.date);
-      var day = new Intl.DateTimeFormat("en", {day: "2-digit"}).format(comment.date);
-      var avatarUrl = comment.author.avatar_url ||
-        "https://eu.ui-avatars.com/api/?background=random&name=" + comment.author.name;
+      var year = new Intl.DateTimeFormat("en", { year: "numeric" }).format(comment.date);
+      var month = new Intl.DateTimeFormat("en", { month: "long" }).format(comment.date);
+      var day = new Intl.DateTimeFormat("en", { day: "2-digit" }).format(comment.date);
 
-      return `{{ safeJS (partial "welcomments/template.html"
-        (dict
-        "id" "${comment.id}"
-        "elementId" "welcomments__comment-${comment.id}"
-        "elementClassName" "welcomments__comment"
-        "nestingLevel" 0
-        "formattedDate" "${month} ${day}, ${year}"
-        "dateXmlSchema" "${comment.date}"
-        "authorName" "${comment.author.name}"
-        "authorWebsite" "${comment.author.website}"
-        "avatarUrl" "${avatarUrl}"
-        "message" "${comment.message}"
-        "apiUrl" $apiUrl
-        "websiteId" $websiteId
-        )) }}`;
+      {{- $avatar := $config.avatar -}}
+      {{- $avatarUrl := $avatar.server }}
+      {{- $avatar = merge $avatar (dict "name" comment.author.name) -}}
+      var avatarUrl = comment.author.avatar_url || "{{- printf "%s/?%s" $avatarUrl ($avatar | urlize) -}}";
+
+      {{- $template := dict -}}
+      {{- $template = merge $template (dict "id" "${comment.id}") -}}
+      {{- $template = merge $template (dict "elementId" "welcomments__comment-${comment.id}") -}}
+      {{- $template = merge $template (dict "elementClassName" "welcomments__comment") -}}
+      {{- $template = merge $template (dict "nestingLevel" 0) -}}
+      {{- $template = merge $template (dict "formattedDate" "${month} ${day}, ${year}") -}}
+      {{- $template = merge $template (dict "dateXmlSchema" "${comment.date}") -}}
+      {{- $template = merge $template (dict "authorName" "${comment.author.name}") -}}
+      {{- $template = merge $template (dict "authorWebsite" "${comment.author.website}") -}}
+      {{- $template = merge $template (dict "avatarUrl" "${avatarUrl}") -}}
+      {{- $template = merge $template (dict "message" "${comment.message}") -}}
+      {{- $template = merge $template (dict "apiUrl" $apiUrl) -}}
+      {{- $template = merge $template (dict "websiteId" $websiteId) -}}
+      return `{{ safeJS (partial "welcomments/template.html" $template) }}`;
     },
   };
 </script>

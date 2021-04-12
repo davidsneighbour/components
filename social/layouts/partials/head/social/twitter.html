@@ -1,10 +1,14 @@
-{{- partial "func/warnf" "calculating twitter meta data" . -}}
+{{- partial "func/throwWarning" "calculating twitter meta data" . -}}
 {{- $config := site.Data.dnb.social.twitter -}}
 {{- $page := false -}}
 {{- if .IsPage -}}{{- $page = true -}}{{- end -}}
 <!-- Twitter meta data generation.
      see https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/markup for details                -->
-<!--  -->
+<!-- https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards                          -->
+<!-- https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/summary-card-with-large-image         -->
+<!-- https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/markup                                -->
+<!-- https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-started                         -->
+<!-- https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/markup                                -->
 <!-- *************************************************************************************************************** -->
 {{- if isset $config "profile" -}}
 <!-- without defining a profile name we won't need any twitter header tags                                           -->

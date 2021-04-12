@@ -3,8 +3,8 @@ extended = false
 min = "0.81.0"
 
 [[module.mounts]]
-source = "data"
-target = "data"
+source = "data/dnb/welcomments"
+target = "data/dnb/welcomments"
 
 [[module.mounts]]
 source = "i18n"
