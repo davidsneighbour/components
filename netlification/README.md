@@ -1,10 +1,12 @@
 ## DNB Hugo Netlification
 
-This is a Hugo theme component with helpers for hosting your site on [Netlify](https://www.netlify.com/). 
+This is a Hugo theme component with helpers for hosting your Hugo generated static site on [Netlify](https://www.netlify.com/). If you don't use Netlify, you DO NOT require this module.
 
 **Redirects:** Adds redirects via HTTP headers. This type of redirection is faster and SEO wise better than Hugo's method of adding `meta-refresh` commands in dedicated files. 
 
-**Headers:** Adds headers that contain content security policies, caching directives and improves security and speed. 
+**CSP:** Adds Content Security Policies for improved security.
+
+**Headers:** Adds headers with caching and security directives to improves security and speed. 
 
 ### Installation
 
@@ -14,7 +16,7 @@ Step 1: enable modules in your own repository
 hugo mod init github.com/username/reponame
 ```
 
-Step 2: add the module to your required modules in config.toml
+Step 2: add the module to your required modules in `config.toml`:
 
 ```toml
 [module]
@@ -22,42 +24,23 @@ Step 2: add the module to your required modules in config.toml
 path = "github.com/dnb-hugo/components/netlification"
 ```
 
-The next time you run hugo it will download the latest version of the module.
-
-Step 3: To make this component work you need to add some lines to your config.toml. 
+or in your `config/module.toml`:
 
 ```toml
-[outputFormats]
-
-[outputFormats.REDIR]
-  mediatype = "text/netlify"
-  baseName = "_redirects"
-  isPlainText = true
-  notAlternative = true
-
-[outputFormats.HEADERS]
-  mediatype = "text/netlify"
-  baseName = "_headers"
-  isPlainText = true
-  notAlternative = true
-
-[mediaTypes]
-
-[mediaTypes."text/netlify"]
-  suffixes = [""]
-  delimiter = ""
+[[imports]]
+path = "github.com/dnb-hugo/components/netlification"
 ```
 
-Careful: Do not add a second `[outputFormats]` or `[mediaTypes]` section. If you already have one of these sections then add the subitems to the existing sections. 
+The next time you run hugo it will download the latest version of the module.
 
-Add REDIR and HEADERS to your home output formats:
+Step 3: Add `REDIR` and `HEADERS` to your home output formats:
 
 ```toml
 [outputs]
 home = [ ... others ... , "REDIR", "HEADERS" ]
 ```
 
-You should already have an `[output]` section, add `"REDIR", "HEADERS"` to it. Add them only to the `home` parameter.
+You should already have an `[outputs]` section, add `"REDIR", "HEADERS"` to it. Add them only to the `home` parameter, not to other definitions.
 
 ### Configuration
 
@@ -97,7 +80,7 @@ aliases:
 
 ##### Disable internal alias creation in Hugo
 
-If you are using Netlification you can speed up Hugo's page creation process a little bit by setting the config variable `disableAliases` to `true`. This will disable the default behaviour of creating an HTML file per alias to redirect via meta tags. 
+If you are using Netlification you can speed up Hugo's page creation process a little bit by setting the config variable `disableAliases` to `true`. This will disable the default behaviour of creating an HTML file per alias to redirect via meta tags and speed up site generation. 
 
 #### Headers
 
