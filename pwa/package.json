@@ -21,7 +21,7 @@
     "@dnb-hugo/textlint-config": "*",
     "cross-env": "7.0.3",
     "standard-version": "9.1.1",
-    "webpack": "5.26.2",
+    "webpack": "5.33.2",
     "webpack-cli": "4.5.0",
     "workbox-cacheable-response": "6.1.2",
     "workbox-core": "6.1.2",
