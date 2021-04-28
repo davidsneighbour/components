@@ -39,7 +39,7 @@ To make this component work you need to add some new `outputFormats` to your con
 [outputFormats]
 
 [outputFormats.manifest]
-mediaType = "text/webmanifest"
+mediaType = "application/manifest+json"
 baseName = "manifest"
 isPlainText = true
 notAlternative = true
@@ -49,7 +49,7 @@ or in your `config/_default/outputformats.toml`:
 
 ```toml
 [manifest]
-mediaType = "text/webmanifest"
+mediaType = "application/manifest+json"
 baseName = "manifest"
 isPlainText = true
 notAlternative = true
