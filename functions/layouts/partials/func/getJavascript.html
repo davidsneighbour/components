@@ -38,9 +38,13 @@
 {{ warnf "Loading %s" "js/script.js" }}
 
 {{/* add local script */}}
-{{ $jsLocal := resources.Get (printf "%s/%s" "js" ($.Param "dnb.javascript")) }}
-{{ $collection = $collection | append $jsLocal }}
-{{ warnf "Loading %s" $jsLocal }}
+{{ if (isset site.Params "dnb") }}
+  {{ with (index site.Params.dnb "javascript") }}
+    {{ $jsLocal := resources.Get (printf "%s/%s" "js" .) }}
+    {{ $collection = $collection | append $jsLocal }}
+    {{ warnf "Loading %s" $jsLocal }}
+  {{ end }}
+{{ end }}
 
 {{/* create and return javascript */}}
 {{ $js := $collection | resources.Concat "script.js" | resources.Minify | resources.Fingerprint "sha384" }}
