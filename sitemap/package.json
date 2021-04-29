@@ -1,6 +1,6 @@
 {
   "name": "@dnb-hugo-components/sitemap",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A sitemap for Hugo",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
   "homepage": "https://github.com/dnb-hugo/components/tree/master/sitemap",
