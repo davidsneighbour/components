@@ -1,6 +1,6 @@
 {
   "name": "@dnb-hugo/search-lunrjs",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Lunr.js search for Hugo",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
   "homepage": "https://github.com/dnb-hugo/components/tree/master/search-lunrjs",
