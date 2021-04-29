@@ -6,5 +6,5 @@ extended = false
 min = "0.56.0"
 
 [[module.mounts]]
-source = "layouts"
-target = "layouts"
+source = "layouts/robots.txt"
+target = "layouts/robots.txt"
