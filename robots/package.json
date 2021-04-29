@@ -1,6 +1,6 @@
 {
   "name": "@dnb-hugo/robots",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Configurable robots.txt for Hugo",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
   "homepage": "https://github.com/dnb-hugo/components/tree/master/robots",
