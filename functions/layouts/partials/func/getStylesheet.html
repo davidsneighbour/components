@@ -3,10 +3,10 @@
 
 {{/* load plugged in templated scripts from modules */}}
 {{ range $key, $value := $.Site.Data.dnb }}
-  {{ warnf "Checking SCSSTemplate configuration %s" $key }}
+  {{- partial "func/debug" (dict "message" (printf "Checking SCSSTemplate configuration %s" $key) "severity" "debug") -}}
   {{ if (and (isset $value "config") (isset $value.config "plugins") (isset $value.config.plugins "scssTemplates")) }}
     {{ range $value.config.plugins.scssTemplates }}
-      {{ warnf "Loading SCSSTemplate %s" . }}
+      {{- partial "func/debug" (dict "message" (printf "Loading SCSSTemplate %s" .) "severity" "debug") -}}
       {{ $template := . }}
       {{ $scss := resources.Get $template | resources.ExecuteAsTemplate (print now.Unix $template) . }}
       {{ $collection = $collection | append ($scss) }}
@@ -16,16 +16,16 @@
 
 {{/* load plugged in scripts from modules */}}
 {{ range $key, $value := $.Site.Data.dnb }}
-  {{ warnf "Checking SCSS configuration %s" $key }}
+  {{- partial "func/debug" (dict "message" (printf "Checking SCSS configuration %s" $key) "severity" "debug") -}}
   {{ if (and (isset $value "config") (isset $value.config "plugins") (isset $value.config.plugins "scss")) }}
     {{ range $value.config.plugins.scss }}
-      {{ warnf "Loading SCSSFile %s" . }}
+      {{- partial "func/debug" (dict "message" (printf "Loading SCSSFile %s" .) "severity" "debug") -}}
       {{ $collection = $collection | append (resources.Get .) }}
     {{ end }}
   {{ end }}
 {{ end }}
 
-{{ $collection = $collection | append (resources.Get "theme.scss") | resources.Concat "garuda.scss" }}
+{{ $collection = $collection | append (resources.Get "scss/theme.scss") | resources.Concat "stylesheet.scss" }}
 
 {{ partial "debugprint" $collection }}
 
@@ -35,7 +35,7 @@
 {{ $style := $collection | resources.ToCSS $options | resources.PostCSS (dict "config" "postcss.config.js") | resources.Minify |  resources.Fingerprint "sha512" }}
 {{ $config }}
 {{ with $config.postprocess }}
-  {{- warnf "Going into PostProcessing" -}}
+  {{- partial "func/debug" (dict "message" "going into PostProcessing" "context" . "severity" "info") -}}
   {{ $style = $style | resources.PostProcess }}
 {{ end }}
 {{ return $style }}

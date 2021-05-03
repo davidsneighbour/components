@@ -3,10 +3,10 @@
 
 {{/* load plugged in templated scripts from modules */}}
 {{ range $key, $value := $.Site.Data.dnb }}
-  {{ warnf "Loading data configuration %s" $key }}
+  {{- partial "func/debug" (dict "message" (printf "Loading data configuration %s" $key) "severity" "debug") -}}
   {{ if (and (isset $value "config") (isset $value.config "plugins") (isset $value.config.plugins "jsTemplates")) }}
     {{ range $value.config.plugins.jsTemplates }}
-      {{ warnf "Loading JSTemplate %s" . }}
+      {{- partial "func/debug" (dict "message" (printf "Loading JSTemplate %s" .) "severity" "debug") -}}
       {{ $template := . }}
       {{ $js := resources.Get $template | resources.ExecuteAsTemplate (print now.Unix $template) . }}
       {{ $collection = $collection | append ($js) }}
@@ -16,11 +16,11 @@
 
 {{/* load plugged in scripts from modules */}}
 {{ range $key, $value := $.Site.Data.dnb }}
-  {{ warnf "Loading data configuration %s" $key }}
+  {{- partial "func/debug" (dict "message" (printf "Loading data configuration %s" $key) "severity" "debug") -}}
   {{ if (and (isset $value "config") (isset $value.config "plugins") (isset $value.config.plugins "js")) }}
     {{ range $value.config.plugins.js }}
 {{/*      {{ if fileExists (printf "assets/%s" .) }}*/}}
-        {{ warnf "Loading JSFile %s" . }}
+    {{- partial "func/debug" (dict "message" (printf "Loading JSFile %s" .) "severity" "debug") -}}
         {{ $collection = $collection | append (resources.Get .) }}
 {{/*      {{ else }}*/}}
 {{/*        {{ errorf (printf "File %s can't be found" .) }}*/}}
@@ -31,18 +31,19 @@
 
 {{/* add webpack script */}}
 {{/*{{ $collection = $collection | append (resources.Get "main.js") }}*/}}
+{{/*{{- partial "func/debug" (dict "message" (printf "Loading %s" "main.js") "severity" "debug") -}}*/}}
 {{/*{{ warnf "Loading %s" "main.js" }}*/}}
 
 {{/* add global script */}}
 {{ $collection = $collection | append (resources.Get "js/script.js") }}
-{{ warnf "Loading %s" "js/script.js" }}
+{{- partial "func/debug" (dict "message" (printf "Loading %s" "js/script.js") "severity" "debug") -}}
 
 {{/* add local script */}}
 {{ if (isset site.Params "dnb") }}
   {{ with (index site.Params.dnb "javascript") }}
     {{ $jsLocal := resources.Get (printf "%s/%s" "js" .) }}
     {{ $collection = $collection | append $jsLocal }}
-    {{ warnf "Loading %s" $jsLocal }}
+    {{- partial "func/debug" (dict "message" (printf "Loading %s" $jsLocal) "severity" "debug") -}}
   {{ end }}
 {{ end }}
 
