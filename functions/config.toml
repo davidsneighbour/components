@@ -16,3 +16,14 @@ target = "layouts"
 [[module.mounts]]
 source = "data"
 target = "data"
+
+[params]
+[params.dnb]
+[params.dnb.global]
+# integer that defines the level of debugging output. the lower the less.
+# set to false to disable debugging. this does not influence Hugo's own
+# debugging options, it influences the debugging in DNB components and layouts.
+debug=10
+# set to true to disable additional note about debugging with link to info
+# this note is sent the first time the debug partial is called
+disableDebugNote=false
