@@ -14,9 +14,9 @@
     "url": "https://github.com/dnb-hugo/components/issues"
   },
   "devDependencies": {
-    "standard-version": "9.2.0",
-    "@commitlint/cli": "12.1.1",
-    "@commitlint/config-conventional": "12.1.1",
+    "standard-version": "9.3.0",
+    "@commitlint/cli": "12.1.4",
+    "@commitlint/config-conventional": "12.1.4",
     "remark-preset-lint-dnb": "github:dnb-hugo/remark-preset-lint-dnb"
   },
   "standard-version": {

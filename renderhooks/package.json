@@ -12,10 +12,10 @@
     ]
   },
   "devDependencies": {
-    "@commitlint/cli": "12.1.1",
+    "@commitlint/cli": "12.1.4",
     "@dnb-hugo/commitlint-config": "github:dnb-hugo/commitlint-config",
     "@dnb-hugo/standard-version-config": "github:dnb-hugo/standard-version-config",
-    "standard-version": "9.2.0"
+    "standard-version": "9.3.0"
   },
   "homepage": "https://github.com/dnb-hugo/components/tree/master/renderhooks",
   "license": "MIT",
