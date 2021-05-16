@@ -25,9 +25,9 @@
   {{ end }}
 {{ end }}
 
-{{ $collection = $collection | append (resources.Get "scss/theme.scss") | resources.Concat "stylesheet.scss" }}
-
 {{ partial "debugprint" $collection }}
+
+{{ $collection = $collection | append (resources.Get "scss/theme.scss") | resources.Concat "stylesheet.scss" }}
 
 {{ $config := site.Data.dnb.functions.system.config }}
 

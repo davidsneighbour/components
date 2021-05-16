@@ -42,7 +42,9 @@
 {{ if (isset site.Params "dnb") }}
   {{ with (index site.Params.dnb "javascript") }}
     {{ $jsLocal := resources.Get (printf "%s/%s" "js" .) }}
-    {{ $collection = $collection | append $jsLocal }}
+    {{- with $jsLocal -}}
+      {{- $collection = $collection | append $jsLocal -}}
+    {{- end -}}
     {{- partial "func/debug" (dict "message" (printf "Loading %s" $jsLocal) "severity" "debug") -}}
   {{ end }}
 {{ end }}

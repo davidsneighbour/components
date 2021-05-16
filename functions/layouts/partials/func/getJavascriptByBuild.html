@@ -23,9 +23,11 @@
 {{ $sourceMap := "inline" }}{{- /* Whether to generate source maps. Enum, currently only inline (we will improve that). */ -}}
 {{ $options := ( dict "params" $params "minify" $minify "avoidTDZ" $avoidTDZ "target" $target "externals" $externals "defines" $defines "format" $format "sourceMap" $sourceMap ) }}
 
-{{ $js := resources.Get "js/theme.js" | js.Build $options}}
-{{ $js = $js | resources.Fingerprint "sha384"}}
-
-<script src="{{ $js.Permalink }}"></script>
+{{ $js := resources.Get "js/theme.js" }}
+{{ with $js }}
+  {{ $js | js.Build $options}}
+  {{ $js = $js | resources.Fingerprint "sha384"}}
+  <script src="{{ $js.Permalink }}"></script>
+{{ end }}
 
 {{/*{{ return $js }}*/}}
