@@ -2,24 +2,22 @@
 
 SCRIPTPATH="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 
-if test -f "$SCRIPTPATH"/replacements; then
-  while read -ra __; do
-    go mod edit -dropreplace ${__[0]}
-  done < "$SCRIPTPATH"/replacements
-fi
+#if test -f "$SCRIPTPATH"/replacements; then
+#  while read -ra __; do
+#    go mod edit -dropreplace ${__[0]}
+#  done < "$SCRIPTPATH"/replacements
+#fi
 
-hugo mod get -u ./...
+#hugo mod get -u ./...
 hugo mod tidy
 
 git add go.mod
-git add go.sum
+#git add go.sum
 
-#rm -rf public
-#hugo
-#git add public/ -f
+rm -rf resources/
 
-if test -f "$SCRIPTPATH"/replacements; then
-  while read -ra __; do
-    go mod edit -replace ${__[0]}=${__[1]}
-  done < "$SCRIPTPATH"/replacements
-fi
+#if test -f "$SCRIPTPATH"/replacements; then
+#  while read -ra __; do
+#    go mod edit -replace ${__[0]}=${__[1]}
+#  done < "$SCRIPTPATH"/replacements
+#fi

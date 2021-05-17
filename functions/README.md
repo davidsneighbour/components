@@ -41,17 +41,17 @@ While being named `functions` this component adds merely partials that return va
 ### Update
 
 ```shell
-hugo mod get -u github.com/dnb-hugo/components/functions # update this module
-hugo mod get -u # update all modules
+# update this module
+hugo mod get -u github.com/dnb-hugo/components/functions 
+# update all modules
+hugo mod get -u # 
 ```
 
 ### Available modules and usage instruction
 
 | Component | Description |
 | :--- | :--- |
-| [favicon](https://github.com/dnb-hugo/components/tree/main/favicon) ||
 | [functions](https://github.com/dnb-hugo/components/tree/main/functions) ||
-| [humans.txt](https://github.com/dnb-hugo/components/tree/main/humans.txt) ||
 | [netlification](https://github.com/dnb-hugo/components/tree/main/netlification) | a collection of tools that optimize your site on Netlify |
 | [opensearch](https://github.com/dnb-hugo/components/tree/main/opensearch) ||
 | [pwa](https://github.com/dnb-hugo/components/tree/main/pwa) ||
@@ -70,6 +70,7 @@ DNB Hugo are the elements that enhance and simplify your daily work with [Hugo, 
 | :--- | :--- |
 | [blocks](https://github.com/dnb-hugo/blocks) | Blocks are reusable page elements like headers, footers, content display etc.|
 | [components](https://github.com/dnb-hugo/components) | Components are preconfigured features like automatic search index creation, sitemap and robots.txt creation, etc. |
+| [hooks](https://github.com/dnb-hugo/hooks) | A collection of hooks for Hugo templates. |
 | [libraries](https://github.com/dnb-hugo/libraries) | Libraries are a collection of often used external packages, conveniently configured as modules for Hugo. |
 | [shortcodes](https://github.com/dnb-hugo/shortcodes) | Shortcodes are content particles that helpfully solve repeated tasks, like presentation, galleries and so on. |
 | [testcontent](https://github.com/dnb-hugo/testcontent) | Testcontent is a collection of testing content. Obviously. |
