@@ -6,21 +6,15 @@
   "bugs": {
     "url": "https://github.com/dnb-hugo/components/issues"
   },
-  "commitlint": {
-    "extends": [
-      "@dnb-hugo/commitlint-config"
-    ]
-  },
   "devDependencies": {
-    "@dnb-hugo/remark-preset-lint": "github:dnb-hugo/remark-preset-lint",
-    "@dnb-hugo/standard-version-config": "github:dnb-hugo/standard-version-config",
-    "@dnb-hugo/textlint-config": "github:dnb-hugo/textlint-config"
+    "@dnb-hugo/remark-config": "2.0.13",
+    "@dnb-hugo/standard-version-config": "2.0.12",
+    "@dnb-hugo/textlint-config": "2.0.12"
   },
   "homepage": "https://github.com/dnb-hugo/components/tree/master/functions",
   "license": "MIT",
   "private": true,
   "scripts": {
-    "commitlint": "commitlint --from=HEAD~1",
     "release": "standard-version --release-as patch -a -t \"functions/v\" --releaseCommitMessageFormat \"chore(release): functions/v{{currentTag}}\" && ./bin/release-hook-postrelease.sh",
     "release:major": "standard-version --release-as major -a -t \"functions/v\" --releaseCommitMessageFormat \"chore(release): functions/v{{currentTag}}\" && ./bin/release-hook-postrelease.sh",
     "release:next": "standard-version --release-as minor -a -t \"functions/v\" --releaseCommitMessageFormat \"chore(release): functions/v{{currentTag}}\" && ./bin/release-hook-postrelease.sh"
