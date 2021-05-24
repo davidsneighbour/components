@@ -7,9 +7,9 @@
     "url": "https://github.com/dnb-hugo/components/issues"
   },
   "devDependencies": {
-    "@dnb-hugo/remark-config": "2.0.13",
-    "@dnb-hugo/standard-version-config": "2.0.12",
-    "@dnb-hugo/textlint-config": "2.0.12"
+    "@dnb-hugo/remark-config": "2.0.17",
+    "@dnb-hugo/standard-version-config": "2.0.16",
+    "@dnb-hugo/textlint-config": "2.0.16"
   },
   "homepage": "https://github.com/dnb-hugo/components/tree/master/functions",
   "license": "MIT",
