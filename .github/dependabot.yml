@@ -7,7 +7,8 @@ updates:
   - package-ecosystem: "npm"
     directory: "/favicon"
     schedule:
-      interval: "daily"
+      interval: "weekly"
+      day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
     assignees:
@@ -22,7 +23,8 @@ updates:
   - package-ecosystem: "npm"
     directory: "/functions"
     schedule:
-      interval: "daily"
+      interval: "weekly"
+      day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
     assignees:
@@ -37,7 +39,8 @@ updates:
   - package-ecosystem: "npm"
     directory: "/humans.txt"
     schedule:
-      interval: "daily"
+      interval: "weekly"
+      day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
     assignees:
@@ -52,7 +55,8 @@ updates:
   - package-ecosystem: "npm"
     directory: "/netlification"
     schedule:
-      interval: "daily"
+      interval: "weekly"
+      day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
     assignees:
@@ -67,7 +71,8 @@ updates:
   - package-ecosystem: "npm"
     directory: "/opensearch"
     schedule:
-      interval: "daily"
+      interval: "weekly"
+      day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
     assignees:
@@ -82,7 +87,8 @@ updates:
   - package-ecosystem: "npm"
     directory: "/pwa"
     schedule:
-      interval: "daily"
+      interval: "weekly"
+      day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
     assignees:
@@ -97,7 +103,8 @@ updates:
   - package-ecosystem: "npm"
     directory: "/renderhooks"
     schedule:
-      interval: "daily"
+      interval: "weekly"
+      day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
     assignees:
@@ -112,7 +119,8 @@ updates:
   - package-ecosystem: "npm"
     directory: "/robots"
     schedule:
-      interval: "daily"
+      interval: "weekly"
+      day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
     assignees:
@@ -127,7 +135,8 @@ updates:
   - package-ecosystem: "npm"
     directory: "/search-algolia"
     schedule:
-      interval: "daily"
+      interval: "weekly"
+      day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
     assignees:
@@ -142,7 +151,8 @@ updates:
   - package-ecosystem: "npm"
     directory: "/search-lunrjs"
     schedule:
-      interval: "daily"
+      interval: "weekly"
+      day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
     assignees:
@@ -157,7 +167,8 @@ updates:
   - package-ecosystem: "npm"
     directory: "/sitemap"
     schedule:
-      interval: "daily"
+      interval: "weekly"
+      day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
     assignees:
@@ -172,7 +183,8 @@ updates:
   - package-ecosystem: "npm"
     directory: "/social"
     schedule:
-      interval: "daily"
+      interval: "weekly"
+      day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
     assignees:
