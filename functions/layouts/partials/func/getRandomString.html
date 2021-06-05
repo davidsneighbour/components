@@ -14,7 +14,10 @@
 - call with `partialCached` and a unique seed to reuse the random string
 
 */ -}}
-{{ $seed := .seed | default (printf "%s%s" site.Title now.Unix) }}
+{{ $seed := printf "%s%s" site.Title now.Unix }}
+{{ if isset . "seed" }}
+  {{ $seed = .seed }}
+{{ end }}
 {{ $limit := .limit | default 12 }}
 {{ $random := delimit (shuffle (split (md5 $seed) "" )) "" }}
 {{ return substr $random 0 $limit }}
