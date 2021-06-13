@@ -9,11 +9,13 @@
   {{ end }}
 {{ end }}
 
-{{- /* options for jsBuild */ -}}
-{{- /* 0.78.0 */ -}}
+{{- /*
+      options for jsBuild
+      requires Hugo 0.78+
+*/ -}}
 {{ $minify := true }}
 {{ $avoidTDZ := true }}
-{{ $target := "esnext" }}{{- /* one of es5, es2015, es2016, es2017, es2018, es2019, es2020 or esnext */ -}}
+{{ $target := "es2018" }}{{- /* one of es5, es2015, es2016, es2017, es2018, es2019, es2020 or esnext */ -}}
 {{ $externals := slice }}{{- /* If a dependency should not be included in the bundle (Ex. library loaded from a CDN.),
           it should be listed here.*/ -}}
 {{ $defines := dict }}{{- /* Allow to define a set of string replacement to be performed when building. Should be a map
@@ -27,7 +29,5 @@
 {{ with $js }}
   {{ $js | js.Build $options}}
   {{ $js = $js | resources.Fingerprint "sha384"}}
-  <script src="{{ $js.Permalink }}"></script>
+  {{ return $js }}
 {{ end }}
-
-{{/*{{ return $js }}*/}}
