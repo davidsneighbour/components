@@ -5,32 +5,42 @@
 {{- $autoupdate := $config.enable_autoupdate | default true }}
 {{- $title := $config.title | default (printf "%s" .Site.Title) }}
 {{- if gt (len $title) 16 }}
-  {{- warnf "OpenSearch: parameter %s must be 16 or less characters (see %s)" "title" $config.hookLink }}
+  {{- partial "func/debug"
+    (dict "message" (printf "opensearch: parameter %s must be 1024 or less characters (see %s)" $config.hookLink) "context" . "severity" "warn" "level" 6)
+  -}}
 {{- end }}
 {{- $description := $config.description | default (printf "%s %s" "Search on" .Site.Title) }}
 {{- if gt (len $description) 1024 }}
-  {{- warnf "OpenSearch: parameter %s must be 1024 or less characters (see %s)" "description" $config.hookLink }}
+  {{- partial "func/debug"
+    (dict "message" (printf "opensearch: parameter %s must be 1024 or less characters (see %s)" $config.hookLink) "context" . "severity" "info" "level" 8)
+  -}}
 {{- end }}
 {{- $searchUrl := "" }}
 {{- with $config.query_url }}
   {{- $searchUrl = printf "%s%s" $.Site.BaseURL . }}
 {{- else }}
   {{- $searchUrl = printf "%s%s" $.Site.BaseURL "search/?q={searchTerms}" }}
-  {{- warnf "OpenSearch: using default site search URL (see %s)" $config.hookLink }}
+  {{- partial "func/debug"
+    (dict "message" (printf "opensearch: using default site search URL (see %s)" $config.hookLink) "context" . "severity" "info" "level" 8)
+  -}}
 {{- end }}
 {{- $searchForm := "" }}
 {{- with $config.search_form }}
   {{- $searchForm = printf "%s%s" $.Site.BaseURL . }}
 {{- else }}
   {{- $searchForm = printf "%s%s" $.Site.BaseURL "search/" }}
-  {{- warnf "OpenSearch: using default site search form URL (see %s)" $config.hookLink }}
+  {{- partial "func/debug"
+    (dict "message" (printf "opensearch: using default site search form URL (see %s)" $config.hookLink) "context" . "severity" "info" "level" 8)
+  -}}
 {{- end }}
 {{- $image := "" }}
 {{- with $config.image }}
   {{- $image = printf "%s%s" $.Site.BaseURL . }}
 {{- else }}
   {{- $image = printf "%s%s" $.Site.BaseURL "favicon.png" }}
-  {{- warnf "OpenSearch: using default site search icon (see %s)" $config.hookLink }}
+  {{- partial "func/debug"
+    (dict "message" (printf "opensearch: using default site search icon (see %s)" $config.hookLink) "context" . "severity" "info" "level" 8)
+  -}}
 {{- end }}
 <ShortName>{{ $title }}</ShortName>
 <Description>{{ $description }}</Description>
