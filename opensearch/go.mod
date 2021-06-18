@@ -1,3 +1,3 @@
 module github.com/dnb-hugo/components/opensearch
 
-go 1.15
+go 1.16
