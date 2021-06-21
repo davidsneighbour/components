@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.33](https://github.com/dnb-hugo/components/compare/functions/v1.0.32...functions/v1.0.33) (2021-06-21)
+
+
+### Chore
+
+* update README.md ([accbaa4](https://github.com/dnb-hugo/components/commit/accbaa4fb080e090b30bb4f21fdda8a84dc12fa4))
+
 ### [1.0.32](https://github.com/dnb-hugo/components/compare/functions/v1.0.31...functions/v1.0.32) (2021-06-21)
 
 

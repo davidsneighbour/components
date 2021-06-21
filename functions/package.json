@@ -1,7 +1,7 @@
 {
   "name": "@dnb-hugo-components/functions",
   "description": "Template functions for Hugo",
-  "version": "1.0.32",
+  "version": "1.0.33",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
   "bugs": {
     "url": "https://github.com/dnb-hugo/components/issues"
