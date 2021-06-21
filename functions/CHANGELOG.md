@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.32](https://github.com/dnb-hugo/components/compare/functions/v1.0.31...functions/v1.0.32) (2021-06-21)
+
+
+### Chore
+
+* add eslint configuration ([f0169a9](https://github.com/dnb-hugo/components/commit/f0169a90207a35f2cb4c2b43e24df911b6288a44))
+* add fixpack configuration ([f21e2ed](https://github.com/dnb-hugo/components/commit/f21e2ed7977d968347623fc22c831c85181808b8))
+* cleanup build scripts ([6b2b1a2](https://github.com/dnb-hugo/components/commit/6b2b1a269cb9aa1c10262ce45fbbba9971e16161))
+* cleanup configuration and add assets directory ([38af073](https://github.com/dnb-hugo/components/commit/38af073f2641617139e1782c4eb08b923c203b5f))
+* move configuration into config directory ([0724a8d](https://github.com/dnb-hugo/components/commit/0724a8d58bdbcb917a265e0fe02127c01d9f4d37))
+* **deps:** update dependencies ([8541d3b](https://github.com/dnb-hugo/components/commit/8541d3bc8f056a858687b4ec8eafb1159d590316))
+* **release:** pwa/v1.1.12 ([0b388a1](https://github.com/dnb-hugo/components/commit/0b388a1d7de6b6e9732e2c13fd7038d49d9dcff1))
+
 ### [1.0.31](https://github.com/dnb-hugo/components/compare/functions/v1.0.30...functions/v1.0.31) (2021-06-18)
 
 
