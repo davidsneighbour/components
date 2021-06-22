@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.34](https://github.com/dnb-hugo/components/compare/functions/v1.0.33...functions/v1.0.34) (2021-06-22)
+
+
+### Bug Fixes
+
+* move configuration back to config file and set max hugo version to 0.83.1 ([301ab1e](https://github.com/dnb-hugo/components/commit/301ab1e17881ef19595a7c022c46085f082240ab))
+
 ### [1.0.33](https://github.com/dnb-hugo/components/compare/functions/v1.0.32...functions/v1.0.33) (2021-06-21)
 
 
