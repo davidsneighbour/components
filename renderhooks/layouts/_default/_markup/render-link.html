@@ -29,8 +29,8 @@ call via:
   {{- end -}}
 {{- end -}}
 <a href="{{ $link | safeURL }}"
-        {{- with .Title}} title="{{ . | safeHTMLAttr }}"{{ end -}}
-        {{- if $isRemote }} target="_blank" rel="noopener noreferrer"{{ end -}}
+  {{- with .Title}} title="{{ . | safeHTMLAttr }}"{{ end -}}
+  {{- if $isRemote }} target="_blank" rel="noopener noreferrer"{{ end -}}
 >
   {{- .Text | safeHTML -}}
 </a>
