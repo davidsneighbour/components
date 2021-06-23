@@ -15,4 +15,6 @@ target = "i18n"
 
 [[module.imports]]
 path = "github.com/dnb-hugo/components/functions"
-disabled = false
+disable = false
+ignoreConfig = false
+ignoreImports = false
