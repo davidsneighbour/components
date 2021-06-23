@@ -1,6 +1,7 @@
 [module.hugoVersion]
 extended = false
 min = "0.56.0"
+max = "0.83.1"
 
 [[module.mounts]]
 source = "data"
@@ -9,3 +10,15 @@ target = "data"
 [[module.mounts]]
 source = "layouts"
 target = "layouts"
+
+[outputFormats]
+[outputFormats.OpenSearch]
+mediatype = "application/opensearchdescription+xml"
+baseName = "opensearch"
+isPlainText = true
+notAlternative = true
+
+[mediaTypes]
+[mediaTypes."application/opensearchdescription+xml"]
+suffixes = ["xml"]
+delimiter = ""
