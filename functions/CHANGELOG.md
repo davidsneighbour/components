@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.35](https://github.com/dnb-hugo/components/compare/functions/v1.0.34...functions/v1.0.35) (2021-06-23)
+
+
+### Bug Fixes
+
+* typo ([e948b39](https://github.com/dnb-hugo/components/commit/e948b3999dd026c0bef8a50408bfc35f6bedd1c4))
+
+
+### Chore
+
+* remove max version restraint from config ([eb7ec44](https://github.com/dnb-hugo/components/commit/eb7ec44cc8e960415ee26fa2a883fefdfc432d04))
+* **deps:** update dependencies ([5a70a35](https://github.com/dnb-hugo/components/commit/5a70a3573cdc446f5c7fddbd1a52b7fd1fa258f9))
+* **deps:** update dependencies ([f2c3941](https://github.com/dnb-hugo/components/commit/f2c3941063dea0fdebf4bbf12887ace77fa02c2f))
+* **deps:** update dependencies and build system ([5162e08](https://github.com/dnb-hugo/components/commit/5162e0802c16c4159529d56e2f3d9d1822c5373f))
+* **deps:** update dependencies and build system ([dce4f95](https://github.com/dnb-hugo/components/commit/dce4f95d11bd3e63354efbc44af2ee98ddcd6cf6))
+* **deps:** update dependencies and build system ([3241478](https://github.com/dnb-hugo/components/commit/324147820250efdd5787df7a2e31038d2d74a1ff))
+* **deps:** update dependencies and build system ([0b01525](https://github.com/dnb-hugo/components/commit/0b015253c9c0fa1f7affbd5f998a644f89d66e1b))
+* **release:** netlification/v1.1.14 ([104b099](https://github.com/dnb-hugo/components/commit/104b099ff52f4929ccf41d56607f3913760a4ebd))
+* **release:** opensearch/v1.0.4 ([706ecba](https://github.com/dnb-hugo/components/commit/706ecba6719b12a1962df15f43a09cec0939a9b2))
+* **release:** pwa/v1.1.13 ([6139925](https://github.com/dnb-hugo/components/commit/613992574836c635026ad6339a287b95fee7453b))
+* **release:** renderhooks/v1.0.12 ([9ceb7cb](https://github.com/dnb-hugo/components/commit/9ceb7cb5d9256ab0adcc8755f13b7883e9f72776))
+* **release:** renderhooks/v1.0.13 ([6e9bad2](https://github.com/dnb-hugo/components/commit/6e9bad299937350d83375006bdd62a3d8b4cb5f8))
+* **release:** robots/v1.0.8 ([d1c4ed3](https://github.com/dnb-hugo/components/commit/d1c4ed38eee6bf39ab1f623ca3fce8bdd9af888a))
+* **release:** sitemap/v0.0.7 ([1a9de71](https://github.com/dnb-hugo/components/commit/1a9de7140e537ac08c4c9eda23c16891c8e081d3))
+* **release:** sitemap/v1.0.7 ([661f6ce](https://github.com/dnb-hugo/components/commit/661f6cedcd66d98a3b6b33db38266262b701417d))
+* set min and max versions and fix hook link ([0a4bfe5](https://github.com/dnb-hugo/components/commit/0a4bfe5b275d16392d28ec181b1c9c709928c651))
+
 ### [1.0.34](https://github.com/dnb-hugo/components/compare/functions/v1.0.33...functions/v1.0.34) (2021-06-22)
 
 
