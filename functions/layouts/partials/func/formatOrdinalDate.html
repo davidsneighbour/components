@@ -9,9 +9,9 @@
   {{- $shortend = "rd" -}}
 {{- end }}
 {{- return $date.Format (printf $format $shortend) -}}
-{{/*
+{{- /*
 evaluate:
 this should work too:
 {{- $shortend := humanize $date.Day -}}
 but doesn't right now.
-*/}}
+*/ -}}
