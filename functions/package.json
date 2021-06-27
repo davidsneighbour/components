@@ -9,7 +9,7 @@
   "devDependencies": {
     "@dnb-hugo/eslint-config": "3.0.1",
     "@dnb-hugo/remark-config": "3.0.1",
-    "@dnb-hugo/standard-version-config": "3.0.1",
+    "@dnb-hugo/standard-version-config": "3.0.13",
     "@dnb-hugo/textlint-config": "3.0.1"
   },
   "homepage": "https://github.com/dnb-hugo/components/tree/master/functions",
