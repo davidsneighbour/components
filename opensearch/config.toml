@@ -10,6 +10,10 @@ target = "data"
 source = "layouts"
 target = "layouts"
 
+# either:
+# copy this section into your own configuration
+# or:
+# add `_merge = "deep"` into the `[outputFormats]` section of your configuration
 [outputFormats]
 [outputFormats.OpenSearch]
 mediatype = "application/opensearchdescription+xml"
@@ -17,7 +21,11 @@ baseName = "opensearch"
 isPlainText = true
 notAlternative = true
 
+# either:
+# copy this section into your own configuration
+# or:
+# add `_merge = "deep"` into the `[mediaTypes]` section of your configuration
 [mediaTypes]
 [mediaTypes."application/opensearchdescription+xml"]
 suffixes = ["xml"]
-delimiter = ""
+delimiter = "."
