@@ -29,3 +29,8 @@ notAlternative = true
 [mediaTypes."application/opensearchdescription+xml"]
 suffixes = ["xml"]
 delimiter = "."
+
+# parameters
+[params]
+[params.dnb.opensearch]
+hookLink = "https://q.dnb9.xyz/opensearch"

@@ -1,0 +1,7 @@
+[slug]
+other = "opensearch"
+
+[error-url]
+other = "using default site search URL (see %s)"
+
+[error-slug]
