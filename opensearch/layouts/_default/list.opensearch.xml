@@ -4,10 +4,12 @@
 {{- $config := site.Params.dnb.opensearch }}
 {{- $autoupdate := $config.enable_autoupdate | default true }}
 {{- $title := $config.title | default (printf "%s" site.Title) }}
+{{- $messageslug := "%s: %s (see %s)" -}}
+{{- $slug := "opensearch" -}}
 {{- if gt (len $title) 16 }}
   {{- partial "func/debug"
     (dict
-      "message" (printf "opensearch: parameter %s must be 1024 or less characters (see %s)" $config.hookLink)
+      "message" (printf $messageslug $slug (i18n "dnb-opensearch-error-title") $config.hookLink)
       "context" .
       "severity" "debug"
     )
@@ -17,7 +19,7 @@
 {{- if gt (len $description) 1024 }}
   {{- partial "func/debug"
     (dict
-      "message" (printf "opensearch: parameter %s must be 1024 or less characters (see %s)" $config.hookLink)
+      "message" (printf $messageslug $slug (i18n "dnb-opensearch-error-description") $config.hookLink)
       "context" .
       "severity" "debug"
     )
@@ -30,7 +32,7 @@
   {{- $searchUrl = printf "%s%s" site.BaseURL "search/?q={searchTerms}" }}
   {{- partial "func/debug"
     (dict
-      "message" (printf "opensearch: using default site search URL (see %s)" $config.hookLink)
+      "message" (printf $messageslug $slug (i18n "dnb-opensearch-error-url") $config.hookLink)
       "context" .
       "severity" "debug"
     )
@@ -43,7 +45,7 @@
   {{- $searchForm = printf "%s%s" site.BaseURL "search/" }}
   {{- partial "func/debug"
     (dict
-      "message" (printf "opensearch: using default site search form URL (see %s)" $config.hookLink)
+      "message" (printf $messageslug $slug (i18n "dnb-opensearch-error-form") $config.hookLink)
       "context" .
       "severity" "debug"
     )
@@ -56,7 +58,7 @@
   {{- $image = printf "%s%s" site.BaseURL "favicon.png" }}
   {{- partial "func/debug"
     (dict
-      "message" (printf "opensearch: using default site search icon (see %s)" $config.hookLink)
+      "message" (printf $messageslug $slug (i18n "dnb-opensearch-error-icon") $config.hookLink)
       "context" .
       "severity" "debug"
     )
@@ -70,6 +72,6 @@
 <OutputEncoding>{{- $config.output_encoding | default "UTF-8" -}}</OutputEncoding>
 <InputEncoding>{{- $config.input_encoding | default "UTF-8" -}}</InputEncoding>
 {{- if $autoupdate -}}
-  <Url type="application/opensearchdescription+xml" rel="self" template="{{- site.BaseURL -}}opensearch.xml" />
+  <Url type="application/opensearchdescription+xml" rel="self" template="{{ "opensearch.xml" | absLangURL }}" />
 {{- end -}}
 </OpenSearchDescription>
