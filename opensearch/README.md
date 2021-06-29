@@ -50,7 +50,7 @@ You should already have an `[output]` section, add `"OpenSearch"` to it. Add the
 This will add a file opensearch.xml to your Website. You should now add a meta tag to your header that helps with automatically finding this file:
 
 ```gotemplate
-{{ partial "head/opensearch" . }}
+{{ partial "head/opensearch.html" . }}
 ```
 
 ### Configuration
