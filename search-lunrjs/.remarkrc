@@ -1,6 +1,0 @@
-{
-  "plugins": [
-    "@dnb-hugo/remark-preset-lint",
-    ["remark-lint-write-good", false]
-  ]
-}
