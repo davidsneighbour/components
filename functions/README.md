@@ -74,7 +74,7 @@ hugo mod get -u #
 | [blocks](https://github.com/dnb-hugo/blocks) | Blocks are reusable page elements like headers, footers, content display etc.|
 | [components](https://github.com/dnb-hugo/components) | Components are preconfigured features like automatic search index creation, sitemap and robots.txt creation, etc. |
 | [configurations](https://github.com/dnb-hugo/configurations) | A collection of configuration packages used in dnb-hugo |
-| [debugprint](https://github.com/dnb-hugo/debugprint) | Debugging for your Hugo layout files. |
+| [debug](https://github.com/dnb-hugo/debug) | Debugging for your Hugo layout files. |
 | [hooks](https://github.com/dnb-hugo/hooks) | Template hooks for Hugo themes |
 | [libraries](https://github.com/dnb-hugo/libraries) | Libraries are a collection of often used external packages, conveniently configured as modules for Hugo. |
 | [shortcodes](https://github.com/dnb-hugo/shortcodes) | Shortcodes are content particles that helpfully solve repeated tasks, like presentation, galleries and so on. |
