@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.39](https://github.com/dnb-hugo/components/compare/functions/v1.0.38...functions/v1.0.39) (2021-07-08)
+
+
+### Chore
+
+* **deps:** update dependencies ([63df295](https://github.com/dnb-hugo/components/commit/63df2959652705ef1f542413ed8042b212033512))
+
 ### [1.0.35](https://github.com/dnb-hugo/components/compare/functions/v1.0.34...functions/v1.0.35) (2021-06-23)
 
 
