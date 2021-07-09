@@ -15,7 +15,7 @@
     "@commitlint/cli": "12.1.4",
     "@commitlint/config-conventional": "12.1.4",
     "@dnb-hugo/browserslist-config": "3.0.13",
-    "@dnb-hugo/commitlint-config": "3.0.13",
+    "@dnb-hugo/commitlint-config": "3.0.21",
     "@dnb-hugo/eslint-config": "3.0.13",
     "@dnb-hugo/remark-config": "3.0.13",
     "@dnb-hugo/standard-version-config": "3.0.13",
