@@ -20,7 +20,7 @@
     "@dnb-hugo/commitlint-config": "3.0.13",
     "@dnb-hugo/eslint-config": "3.0.13",
     "@dnb-hugo/remark-config": "3.0.13",
-    "@dnb-hugo/standard-version-config": "3.0.13",
+    "@dnb-hugo/standard-version-config": "3.0.17",
     "@dnb-hugo/stylelint-config": "3.0.13",
     "@dnb-hugo/textlint-config": "3.0.13",
     "standard-version": "9.3.0"
