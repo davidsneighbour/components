@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.40](https://github.com/dnb-hugo/components/compare/functions/v1.0.39...functions/v1.0.40) (2021-07-09)
+
+
+### Features
+
+* add eval partial ([a2d06f3](https://github.com/dnb-hugo/components/commit/a2d06f3a97042fcccd93f761d6fa4f15d86730ee))
+
 ### [1.0.39](https://github.com/dnb-hugo/components/compare/functions/v1.0.38...functions/v1.0.39) (2021-07-08)
 
 
