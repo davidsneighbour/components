@@ -18,7 +18,7 @@
     "@dnb-hugo/remark-config": "3.0.13",
     "@dnb-hugo/standard-version-config": "3.0.13",
     "@dnb-hugo/stylelint-config": "3.0.13",
-    "@dnb-hugo/textlint-config": "3.0.13",
+    "@dnb-hugo/textlint-config": "3.0.17",
     "cross-env": "7.0.3",
     "standard-version": "9.3.0",
     "webpack": "5.42.0",
