@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/dnb-hugo/components/compare/functions/v1.0.40...functions/v1.1.0) (2021-07-13)
+
+
+### Chore
+
+* change dnb-hugo to dnb-org organisation ([d8afb27](https://github.com/dnb-hugo/components/commit/d8afb27ba94ba18335972eb23d07b947e5eed55f))
+
 ### [1.0.40](https://github.com/dnb-org/components/compare/functions/v1.0.39...functions/v1.0.40) (2021-07-09)
 
 
