@@ -1,6 +1,6 @@
 {
   "name": "@dnb-org/netlification",
-  "version": "1.1.14",
+  "version": "1.2.0",
   "description": "Tools for Hugo on Netlify",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
   "homepage": "https://github.com/dnb-org/components/tree/master/netlification",
