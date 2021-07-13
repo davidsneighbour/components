@@ -1,18 +1,18 @@
 {
-  "name": "@dnb-hugo-components/functions",
+  "name": "@dnb-org-components/functions",
   "description": "Template functions for Hugo",
   "version": "1.0.40",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
   "bugs": {
-    "url": "https://github.com/dnb-hugo/components/issues"
+    "url": "https://github.com/dnb-org/components/issues"
   },
   "devDependencies": {
-    "@dnb-hugo/eslint-config": "3.0.21",
-    "@dnb-hugo/remark-config": "3.0.17",
-    "@dnb-hugo/standard-version-config": "3.0.17",
-    "@dnb-hugo/textlint-config": "3.0.17"
+    "@dnb-org/eslint-config": "3.0.21",
+    "@dnb-org/remark-config": "3.0.17",
+    "@dnb-org/standard-version-config": "3.0.17",
+    "@dnb-org/textlint-config": "3.0.17"
   },
-  "homepage": "https://github.com/dnb-hugo/components/tree/master/functions",
+  "homepage": "https://github.com/dnb-org/components/tree/master/functions",
   "license": "MIT",
   "private": true,
   "scripts": {
