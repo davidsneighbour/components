@@ -21,14 +21,14 @@ Step 2: add the module to your required modules in `config.toml`:
 ```toml
 [module]
 [[module.imports]]
-path = "github.com/dnb-hugo/components/netlification"
+path = "github.com/dnb-org/components/netlification"
 ```
 
 or in your `config/module.toml`:
 
 ```toml
 [[imports]]
-path = "github.com/dnb-hugo/components/netlification"
+path = "github.com/dnb-org/components/netlification"
 ```
 
 The next time you run hugo it will download the latest version of the module.
@@ -50,7 +50,7 @@ You should already have an `[outputs]` section, add `"REDIR", "HEADERS"` to it. 
 
 Redirection takes aliases that are defined in the pages frontmatter and creates a 301 redirect for them. This is done via HTTP headers as opposed to the redirects via HTML meta tags that Hugo is doing. This is faster and might be better for SEO.
 
-Just keep defining them via frontmatter and let `dnb-hugo-netlification` do the rest. 
+Just keep defining them via frontmatter and let `dnb-org-netlification` do the rest. 
 
 ```yaml
 aliases:
@@ -88,7 +88,7 @@ Netlification uses considerate caching options. Stylesheets, javascripts, images
 
 ##### Content Security Policy
 
-Have a look in [data/dnb/netlification/config.toml](https://github.com/dnb-hugo/components/blob/main/netlification/data/dnb/netlification/config.toml) or [data/dnb/netlification/sample-config.toml](https://github.com/dnb-hugo/components/blob/main/netlification/data/dnb/netlification/sample-config.toml) to learn more. 
+Have a look in [data/dnb/netlification/config.toml](https://github.com/dnb-org/components/blob/main/netlification/data/dnb/netlification/config.toml) or [data/dnb/netlification/sample-config.toml](https://github.com/dnb-org/components/blob/main/netlification/data/dnb/netlification/sample-config.toml) to learn more. 
 
 ### Sample Configuration
 
@@ -167,7 +167,7 @@ netlify = ""
 To update this module:
 
 ```shell
-hugo mod get -u github.com/dnb-hugo/components/robots
+hugo mod get -u github.com/dnb-org/components/robots
 ```
 
 To update all modules:

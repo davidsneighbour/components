@@ -1,9 +1,9 @@
 {
-  "name": "@dnb-hugo/netlification",
+  "name": "@dnb-org/netlification",
   "version": "1.1.14",
   "description": "Tools for Hugo on Netlify",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
-  "homepage": "https://github.com/dnb-hugo/components/tree/master/netlification",
+  "homepage": "https://github.com/dnb-org/components/tree/master/netlification",
   "license": "MIT",
   "scripts": {
     "commitlint": "commitlint --from=HEAD~1",
@@ -12,24 +12,24 @@
     "release-major": "standard-version --release-as major -a -t \"netlification/v\"gi --releaseCommitMessageFormat \"chore(release): netlification/v{{currentTag}}\" && ./bin/release-hook-postrelease.sh"
   },
   "bugs": {
-    "url": "https://github.com/dnb-hugo/components/issues"
+    "url": "https://github.com/dnb-org/components/issues"
   },
   "devDependencies": {
     "@commitlint/cli": "12.1.4",
     "@commitlint/config-conventional": "12.1.4",
-    "@dnb-hugo/browserslist-config": "3.0.13",
-    "@dnb-hugo/commitlint-config": "3.0.13",
-    "@dnb-hugo/eslint-config": "3.0.13",
-    "@dnb-hugo/remark-config": "3.0.13",
-    "@dnb-hugo/standard-version-config": "3.0.13",
-    "@dnb-hugo/stylelint-config": "3.0.13",
-    "@dnb-hugo/textlint-config": "3.0.13",
+    "@dnb-org/browserslist-config": "3.0.13",
+    "@dnb-org/commitlint-config": "3.0.13",
+    "@dnb-org/eslint-config": "3.0.13",
+    "@dnb-org/remark-config": "3.0.13",
+    "@dnb-org/standard-version-config": "3.0.13",
+    "@dnb-org/stylelint-config": "3.0.13",
+    "@dnb-org/textlint-config": "3.0.13",
     "standard-version": "9.3.0"
   },
   "private": true,
   "commitlint": {
     "extends": [
-      "@dnb-hugo/commitlint-config"
+      "@dnb-org/commitlint-config"
     ]
   }
 }
