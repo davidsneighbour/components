@@ -1,7 +1,7 @@
 {
   "name": "@dnb-org-components/pwa",
   "description": "PWA for Hugo",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
   "bugs": {
     "url": "https://github.com/dnb-org/components/issues"
@@ -12,16 +12,16 @@
     ]
   },
   "devDependencies": {
-    "@dnb-org/browserslist-config": "3.0.13",
-    "@dnb-org/commitlint-config": "3.0.13",
-    "@dnb-org/eslint-config": "3.0.13",
-    "@dnb-org/remark-config": "3.0.13",
-    "@dnb-org/standard-version-config": "3.0.13",
-    "@dnb-org/stylelint-config": "3.0.13",
-    "@dnb-org/textlint-config": "3.0.13",
+    "@dnb-org/browserslist-config": "3.1.0",
+    "@dnb-org/commitlint-config": "3.1.0",
+    "@dnb-org/eslint-config": "3.1.0",
+    "@dnb-org/remark-config": "3.1.0",
+    "@dnb-org/standard-version-config": "3.1.0",
+    "@dnb-org/stylelint-config": "3.1.0",
+    "@dnb-org/textlint-config": "3.1.0",
     "cross-env": "7.0.3",
     "standard-version": "9.3.0",
-    "webpack": "5.42.0",
+    "webpack": "5.44.0",
     "webpack-cli": "4.7.2",
     "workbox-cacheable-response": "6.1.5",
     "workbox-core": "6.1.5",
