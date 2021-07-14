@@ -1,6 +1,6 @@
 {
   "name": "@dnb-org/search-algolia",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Algolia search for Hugo",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
   "homepage": "https://github.com/dnb-org/components/tree/master/search-algolia",
@@ -17,18 +17,8 @@
     "standard-version": "9.3.0",
     "@commitlint/cli": "12.1.4",
     "@commitlint/config-conventional": "12.1.4",
-    "@dnb-org/remark-config": "3.1.0"
-  },
-  "standard-version": {
-    "skip": {
-      "changelog": true
-    },
-    "bumpFiles": [
-      {
-        "filename": "package.json",
-        "type": "json"
-      }
-    ]
+    "@dnb-org/remark-config": "3.1.0",
+    "@dnb-org/standard-version-config": "3.1.0"
   },
   "private": true,
   "commitlint": {
