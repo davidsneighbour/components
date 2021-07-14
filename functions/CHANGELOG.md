@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/dnb-org/components/compare/functions/v0.0.7...functions/v1.1.1) (2021-07-14)
+
+
+### Chore
+
+* **release:** pwa/v1.1.14 ([3d32d80](https://github.com/dnb-org/components/commit/3d32d806ef4a1aa18f9796de7a19fa37aa8ef93f))
+
 ## [1.1.0](https://github.com/dnb-hugo/components/compare/functions/v1.0.40...functions/v1.1.0) (2021-07-13)
 
 
