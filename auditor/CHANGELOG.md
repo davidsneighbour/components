@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.7](https://github.com/dnb-org/components/compare/functions/v0.0.6...functions/v0.0.7) (2021-07-14)
+
 ### [0.0.6](https://github.com/dnb-org/components/compare/functions/v1.1.0...functions/v0.0.6) (2021-07-14)
 
 
