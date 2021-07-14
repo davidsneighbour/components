@@ -1,7 +1,7 @@
 {
   "name": "@dnb-org/opensearch",
   "description": "Opensearch configuration for Hugo",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
   "bugs": {
     "url": "https://github.com/dnb-org/components/issues"
@@ -12,12 +12,12 @@
     ]
   },
   "devDependencies": {
-    "@dnb-org/browserslist-config": "^3.0.13",
-    "@dnb-org/commitlint-config": "^3.0.13",
-    "@dnb-org/remark-config": "^3.0.13",
-    "@dnb-org/standard-version-config": "^3.0.13",
-    "@dnb-org/stylelint-config": "^3.0.13",
-    "@dnb-org/textlint-config": "^3.0.13",
+    "@dnb-org/browserslist-config": "^3.1.0",
+    "@dnb-org/commitlint-config": "^3.1.0",
+    "@dnb-org/remark-config": "^3.1.0",
+    "@dnb-org/standard-version-config": "^3.1.0",
+    "@dnb-org/stylelint-config": "^3.1.0",
+    "@dnb-org/textlint-config": "^3.1.0",
     "standard-version": "9.3.0"
   },
   "homepage": "https://github.com/dnb-org/components/tree/master/favicon",
