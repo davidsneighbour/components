@@ -1,7 +1,7 @@
 {
   "name": "@dnb-org/renderhooks",
   "description": "Render hooks for Hugo",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
   "bugs": {
     "url": "https://github.com/dnb-org/components/issues"
@@ -13,8 +13,8 @@
   },
   "devDependencies": {
     "@commitlint/cli": "12.1.4",
-    "@dnb-org/commitlint-config": "3.0.13",
-    "@dnb-org/standard-version-config": "3.0.13",
+    "@dnb-org/commitlint-config": "3.1.0",
+    "@dnb-org/standard-version-config": "3.1.0",
     "standard-version": "9.3.0"
   },
   "homepage": "https://github.com/dnb-org/components/tree/master/renderhooks",
