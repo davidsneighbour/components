@@ -10,7 +10,7 @@ import { ExpirationPlugin } from 'workbox-expiration';
 import { setCacheNameDetails } from 'workbox-core';
 
 setCacheNameDetails({
-  prefix: 'dnb-hugo-pwa',
+  prefix: 'dnb-org-pwa',
   suffix: 'v1'
 });
 

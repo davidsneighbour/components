@@ -1,3 +1,3 @@
-module github.com/dnb-hugo/components/welcomments
+module github.com/dnb-org/components/welcomments
 
 go 1.16

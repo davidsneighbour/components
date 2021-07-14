@@ -1,3 +1,3 @@
-module github.com/dnb-hugo/components/robots
+module github.com/dnb-org/components/robots
 
 go 1.16

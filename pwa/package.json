@@ -1,24 +1,24 @@
 {
-  "name": "@dnb-hugo-components/pwa",
+  "name": "@dnb-org-components/pwa",
   "description": "PWA for Hugo",
   "version": "1.1.13",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
   "bugs": {
-    "url": "https://github.com/dnb-hugo/components/issues"
+    "url": "https://github.com/dnb-org/components/issues"
   },
   "commitlint": {
     "extends": [
-      "@dnb-hugo/commitlint-config"
+      "@dnb-org/commitlint-config"
     ]
   },
   "devDependencies": {
-    "@dnb-hugo/browserslist-config": "3.0.13",
-    "@dnb-hugo/commitlint-config": "3.0.13",
-    "@dnb-hugo/eslint-config": "3.0.13",
-    "@dnb-hugo/remark-config": "3.0.13",
-    "@dnb-hugo/standard-version-config": "3.0.13",
-    "@dnb-hugo/stylelint-config": "3.0.13",
-    "@dnb-hugo/textlint-config": "3.0.13",
+    "@dnb-org/browserslist-config": "3.0.13",
+    "@dnb-org/commitlint-config": "3.0.13",
+    "@dnb-org/eslint-config": "3.0.13",
+    "@dnb-org/remark-config": "3.0.13",
+    "@dnb-org/standard-version-config": "3.0.13",
+    "@dnb-org/stylelint-config": "3.0.13",
+    "@dnb-org/textlint-config": "3.0.13",
     "cross-env": "7.0.3",
     "standard-version": "9.3.0",
     "webpack": "5.42.0",
@@ -31,7 +31,7 @@
     "workbox-strategies": "6.1.5",
     "workbox-webpack-plugin": "6.1.5"
   },
-  "homepage": "https://github.com/dnb-hugo/components/tree/master/pwa",
+  "homepage": "https://github.com/dnb-org/components/tree/master/pwa",
   "license": "MIT",
   "private": true,
   "scripts": {

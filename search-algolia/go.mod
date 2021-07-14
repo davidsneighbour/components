@@ -1,8 +1,8 @@
-module github.com/dnb-hugo/components/search-algolia
+module github.com/dnb-org/components/search-algolia
 
 go 1.16
 
 require (
-	github.com/dnb-hugo/components/functions v1.0.37 // indirect
-	github.com/dnb-hugo/debug v1.2.1 // indirect
+	github.com/dnb-org/components/functions v1.0.37 // indirect
+	github.com/dnb-org/debug v1.2.1 // indirect
 )

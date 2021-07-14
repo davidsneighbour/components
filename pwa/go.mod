@@ -1,3 +1,3 @@
-module github.com/dnb-hugo/components/pwa
+module github.com/dnb-org/components/pwa
 
 go 1.16

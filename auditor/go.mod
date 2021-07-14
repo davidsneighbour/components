@@ -1,3 +1,3 @@
-module github.com/dnb-hugo/components/auditor
+module github.com/dnb-org/components/auditor
 
 go 1.16

@@ -1,27 +1,27 @@
 {
-  "name": "@dnb-hugo-components/welcomments",
+  "name": "@dnb-org-components/welcomments",
   "description": "Welcomments for Hugo",
   "version": "0.0.7",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
   "bugs": {
-    "url": "https://github.com/dnb-hugo/components/issues"
+    "url": "https://github.com/dnb-org/components/issues"
   },
   "commitlint": {
     "extends": [
-      "@dnb-hugo/commitlint-config"
+      "@dnb-org/commitlint-config"
     ]
   },
   "devDependencies": {
-    "@dnb-hugo/browserslist-config": "2.2.9",
-    "@dnb-hugo/commitlint-config": "2.0.18",
-    "@dnb-hugo/eslint-config": "2.0.15",
-    "@dnb-hugo/remark-config": "2.0.11",
-    "@dnb-hugo/standard-version-config": "2.0.10",
-    "@dnb-hugo/stylelint-config": "2.0.24",
-    "@dnb-hugo/textlint-config": "2.0.10",
+    "@dnb-org/browserslist-config": "2.2.9",
+    "@dnb-org/commitlint-config": "2.0.18",
+    "@dnb-org/eslint-config": "2.0.15",
+    "@dnb-org/remark-config": "2.0.11",
+    "@dnb-org/standard-version-config": "2.0.10",
+    "@dnb-org/stylelint-config": "2.0.24",
+    "@dnb-org/textlint-config": "2.0.10",
     "standard-version": "9.3.0"
   },
-  "homepage": "https://github.com/dnb-hugo/components/tree/master/welcomments",
+  "homepage": "https://github.com/dnb-org/components/tree/master/welcomments",
   "license": "MIT",
   "private": true,
   "scripts": {

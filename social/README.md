@@ -15,7 +15,7 @@ Step 2: add this module to your required modules in config.toml
 ```
 [module]
 [[module.imports]]
-path = "github.com/dnb-hugo/components/social"
+path = "github.com/dnb-org/components/social"
 ```
 
 The next time you run hugo it will download the latest version of the module.
@@ -25,7 +25,7 @@ The next time you run hugo it will download the latest version of the module.
 To update this module:
 
 ```
-hugo mod get -u github.com/dnb-hugo/components/social
+hugo mod get -u github.com/dnb-org/components/social
 ```
 
 To update all modules:

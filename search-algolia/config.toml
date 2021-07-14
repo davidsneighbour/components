@@ -15,13 +15,13 @@ source = "layouts"
 target = "layouts"
 
 [[module.imports]]
-path = "github.com/dnb-hugo/components/functions"
+path = "github.com/dnb-org/components/functions"
 disable = false
 ignoreConfig = false
 ignoreImports = false
 
 [[module.imports]]
-path = "github.com/dnb-hugo/debug"
+path = "github.com/dnb-org/debug"
 disable = false
 ignoreConfig = false
 ignoreImports = false
