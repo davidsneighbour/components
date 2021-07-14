@@ -1,7 +1,7 @@
 {
   "name": "@dnb-org-components/welcomments",
   "description": "Welcomments for Hugo",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
   "bugs": {
     "url": "https://github.com/dnb-org/components/issues"
@@ -12,13 +12,13 @@
     ]
   },
   "devDependencies": {
-    "@dnb-org/browserslist-config": "2.2.9",
-    "@dnb-org/commitlint-config": "2.0.18",
-    "@dnb-org/eslint-config": "2.0.15",
-    "@dnb-org/remark-config": "2.0.11",
-    "@dnb-org/standard-version-config": "2.0.10",
-    "@dnb-org/stylelint-config": "2.0.24",
-    "@dnb-org/textlint-config": "2.0.10",
+    "@dnb-org/browserslist-config": "3.1.0",
+    "@dnb-org/commitlint-config": "3.1.0",
+    "@dnb-org/eslint-config": "3.1.0",
+    "@dnb-org/remark-config": "3.1.0",
+    "@dnb-org/standard-version-config": "3.1.0",
+    "@dnb-org/stylelint-config": "3.1.0",
+    "@dnb-org/textlint-config": "3.1.0",
     "standard-version": "9.3.0"
   },
   "homepage": "https://github.com/dnb-org/components/tree/master/welcomments",
