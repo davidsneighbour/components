@@ -21,7 +21,7 @@
     "@dnb-org/standard-version-config": "3.1.0",
     "@dnb-org/stylelint-config": "3.1.0",
     "@dnb-org/textlint-config": "3.1.0",
-    "standard-version": "9.3.0"
+    "standard-version": "9.3.1"
   },
   "homepage": "https://github.com/dnb-org/components/tree/master/social",
   "license": "MIT",
