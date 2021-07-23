@@ -2,6 +2,37 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.2](https://github.com/dnb-org/components/compare/functions/v1.1.1...functions/v1.1.2) (2021-07-23)
+
+
+### Features
+
+* add partial that displays the current year ([2524bb0](https://github.com/dnb-org/components/commit/2524bb07940d6f05cf1d1a022d61aa597eaeb112))
+
+
+### Bug Fixes
+
+* random string seed creation ([b9b8df6](https://github.com/dnb-org/components/commit/b9b8df650ac9c8961b58f2f4eca0c9e8efb54d90))
+
+
+### Chore
+
+* **deps-dev:** bump standard-version from 9.3.0 to 9.3.1 in /pwa ([#357](https://github.com/dnb-org/components/issues/357)) ([debcba7](https://github.com/dnb-org/components/commit/debcba72b8decf89aa4cbf590a67e9f31e634c7b))
+* **deps-dev:** bump standard-version from 9.3.0 to 9.3.1 in /robots ([#354](https://github.com/dnb-org/components/issues/354)) ([9b1756e](https://github.com/dnb-org/components/commit/9b1756e4bb8e8430c7401c4678374d40bffec47f))
+* **deps-dev:** bump standard-version from 9.3.0 to 9.3.1 in /sitemap ([#355](https://github.com/dnb-org/components/issues/355)) ([2b24859](https://github.com/dnb-org/components/commit/2b248594e14e72614f2d9dc8a504a1005f5a9c87))
+* **deps-dev:** bump standard-version from 9.3.0 to 9.3.1 in /social ([#353](https://github.com/dnb-org/components/issues/353)) ([3a7d5d3](https://github.com/dnb-org/components/commit/3a7d5d3e293afd4227978989173efdb31c94b877))
+* **deps-dev:** bump standard-version in /netlification ([#356](https://github.com/dnb-org/components/issues/356)) ([226f842](https://github.com/dnb-org/components/commit/226f842210065a93084f8fce0fa302025e7563e8))
+* **deps-dev:** bump standard-version in /opensearch ([#352](https://github.com/dnb-org/components/issues/352)) ([c3ea724](https://github.com/dnb-org/components/commit/c3ea72462fe7440e5754a648578adb5256664cef))
+* **deps-dev:** bump standard-version in /renderhooks ([#350](https://github.com/dnb-org/components/issues/350)) ([43db771](https://github.com/dnb-org/components/commit/43db771fe62d518351df4a4791b5fd12d4758a1d))
+* **deps-dev:** bump standard-version in /search-algolia ([#351](https://github.com/dnb-org/components/issues/351)) ([7e75077](https://github.com/dnb-org/components/commit/7e750771d07c8de29b00451bc71fe988046236de))
+* **release:** opensearch/v1.0.11 ([6be4e3c](https://github.com/dnb-org/components/commit/6be4e3c296951a64ac13ad40d6247e6dfd5f5535))
+* **release:** opensearch/v1.0.12 ([ea5de5c](https://github.com/dnb-org/components/commit/ea5de5cb882160cf425056c4ca1ae51c1acf7c61))
+* **release:** renderhooks/v1.0.14 ([73cbf10](https://github.com/dnb-org/components/commit/73cbf10dacf749c9a8fd3c9f4ce2e5eb8be5d961))
+* **release:** search-algolia/v1.0.12 ([5249866](https://github.com/dnb-org/components/commit/524986685721b06d53c0356f19e101896efa0175))
+* **release:** sitemap/v0.0.9 ([a480621](https://github.com/dnb-org/components/commit/a4806213185397906825bbc6a878189bd29e98e0))
+* **release:** sitemap/v1.0.8 ([937ae5d](https://github.com/dnb-org/components/commit/937ae5d600388691693d613656869f73ed04ed83))
+* **release:** welcomments/v0.0.8 ([42644fc](https://github.com/dnb-org/components/commit/42644fcc3b15dc270737dec7d68d2c92e36da8ae))
+
 ### [1.1.1](https://github.com/dnb-org/components/compare/functions/v0.0.7...functions/v1.1.1) (2021-07-14)
 
 
