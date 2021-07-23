@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.3](https://github.com/dnb-org/components/compare/functions/v1.1.2...functions/v1.1.3) (2021-07-23)
+
+
+### Bug Fixes
+
+* let getYear return the year instead of printing it ([2b5d149](https://github.com/dnb-org/components/commit/2b5d149f01f536ea1a14a4710d857821a98c27e2))
+
 ### [1.1.2](https://github.com/dnb-org/components/compare/functions/v1.1.1...functions/v1.1.2) (2021-07-23)
 
 
