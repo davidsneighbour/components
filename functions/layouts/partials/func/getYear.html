@@ -1,2 +1,2 @@
 {{ $year := dateFormat "2006" now }}
-{{ return $year }}
+{{ return (int $year) }}
