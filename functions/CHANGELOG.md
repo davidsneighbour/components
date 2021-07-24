@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.4](https://github.com/dnb-org/components/compare/functions/v1.1.3...functions/v1.1.4) (2021-07-24)
+
+
+### Bug Fixes
+
+* return year as integer ([a1ad934](https://github.com/dnb-org/components/commit/a1ad934d320af0620ea6385da7d66c6808872df7))
+
 ### [1.1.3](https://github.com/dnb-org/components/compare/functions/v1.1.2...functions/v1.1.3) (2021-07-23)
 
 
