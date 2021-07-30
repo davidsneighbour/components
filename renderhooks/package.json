@@ -12,7 +12,7 @@
     ]
   },
   "devDependencies": {
-    "@commitlint/cli": "12.1.4",
+    "@commitlint/cli": "13.1.0",
     "@dnb-org/commitlint-config": "3.1.0",
     "@dnb-org/standard-version-config": "3.1.0",
     "standard-version": "9.3.1"
