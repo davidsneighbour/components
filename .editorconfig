@@ -1,4 +1,8 @@
 ; https://editorconfig.org
+; This configuration has opiniated settings for the following formats:
+; *.css *.html *.js *.json *.md *.scss *.sh
+; If a dedicated object is missing for a certain format then the root object is
+; the setup desired.
 
 root = true
 
