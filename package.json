@@ -1,0 +1,26 @@
+{
+  "name": "@dnb-org/components",
+  "description": "DNB Hugo's repo of Hugo components.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Patrick Kollitsch",
+    "email": "patrick@davids-neighbour.com",
+    "web": "https://davids-neighbour.com"
+  },
+  "bugs": {
+    "url": "https://github.com/dnb-org/components/issues"
+  },
+  "devDependencies": {
+    "@dnb-org/all": "3.2.3"
+  },
+  "homepage": "https://github.com/dnb-org/components#readme",
+  "keywords": [
+    "gohugo",
+    "modules"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dnb-org/components.git"
+  }
+}
