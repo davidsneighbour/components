@@ -15,8 +15,7 @@
   },
   "homepage": "https://github.com/dnb-org/components#readme",
   "keywords": [
-    "gohugo",
-    "modules"
+    "configuration"
   ],
   "license": "MIT",
   "repository": {
