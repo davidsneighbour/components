@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.16](https://github.com/dnb-org/components/compare/pwa/v1.1.15...pwa/v1.1.16) (2021-08-13)
+
+
+### Chore
+
+* **config:** move configuration into config directory and add outputformats ([cf14f0d](https://github.com/dnb-org/components/commit/cf14f0daee845553171baee1848d671d114eaab0))
+* remove root folder dependencies ([1512643](https://github.com/dnb-org/components/commit/1512643d9766f2af683c0b211da8539e0cf6ace3))
+* update configuration ([4fce9d4](https://github.com/dnb-org/components/commit/4fce9d4b2e1166f1e14e71e1edb23608eb2dadb5))
+
 ### [1.1.15](https://github.com/dnb-org/components/compare/pwa/v1.1.14...pwa/v1.1.15) (2021-08-13)
 
 
