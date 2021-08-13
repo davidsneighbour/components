@@ -10,9 +10,6 @@
   "bugs": {
     "url": "https://github.com/dnb-org/components/issues"
   },
-  "devDependencies": {
-    "@dnb-org/all": "3.2.8"
-  },
   "homepage": "https://github.com/dnb-org/components#readme",
   "keywords": [
     "configuration"
