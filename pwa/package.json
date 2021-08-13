@@ -12,17 +12,7 @@
     ]
   },
   "devDependencies": {
-    "@dnb-org/browserslist-config": "3.2.8",
-    "@dnb-org/commitlint-config": "3.2.8",
-    "@dnb-org/eslint-config": "3.2.8",
-    "@dnb-org/remark-config": "3.2.9",
-    "@dnb-org/standard-version-config": "3.2.8",
-    "@dnb-org/stylelint-config": "3.2.8",
-    "@dnb-org/textlint-config": "3.2.8",
-    "cross-env": "7.0.3",
-    "standard-version": "9.3.1",
-    "webpack": "5.50.0",
-    "webpack-cli": "4.7.2",
+    "@dnb-org/all": "3.2.16",
     "workbox-cacheable-response": "6.2.4",
     "workbox-core": "6.2.4",
     "workbox-expiration": "6.2.4",

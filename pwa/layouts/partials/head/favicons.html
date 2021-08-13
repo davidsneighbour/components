@@ -1,11 +1,11 @@
 {{- $icon := resources.Get "favicon/favicon.png" -}}
-{{ if ne nil $icon }}
+{{- if ne nil $icon -}}
 <link rel="apple-touch-icon" sizes="180x180" href="{{- ($icon.Resize "180x180").Permalink -}}">
 <link rel="apple-touch-icon" sizes="192x192" href="{{- ($icon.Resize "192x192").Permalink -}}">
 <link rel="icon" type="image/png" sizes="32x32" href="{{- ($icon.Resize "32x32").Permalink -}}">
 <link rel="icon" type="image/png" sizes="16x16" href="{{- ($icon.Resize "16x16").Permalink -}}">
 <link rel="mask-icon" href="{{- ($icon.Resize "192x192").Permalink -}}" color="#ffffff">
 <meta name="theme-color" content="#ffffff">
-{{ else }}
-{{ warnf "No favicon defined. " }}
-{{ end }}
+{{- else -}}
+{{- warnf "No favicon defined. " -}}
+{{- end -}}

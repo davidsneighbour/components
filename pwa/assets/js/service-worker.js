@@ -1,84 +1,84 @@
 // console.log('Hello from service-worker.js');
 
-import { registerRoute, setCatchHandler } from 'workbox-routing';
-import { CacheFirst, NetworkFirst, StaleWhileRevalidate } from 'workbox-strategies';
-import { matchPrecache, precacheAndRoute } from 'workbox-precaching';
+import { registerRoute, setCatchHandler } from "workbox-routing";
+import { CacheFirst, NetworkFirst, StaleWhileRevalidate } from "workbox-strategies";
+import { matchPrecache, precacheAndRoute } from "workbox-precaching";
 // Used for filtering matches based on status code, header, or both
-import { CacheableResponsePlugin } from 'workbox-cacheable-response';
+import { CacheableResponsePlugin } from "workbox-cacheable-response";
 // Used to limit entries in cache, remove entries after a certain period of time
-import { ExpirationPlugin } from 'workbox-expiration';
-import { setCacheNameDetails } from 'workbox-core';
+import { ExpirationPlugin } from "workbox-expiration";
+import { setCacheNameDetails } from "workbox-core";
 
 setCacheNameDetails({
-  prefix: 'dnb-org-pwa',
-  suffix: 'v1'
+  prefix: "dnb-org-pwa",
+  suffix: "v1"
 });
 
 registerRoute(
-  ({request}) => request.destination === 'script' ||
-    request.destination === 'style',
+  ({ request }) => request.destination === "script" ||
+    request.destination === "style",
   new StaleWhileRevalidate({
-    cacheName: 'static-resources',
+    cacheName: "static-resources"
   })
 );
 
 // Cache page navigations (html) with a Network First strategy
 registerRoute(
   // Check to see if the request is a navigation to a new page
-  ({ request }) => request.mode === 'navigate',
+  ({ request }) => request.mode === "navigate",
   // Use a Network First caching strategy
   new NetworkFirst({
     // Put all cached files in a cache named 'pages'
-    cacheName: 'pages',
+    cacheName: "pages",
     plugins: [
       // Ensure that only requests that result in a 200 status are cached
       new CacheableResponsePlugin({
-        statuses: [200],
-      }),
-    ],
-  }),
+        statuses: [200]
+      })
+    ]
+  })
 );
 
 // Cache CSS, JS, and Web Worker requests with a Stale While Revalidate strategy
 registerRoute(
   // Check to see if the request's destination is style for stylesheets, script for JavaScript, or worker for web worker
   ({ request }) =>
-    request.destination === 'style' ||
-    request.destination === 'script' ||
-    request.destination === 'worker',
+    request.destination === "style" ||
+    request.destination === "script" ||
+    request.destination === "worker",
   // Use a Stale While Revalidate caching strategy
   new StaleWhileRevalidate({
     // Put all cached files in a cache named 'assets'
-    cacheName: 'assets',
+    cacheName: "assets",
     plugins: [
       // Ensure that only requests that result in a 200 status are cached
       new CacheableResponsePlugin({
-        statuses: [200],
-      }),
-    ],
-  }),
+        statuses: [200]
+      })
+    ]
+  })
 );
 
 // Cache images with a Cache First strategy
 registerRoute(
   // Check to see if the request's destination is style for an image
-  ({ request }) => request.destination === 'image',
+  ({ request }) => request.destination === "image",
   // Use a Cache First caching strategy
   new CacheFirst({
     // Put all cached files in a cache named 'images'
-    cacheName: 'images',
+    cacheName: "images",
     plugins: [
       // Ensure that only requests that result in a 200 status are cached
       new CacheableResponsePlugin({
-        statuses: [200],
+        statuses: [200]
       }),
       // Don't cache more than 50 items, and expire them after 30 days
       new ExpirationPlugin({
         maxEntries: 50,
-        maxAgeSeconds: 60 * 60 * 24 * 30, // 30 Days
-      }),
-    ],
-  }),
+        maxAgeSeconds: 60 * 60 * 24 * 30 // 30 Days
+      })
+    ]
+  })
 );
 
 // Use with precache injection
@@ -88,8 +88,8 @@ precacheAndRoute(self.__WB_MANIFEST);
 // Catch routing errors, like if the user is offline
 setCatchHandler(async ({ event }) => {
   // Return the precached offline page if a document is being requested
-  if (event.request.destination === 'document') {
-    return matchPrecache('/offline.html');
+  if (event.request.destination === "document") {
+    return matchPrecache("/offline.html");
   }
 
   return Response.error();

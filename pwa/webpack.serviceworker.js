@@ -40,6 +40,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'static'),
     filename: '[name].[fullhash].js',
+    clean: true,
   },
 
   performance: {
