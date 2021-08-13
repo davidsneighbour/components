@@ -33,29 +33,7 @@ disabled = false
 
 The next time you run `hugo` it will download the latest version of this module.
 
-To make this component work you need to add some new `outputFormats` to your configuration in `config.toml`: 
-
-```toml
-[outputFormats]
-
-[outputFormats.manifest]
-mediaType = "application/manifest+json"
-baseName = "manifest"
-isPlainText = true
-notAlternative = true
-```
-
-or in your `config/_default/outputformats.toml`:
-
-```toml
-[manifest]
-mediaType = "application/manifest+json"
-baseName = "manifest"
-isPlainText = true
-notAlternative = true
-```
-
-Add the manifest to your _home_ output formats in `config.toml`:
+To make this component work you need to add the manifest to your _home_ output formats in `config.toml`:
 
 ```toml
 [outputs]
@@ -102,7 +80,7 @@ Notes:
 Hugo itself will check on a regular base for updates. To force an update of this module run one of the following commands on your CLI. 
 
 ```shell
-hugo mod get -u github.com/dnb-org/components/robots
+hugo mod get -u github.com/dnb-org/components/pwa # or
 hugo mod get -u # update all modules
 ```
 

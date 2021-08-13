@@ -1,15 +1,15 @@
-[module.hugoVersion]
+[hugoVersion]
 extended = false
 min = "0.80.0"
 
-[[module.mounts]]
+[[mounts]]
 source = "layouts"
 target = "layouts"
 
-[[module.mounts]]
+[[mounts]]
 source = "static"
 target = "static"
 
-[[module.mounts]]
+[[mounts]]
 source = "static/service-worker.js"
 target = "assets/service-worker.js"
