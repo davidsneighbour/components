@@ -2,6 +2,70 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.15](https://github.com/dnb-org/components/compare/pwa/v1.1.14...pwa/v1.1.15) (2021-08-13)
+
+
+### Features
+
+* add partial that displays the current year ([2524bb0](https://github.com/dnb-org/components/commit/2524bb07940d6f05cf1d1a022d61aa597eaeb112))
+
+
+### Bug Fixes
+
+* cleanup service-worker creation ([8eabe71](https://github.com/dnb-org/components/commit/8eabe7166492f96cebf2983cf20000ffbe1b90a5))
+* let getYear return the year instead of printing it ([2b5d149](https://github.com/dnb-org/components/commit/2b5d149f01f536ea1a14a4710d857821a98c27e2))
+* random string seed creation ([b9b8df6](https://github.com/dnb-org/components/commit/b9b8df650ac9c8961b58f2f4eca0c9e8efb54d90))
+* return year as integer ([a1ad934](https://github.com/dnb-org/components/commit/a1ad934d320af0620ea6385da7d66c6808872df7))
+
+
+### Chore
+
+* cleanup double license file ([00701cd](https://github.com/dnb-org/components/commit/00701cd3b6eafcf40d9362b7616f77bb094db6a4))
+* **config:** move editorconfig to root directory ([6b23764](https://github.com/dnb-org/components/commit/6b23764e5c9d8504c3036a729406df7cfc9861cc))
+* **deps-dev:** bump @dnb-org/remark-config from 3.2.8 to 3.2.9 in /pwa ([#470](https://github.com/dnb-org/components/issues/470)) ([29c4d13](https://github.com/dnb-org/components/commit/29c4d131cbd6b0c77d350262cbdceb192da7feeb))
+* **deps-dev:** bump @dnb-org/remark-config in /auditor ([#479](https://github.com/dnb-org/components/issues/479)) ([523b0e0](https://github.com/dnb-org/components/commit/523b0e001d751104fc7dc83ae9a77dd41664b550))
+* **deps-dev:** bump @dnb-org/remark-config in /functions ([#469](https://github.com/dnb-org/components/issues/469)) ([47f98f6](https://github.com/dnb-org/components/commit/47f98f68b125b8c65704e72f7bc546b0c765c799))
+* **deps-dev:** bump @dnb-org/remark-config in /netlification ([#467](https://github.com/dnb-org/components/issues/467)) ([6d59865](https://github.com/dnb-org/components/commit/6d59865d6b17ecd937ce3684aeb09cde9b70b9d1))
+* **deps-dev:** bump @dnb-org/remark-config in /robots ([#407](https://github.com/dnb-org/components/issues/407)) ([edf47d0](https://github.com/dnb-org/components/commit/edf47d0638a78a982ae24fbf122607806d0a9ecc))
+* **deps-dev:** bump @dnb-org/remark-config in /robots ([#472](https://github.com/dnb-org/components/issues/472)) ([1877a54](https://github.com/dnb-org/components/commit/1877a5417d0a3c41edc3da311ba12fbe33c7cc4e))
+* **deps-dev:** bump @dnb-org/remark-config in /search-algolia ([#466](https://github.com/dnb-org/components/issues/466)) ([44780ad](https://github.com/dnb-org/components/commit/44780adbc10ca4cb7980e77ee7180b53778b8361))
+* **deps-dev:** bump @dnb-org/remark-config in /sitemap ([#468](https://github.com/dnb-org/components/issues/468)) ([a705208](https://github.com/dnb-org/components/commit/a705208b9247963139dee8e58808935d5f437540))
+* **deps-dev:** bump @dnb-org/remark-config in /social ([#471](https://github.com/dnb-org/components/issues/471)) ([4ad74c3](https://github.com/dnb-org/components/commit/4ad74c32d3300fc5281623b65ad3b06457340cbb))
+* **deps-dev:** bump @dnb-org/stylelint-config in /pwa ([#408](https://github.com/dnb-org/components/issues/408)) ([0b45fd2](https://github.com/dnb-org/components/commit/0b45fd2db435dd3dc09f4e4ebbfd38138b23edd4))
+* **deps-dev:** bump standard-version from 9.3.0 to 9.3.1 in /pwa ([#357](https://github.com/dnb-org/components/issues/357)) ([debcba7](https://github.com/dnb-org/components/commit/debcba72b8decf89aa4cbf590a67e9f31e634c7b))
+* **deps-dev:** bump standard-version from 9.3.0 to 9.3.1 in /robots ([#354](https://github.com/dnb-org/components/issues/354)) ([9b1756e](https://github.com/dnb-org/components/commit/9b1756e4bb8e8430c7401c4678374d40bffec47f))
+* **deps-dev:** bump standard-version from 9.3.0 to 9.3.1 in /sitemap ([#355](https://github.com/dnb-org/components/issues/355)) ([2b24859](https://github.com/dnb-org/components/commit/2b248594e14e72614f2d9dc8a504a1005f5a9c87))
+* **deps-dev:** bump standard-version from 9.3.0 to 9.3.1 in /social ([#353](https://github.com/dnb-org/components/issues/353)) ([3a7d5d3](https://github.com/dnb-org/components/commit/3a7d5d3e293afd4227978989173efdb31c94b877))
+* **deps-dev:** bump standard-version in /netlification ([#356](https://github.com/dnb-org/components/issues/356)) ([226f842](https://github.com/dnb-org/components/commit/226f842210065a93084f8fce0fa302025e7563e8))
+* **deps-dev:** bump standard-version in /opensearch ([#352](https://github.com/dnb-org/components/issues/352)) ([c3ea724](https://github.com/dnb-org/components/commit/c3ea72462fe7440e5754a648578adb5256664cef))
+* **deps-dev:** bump standard-version in /renderhooks ([#350](https://github.com/dnb-org/components/issues/350)) ([43db771](https://github.com/dnb-org/components/commit/43db771fe62d518351df4a4791b5fd12d4758a1d))
+* **deps-dev:** bump standard-version in /search-algolia ([#351](https://github.com/dnb-org/components/issues/351)) ([7e75077](https://github.com/dnb-org/components/commit/7e750771d07c8de29b00451bc71fe988046236de))
+* **deps-dev:** bump webpack from 5.44.0 to 5.46.0 in /pwa ([#358](https://github.com/dnb-org/components/issues/358)) ([246bd85](https://github.com/dnb-org/components/commit/246bd852b691fe4bc149cc4083c00d1b9507fe3e))
+* **deps-dev:** bump webpack from 5.49.0 to 5.50.0 in /pwa ([#477](https://github.com/dnb-org/components/issues/477)) ([65959c1](https://github.com/dnb-org/components/commit/65959c16c358a1aed846364a2bfa7ef9d4a0af41))
+* **deps-dev:** bump workbox-cacheable-response in /pwa ([#474](https://github.com/dnb-org/components/issues/474)) ([ffba64c](https://github.com/dnb-org/components/commit/ffba64cef82fcfb658af94c29b435e67691c21c1))
+* **deps-dev:** bump workbox-core from 6.2.0 to 6.2.4 in /pwa ([#476](https://github.com/dnb-org/components/issues/476)) ([b0a1d11](https://github.com/dnb-org/components/commit/b0a1d1172c9ed698c30aadf72cc458ac31037281))
+* **deps-dev:** bump workbox-expiration from 6.2.0 to 6.2.4 in /pwa ([#475](https://github.com/dnb-org/components/issues/475)) ([be92558](https://github.com/dnb-org/components/commit/be92558fe3106773b34d5fbf9e3236d627dd11d8))
+* **deps-dev:** bump workbox-precaching from 6.2.0 to 6.2.4 in /pwa ([#478](https://github.com/dnb-org/components/issues/478)) ([73558ba](https://github.com/dnb-org/components/commit/73558bae79065035a6041de2efd6d430c9ba9dd4))
+* **deps-dev:** bump workbox-routing from 6.2.0 to 6.2.4 in /pwa ([#473](https://github.com/dnb-org/components/issues/473)) ([57ffd9e](https://github.com/dnb-org/components/commit/57ffd9e605dd0e57cb560844ec97c8fafebdfe33))
+* **deps-dev:** bump workbox-strategies from 6.2.0 to 6.2.4 in /pwa ([#480](https://github.com/dnb-org/components/issues/480)) ([f37f097](https://github.com/dnb-org/components/commit/f37f097b99c8088b9fe78f1b893fffffd54c3dba))
+* **deps-dev:** bump workbox-webpack-plugin from 6.2.0 to 6.2.4 in /pwa ([#481](https://github.com/dnb-org/components/issues/481)) ([d68b3df](https://github.com/dnb-org/components/commit/d68b3df6bfb9d334b0c3fa704133be87bb5f4586))
+* **deps:** update dependencies ([f0a682e](https://github.com/dnb-org/components/commit/f0a682e70c6d08c6e7a2d55c629591ceec719289))
+* **deps:** update dependencies ([71a5d71](https://github.com/dnb-org/components/commit/71a5d713f6b31625b400c52f5c2b61e421d46a7f))
+* fix keywords ([6e0c2a4](https://github.com/dnb-org/components/commit/6e0c2a45cb8085183a0b8667b93e2e109a2b4e84))
+* reconfigure repository ([4208d75](https://github.com/dnb-org/components/commit/4208d7569b373e5d486b0956b86ea0213d6e3463))
+* **release:** functions/v1.1.1 ([e57edc1](https://github.com/dnb-org/components/commit/e57edc1cacc8a3428cbb33c9f13537aff144f137))
+* **release:** functions/v1.1.2 ([e68cd0e](https://github.com/dnb-org/components/commit/e68cd0ea4586e7fa9589d1366ce9c88dbc09ae41))
+* **release:** functions/v1.1.3 ([bdb88c6](https://github.com/dnb-org/components/commit/bdb88c64b904e7f921784319bcb563c20441903f))
+* **release:** functions/v1.1.4 ([bef9114](https://github.com/dnb-org/components/commit/bef9114d2ec9c78e47cbc3dff1bb106bdc8baf73))
+* **release:** opensearch/v1.0.11 ([6be4e3c](https://github.com/dnb-org/components/commit/6be4e3c296951a64ac13ad40d6247e6dfd5f5535))
+* **release:** opensearch/v1.0.12 ([ea5de5c](https://github.com/dnb-org/components/commit/ea5de5cb882160cf425056c4ca1ae51c1acf7c61))
+* **release:** renderhooks/v1.0.14 ([73cbf10](https://github.com/dnb-org/components/commit/73cbf10dacf749c9a8fd3c9f4ce2e5eb8be5d961))
+* **release:** search-algolia/v1.0.12 ([5249866](https://github.com/dnb-org/components/commit/524986685721b06d53c0356f19e101896efa0175))
+* **release:** sitemap/v0.0.9 ([a480621](https://github.com/dnb-org/components/commit/a4806213185397906825bbc6a878189bd29e98e0))
+* **release:** sitemap/v1.0.8 ([937ae5d](https://github.com/dnb-org/components/commit/937ae5d600388691693d613656869f73ed04ed83))
+* **release:** welcomments/v0.0.8 ([42644fc](https://github.com/dnb-org/components/commit/42644fcc3b15dc270737dec7d68d2c92e36da8ae))
+* remove deprecated modules ([fc4e0c1](https://github.com/dnb-org/components/commit/fc4e0c1baeb12ff2d3b2cf23ffc700fa9f53bff1))
+
 ### [1.1.14](https://github.com/dnb-org/components/compare/pwa/v1.1.13...pwa/v1.1.14) (2021-07-14)
 
 
