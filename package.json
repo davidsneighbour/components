@@ -7,16 +7,17 @@
     "email": "patrick@davids-neighbour.com",
     "web": "https://davids-neighbour.com"
   },
-  "bugs": {
-    "url": "https://github.com/dnb-org/components/issues"
-  },
+  "bugs": "https://github.com/dnb-org/components/issues",
   "homepage": "https://github.com/dnb-org/components#readme",
   "keywords": [
-    "configuration"
+    "configuration",
+    "gohugo",
+    "golang",
+    "components",
+    "modules",
+    "module",
+    "extension"
   ],
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dnb-org/components.git"
-  }
+  "repository": "dnb-org/components"
 }
