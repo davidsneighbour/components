@@ -8,7 +8,7 @@
   },
   "devDependencies": {
     "@dnb-org/eslint-config": "3.2.8",
-    "@dnb-org/remark-config": "3.2.9",
+    "@dnb-org/remark-config": "3.2.18",
     "@dnb-org/standard-version-config": "3.2.8",
     "@dnb-org/textlint-config": "3.2.8"
   },
