@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/auditor/resources/_gen" />
+      <excludeFolder url="file://$MODULE_DIR$/functions/resources/_gen" />
+      <excludeFolder url="file://$MODULE_DIR$/netlification/resources/_gen" />
+      <excludeFolder url="file://$MODULE_DIR$/netlification/scratch" />
+      <excludeFolder url="file://$MODULE_DIR$/opensearch/resources/_gen" />
+      <excludeFolder url="file://$MODULE_DIR$/renderhooks/resources/_gen" />
+      <excludeFolder url="file://$MODULE_DIR$/robots/resources/_gen" />
+      <excludeFolder url="file://$MODULE_DIR$/search-algolia/resources/_gen" />
+      <excludeFolder url="file://$MODULE_DIR$/sitemap/resources/_gen" />
+      <excludeFolder url="file://$MODULE_DIR$/social/resources/_gen" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
