@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0](https://github.com/dnb-org/components/compare/security/v0.0.1...security/v1.0.0) (2021-08-23)
+
+
+### Features
+
+* add configuration documentation and layout fixes ([d24d7b7](https://github.com/dnb-org/components/commit/d24d7b7e7497aea06e59af9dd8b8dff6844cec7d))
+* proper path for security.txt file ([989ecd1](https://github.com/dnb-org/components/commit/989ecd1fce7d97f0b54214b94582d6dfeb8b9f09))
+
 ### 0.0.1 (2021-08-23)
 
 

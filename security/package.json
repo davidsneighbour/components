@@ -1,6 +1,6 @@
 {
   "name": "@dnb-component/security",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Security related features for Hugo.",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
   "homepage": "https://github.com/dnb-org/components/tree/master/security",
