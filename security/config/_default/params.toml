@@ -1,0 +1,12 @@
+[dnb.security.policy]
+content = ""
+
+[dnb.security.txt]
+intro = "Information related to reporting security vulnerabilities of this site."
+contact = ""
+encryption = ""
+acknowledgements = ""
+languages = "en"
+canonical = ""
+policy = ""
+hiring = ""

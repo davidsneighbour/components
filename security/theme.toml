@@ -1,0 +1,11 @@
+name = "DNB Hugo Security"
+license = "MIT"
+licenselink = "https://github.com/dnb-org/components/blob/master/security/LICENSE"
+description = "Security related features for Hugo."
+homepage = "https://github.com/dnb-org/components"
+tags = ["security.txt"]
+min_version = "0.56.0"
+
+[author]
+  name = "Patrick Kollitsch"
+  homepage = "https://davids-neighbour.com/"

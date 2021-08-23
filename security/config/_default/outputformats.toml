@@ -1,0 +1,5 @@
+[security]
+mediatype = "text/plain"
+baseName = "security"
+isPlainText = true
+notAlternative = true

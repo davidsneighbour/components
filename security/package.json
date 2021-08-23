@@ -1,0 +1,24 @@
+{
+  "name": "@dnb-component/security",
+  "version": "0.0.0",
+  "description": "Security related features for Hugo.",
+  "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
+  "homepage": "https://github.com/dnb-org/components/tree/master/security",
+  "license": "MIT",
+  "scripts": {
+    "release": "standard-version --release-as patch -a -t \"security/v\" --releaseCommitMessageFormat \"chore(release): security/v{{currentTag}}\" && git push --follow-tags origin main",
+    "release-next": "standard-version --release-as minor -a -t \"security/v\" --releaseCommitMessageFormat \"chore(release): security/v{{currentTag}}\" && git push --follow-tags origin main",
+    "release-major": "standard-version --release-as major -a -t \"security/v\" --releaseCommitMessageFormat \"chore(release): security/v{{currentTag}}\" && git push --follow-tags origin main"
+  },
+  "bugs": {
+    "url": "https://github.com/dnb-org/components/issues"
+  },
+  "devDependencies": {
+    "@dnb-org/commitlint-config": "3.2.8",
+    "@dnb-org/eslint-config": "3.2.18",
+    "@dnb-org/remark-config": "3.2.18",
+    "@dnb-org/standard-version-config": "3.2.8",
+    "@dnb-org/textlint-config": "3.2.8"
+  },
+  "private": true
+}
