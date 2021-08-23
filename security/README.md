@@ -31,6 +31,15 @@ hugo mod get -u # update all modules
 
 To be written...
 
+### Example Implementations
+
+A few real-world implementation examples of security.txt
+
+- https://www.bbc.com/.well-known/security.txt
+- https://www.theguardian.com/.well-known/security.txt
+- https://www.google.com/.well-known/security.txt
+- https://davids-neighbour.com/.well-known/security.txt
+
 ### Other components in DNB Hugo components
 
 -   [favicon](https://github.com/dnb-org/components/tree/main/favicon)
