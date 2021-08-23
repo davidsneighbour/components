@@ -1,6 +1,6 @@
 [security]
 mediatype = "text/plain"
-path = ".well-known/"
+path = "/.well-known/"
 baseName = "security"
 isPlainText = true
 notAlternative = true
