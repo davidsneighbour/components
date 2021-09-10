@@ -4,6 +4,17 @@ This is a Hugo theme component with helpers to convert your static [Hugo](https:
 
 This is work in progress and while many parts are already working, some changes to the setup will occur. Please watch the releases of this repository to be alerted about changes.
 
+### Features
+
+- :heavy_check_mark: Favicon for apps and sites
+- :heavy_check_mark: simple PWA setup
+- :heavy_check_mark: Happy Google lighthouse testing
+- :x: Improvements for easier "drop in" to other websites/modules
+- :x: Add layout system for offline page creation
+- :x: Add configuration system
+- :x: improve configuration of implemented functionality in the service worker
+- :x: add detailed documentation for all configuration options
+
 ### Installing
 
 #### Setup module and output formats
@@ -84,14 +95,7 @@ hugo mod get -u github.com/dnb-org/components/pwa # or
 hugo mod get -u # update all modules
 ```
 
-### ToDo
 
-- Improvements for easier "drop in" to other websites/modules
-- Add layout system for offline page creation
-- Add configuration system
-- make sure, that Lighthouse shows full PWA capabilities (currently only installability shows up)
-- improve configuration of implemented functionality in the service worker
-- add detailed documentation for all configuration options
 
 ### Other components
 
