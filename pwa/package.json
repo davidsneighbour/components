@@ -19,7 +19,7 @@
     "workbox-precaching": "6.2.4",
     "workbox-routing": "6.2.4",
     "workbox-strategies": "6.2.4",
-    "workbox-webpack-plugin": "6.2.4"
+    "workbox-webpack-plugin": "6.3.0"
   },
   "homepage": "https://github.com/dnb-org/components/tree/master/pwa",
   "license": "MIT",
