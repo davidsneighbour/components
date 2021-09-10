@@ -15,7 +15,7 @@
     "@dnb-org/all": "3.2.20",
     "workbox-cacheable-response": "6.3.0",
     "workbox-core": "6.3.0",
-    "workbox-expiration": "6.2.4",
+    "workbox-expiration": "6.3.0",
     "workbox-precaching": "6.3.0",
     "workbox-routing": "6.3.0",
     "workbox-strategies": "6.3.0",
