@@ -15,7 +15,7 @@
     "@commitlint/cli": "13.1.0",
     "@commitlint/config-conventional": "13.1.0",
     "@dnb-org/browserslist-config": "3.2.20",
-    "@dnb-org/commitlint-config": "3.2.8",
+    "@dnb-org/commitlint-config": "3.2.22",
     "@dnb-org/eslint-config": "3.2.19",
     "@dnb-org/remark-config": "3.2.18",
     "@dnb-org/standard-version-config": "3.2.8",
