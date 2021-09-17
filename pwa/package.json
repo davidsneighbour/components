@@ -12,7 +12,7 @@
     ]
   },
   "devDependencies": {
-    "@dnb-org/all": "3.2.20",
+    "@dnb-org/all": "3.2.24",
     "workbox-cacheable-response": "6.3.0",
     "workbox-core": "6.3.0",
     "workbox-expiration": "6.3.0",
