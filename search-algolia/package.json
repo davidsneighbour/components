@@ -18,7 +18,7 @@
     "@commitlint/cli": "13.1.0",
     "@commitlint/config-conventional": "13.1.0",
     "@dnb-org/remark-config": "3.2.18",
-    "@dnb-org/standard-version-config": "3.2.8"
+    "@dnb-org/standard-version-config": "3.2.22"
   },
   "private": true,
   "commitlint": {
