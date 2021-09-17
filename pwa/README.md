@@ -95,8 +95,6 @@ hugo mod get -u github.com/dnb-org/components/pwa # or
 hugo mod get -u # update all modules
 ```
 
-
-
 ### Other components
 
 | Component | Description |
@@ -115,7 +113,7 @@ hugo mod get -u # update all modules
 
 ### Other elements
 
-[DNB Hugo](https://github.com/dnb-org) are the elements that enhance and simplify your daily work with [Hugo, the world's fastest framework for building websites](https://gohugo.io/). Included are:
+[Hugo elements by David's Neighbour](https://github.com/dnb-org) are modules that enhance and simplify your daily work with [Hugo, the world's fastest framework for building websites](https://gohugo.io/). Included are:
 
 | Element | Description |
 | :--- | :--- |

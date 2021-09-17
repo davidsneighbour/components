@@ -9,7 +9,3 @@ target = "layouts"
 [[mounts]]
 source = "static"
 target = "static"
-
-[[mounts]]
-source = "static/service-worker.js"
-target = "assets/service-worker.js"

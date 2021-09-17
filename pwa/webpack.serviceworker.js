@@ -1,5 +1,5 @@
-const {GenerateSW} = require('workbox-webpack-plugin');
-const path = require("path");
+import { GenerateSW } from 'workbox-webpack-plugin';
+import { join } from "path";
 
 class FileListPlugin {
   apply(compiler) {
@@ -26,35 +26,26 @@ class FileListPlugin {
   }
 }
 
-module.exports = {
-
-  mode: 'production',
-  devtool: 'source-map',
-
-  target: 'webworker',
-
-  entry: {
-    main: path.join(__dirname, 'assets/js', 'service-worker.js'),
-  },
-
-  output: {
-    path: path.join(__dirname, 'static'),
-    filename: '[name].[fullhash].js',
-    clean: true,
-  },
-
-  performance: {
-    maxEntrypointSize: 400000,
-    maxAssetSize: 100000,
-    hints: 'warning'
-  },
-
-  plugins: [
-    new FileListPlugin(),
-    new GenerateSW({
-      clientsClaim: true,
-      skipWaiting: true,
-    })
-  ]
-
+export const mode = 'production';
+export const devtool = 'source-map';
+export const target = 'webworker';
+export const entry = {
+  main: join(__dirname, 'assets/js', 'service-worker.js'),
 };
+export const output = {
+  path: join(__dirname, 'static'),
+  filename: '[name].[fullhash].js',
+  clean: true,
+};
+export const performance = {
+  maxEntrypointSize: 400000,
+  maxAssetSize: 100000,
+  hints: 'warning'
+};
+export const plugins = [
+  new FileListPlugin(),
+  new GenerateSW({
+    clientsClaim: true,
+    skipWaiting: true,
+  })
+];
