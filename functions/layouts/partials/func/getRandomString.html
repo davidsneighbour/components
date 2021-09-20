@@ -18,6 +18,9 @@
 {{ if isset . "seed" }}
   {{ $seed = .seed }}
 {{ end }}
-{{ $limit := .limit | default 12 }}
+{{ $limit := 12 }}
+{{ with .limit }}
+  {{ $limit = . }}
+{{ end }}
 {{ $random := delimit (shuffle (split (md5 $seed) "" )) "" }}
 {{ return substr $random 0 $limit }}
