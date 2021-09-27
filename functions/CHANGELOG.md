@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.6](https://github.com/dnb-org/components/compare/functions/v1.1.5...functions/v1.1.6) (2021-09-27)
+
+
+### Bug Fixes
+
+* check if file exist before trying to .Get it in getjavascript ([6073c9f](https://github.com/dnb-org/components/commit/6073c9f74e07b3515da32d48697824cd1ab9113f))
+* fingerprinting js failed ([bd8dece](https://github.com/dnb-org/components/commit/bd8dece2cd42b40b220e4c4b1155d3b99cb51c68))
+
+
+### Chore
+
+* **deps-dev:** bump @dnb-org/all from 3.2.24 to 3.2.25 in /pwa ([#568](https://github.com/dnb-org/components/issues/568)) ([c16b477](https://github.com/dnb-org/components/commit/c16b4779f7db2e1322c23486ccc185444ca13e56))
+* **deps-dev:** bump @dnb-org/remark-config in /auditor ([#571](https://github.com/dnb-org/components/issues/571)) ([0732b61](https://github.com/dnb-org/components/commit/0732b6175711ff20f03cc3b0c4571238465b1fb7))
+* **deps-dev:** bump @dnb-org/remark-config in /functions ([#565](https://github.com/dnb-org/components/issues/565)) ([8d072b3](https://github.com/dnb-org/components/commit/8d072b33743a36914298c0036c3224af97351195))
+* **deps-dev:** bump @dnb-org/remark-config in /netlification ([#570](https://github.com/dnb-org/components/issues/570)) ([b0f85f2](https://github.com/dnb-org/components/commit/b0f85f2f3539f818047b09ae8f72d1f848a9821f))
+* **deps-dev:** bump @dnb-org/remark-config in /robots ([#569](https://github.com/dnb-org/components/issues/569)) ([06382d0](https://github.com/dnb-org/components/commit/06382d04ce83fca316d4182f8b292d186ffdf274))
+* **deps-dev:** bump @dnb-org/remark-config in /search-algolia ([#564](https://github.com/dnb-org/components/issues/564)) ([6e129d0](https://github.com/dnb-org/components/commit/6e129d0c27edf1549630e951f089a0699c112fc0))
+* **deps-dev:** bump @dnb-org/remark-config in /sitemap ([#566](https://github.com/dnb-org/components/issues/566)) ([a4d5291](https://github.com/dnb-org/components/commit/a4d52914ba1e4ed6cbbd80406bda4248fca8165a))
+* **deps-dev:** bump @dnb-org/remark-config in /social ([#567](https://github.com/dnb-org/components/issues/567)) ([919cb35](https://github.com/dnb-org/components/commit/919cb355085398d896552378038d24235b5068dd))
+* **deps:** update dependencies ([bd98664](https://github.com/dnb-org/components/commit/bd9866427d1103f177f44dc336812da8de1a9a4b))
+
 ### [1.1.5](https://github.com/dnb-org/components/compare/functions/v1.1.4...functions/v1.1.5) (2021-09-20)
 
 
