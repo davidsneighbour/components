@@ -25,12 +25,15 @@
     {{ if isset $value.config "plugins" }}
       {{ if isset $value.config.plugins "js" }}
         {{ range $value.config.plugins.js }}
-        {{/*      {{ if fileExists (printf "assets/%s" .) }}*/}}
-        {{- partial "debug.html" (dict "message" (printf "Loading JSFile %s" .) "severity" "debug") -}}
-        {{ $collection = $collection | append (resources.Get .) }}
-        {{/*      {{ else }}*/}}
-        {{/*        {{ errorf (printf "File %s can't be found" .) }}*/}}
-        {{/*      {{ end }}*/}}
+          {{/*      {{ if fileExists (printf "assets/%s" .) }}*/}}
+          {{- partial "debug.html" (dict "message" (printf "Loading JSFile %s" .) "severity" "debug") -}}
+          {{ $file := resources.Get . }}
+          {{ with $file }}
+            {{ $collection = $collection | append $file }}
+            {{/*      {{ else }}*/}}
+            {{/*        {{ errorf (printf "File %s can't be found" .) }}*/}}
+            {{/*      {{ end }}*/}}
+          {{ end }}
         {{ end }}
       {{ end }}
     {{ end }}
