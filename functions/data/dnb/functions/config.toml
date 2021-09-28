@@ -1,5 +1,5 @@
 namespace = "dnb"
-loglink = "https://q.dnb9.xyz/log"
+loglink = "https://dnbql.netlify.app/log"
 
 [setup]
 disableNote = false

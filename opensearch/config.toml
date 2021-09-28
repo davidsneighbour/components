@@ -37,4 +37,4 @@ delimiter = "."
 # parameters
 [params]
 [params.dnb.opensearch]
-hookLink = "https://q.dnb9.xyz/opensearch"
+hookLink = "https://dnbql.netlify.app/opensearch"
