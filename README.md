@@ -1,6 +1,6 @@
 ## DNB Hugo Components
 
-DNB Hugo's repo of Hugo components.
+DNB Org's repo of Hugo components.
 
 ### Available modules and usage instruction
 
