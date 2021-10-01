@@ -22,7 +22,7 @@
     "@dnb-org/remark-config": "3.2.25",
     "@dnb-org/standard-version-config": "3.2.22",
     "@dnb-org/stylelint-config": "3.2.24",
-    "@dnb-org/textlint-config": "3.2.22",
+    "@dnb-org/textlint-config": "3.3.0",
     "standard-version": "9.3.1"
   },
   "commitlint": {
