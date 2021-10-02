@@ -16,5 +16,8 @@
   "devDependencies": {
     "@dnb-org/all": "3.3.0"
   },
-  "private": true
+  "private": true,
+  "browserslist": [
+    "extends @dnb-org/browserslist-config"
+  ]
 }

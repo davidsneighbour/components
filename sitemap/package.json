@@ -21,5 +21,8 @@
       "@dnb-org/commitlint-config"
     ]
   },
-  "private": true
+  "private": true,
+  "browserslist": [
+    "extends @dnb-org/browserslist-config"
+  ]
 }

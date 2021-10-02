@@ -51,5 +51,8 @@
         false
       ]
     ]
-  }
+  },
+  "browserslist": [
+    "extends @dnb-org/browserslist-config"
+  ]
 }

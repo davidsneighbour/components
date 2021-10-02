@@ -32,5 +32,8 @@
         "type": "json"
       }
     ]
-  }
+  },
+  "browserslist": [
+    "extends @dnb-org/browserslist-config"
+  ]
 }

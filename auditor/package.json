@@ -17,5 +17,8 @@
     "release": "standard-version --release-as patch -a -t \"functions/v\" --releaseCommitMessageFormat \"chore(release): functions/v{{currentTag}}\" && ./bin/release-hook-postrelease.sh",
     "release-major": "standard-version --release-as major -a -t \"functions/v\" --releaseCommitMessageFormat \"chore(release): functions/v{{currentTag}}\" && ./bin/release-hook-postrelease.sh",
     "release-next": "standard-version --release-as minor -a -t \"functions/v\" --releaseCommitMessageFormat \"chore(release): functions/v{{currentTag}}\" && ./bin/release-hook-postrelease.sh"
-  }
+  },
+  "browserslist": [
+    "extends @dnb-org/browserslist-config"
+  ]
 }

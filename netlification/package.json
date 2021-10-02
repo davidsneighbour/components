@@ -22,5 +22,8 @@
     "extends": [
       "@dnb-org/commitlint-config"
     ]
-  }
+  },
+  "browserslist": [
+    "extends @dnb-org/browserslist-config"
+  ]
 }
