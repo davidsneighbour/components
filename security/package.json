@@ -14,11 +14,11 @@
     "url": "https://github.com/dnb-org/components/issues"
   },
   "devDependencies": {
-    "@dnb-org/commitlint-config": "3.2.22",
-    "@dnb-org/eslint-config": "3.2.22",
-    "@dnb-org/remark-config": "3.2.25",
-    "@dnb-org/standard-version-config": "3.2.22",
-    "@dnb-org/textlint-config": "3.2.22"
+    "@dnb-org/commitlint-config": "3.3.0",
+    "@dnb-org/eslint-config": "3.3.0",
+    "@dnb-org/remark-config": "3.3.0",
+    "@dnb-org/standard-version-config": "3.3.0",
+    "@dnb-org/textlint-config": "3.3.0"
   },
   "private": true
 }
