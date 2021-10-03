@@ -35,6 +35,9 @@ const localStandardVersion = {
     { type: "test", section: "Tests" },
     { type: "theme", section: "Theme" },
   ],
+  skip: {
+    changelog: true
+  }
 };
 
 module.exports = {
