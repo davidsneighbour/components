@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.7](https://github.com/dnb-org/components/compare/v1.3.6...v1.3.7) (2021-10-03)
+
+
+### Build System
+
+* **fix:** proper way to add version number in plain-text ([e365e59](https://github.com/dnb-org/components/commit/e365e593ab6c29df0cbbbf2b4ee59efc6b804165))
+
 ### [1.3.6](https://github.com/dnb-org/components/compare/v1.3.5...v1.3.6) (2021-10-03)
 
 
