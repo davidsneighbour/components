@@ -1,11 +1,12 @@
-## DNB Hugo Components
+## DNB Org Hugo Components
 
-DNB Org's repo of Hugo components.
+DNB Org's repository of Hugo components.
 
 ### Available modules and usage instruction
 
 | Component | Description |
 | :--- | :--- |
+| [auditor](https://github.com/dnb-org/components/tree/main/auditor) ||
 | [functions](https://github.com/dnb-org/components/tree/main/functions) ||
 | [netlification](https://github.com/dnb-org/components/tree/main/netlification) | a collection of tools that optimize your site on Netlify |
 | [opensearch](https://github.com/dnb-org/components/tree/main/opensearch) ||
@@ -13,10 +14,11 @@ DNB Org's repo of Hugo components.
 | [renderhooks](https://github.com/dnb-org/components/tree/main/renderhooks) | render hooks for Markdown markup |
 | [robots](https://github.com/dnb-org/components/tree/main/robots) | configure the content of your robots.txt with front matter |
 | [search-algolia](https://github.com/dnb-org/components/tree/main/search-algolia) ||
+| [security](https://github.com/dnb-org/components/tree/main/security) ||
 | [sitemap](https://github.com/dnb-org/components/tree/main/sitemap) ||
 | [social](https://github.com/dnb-org/components/tree/main/social) ||
 
-### Other elements in DNB Hugo
+### Other elements in DNB Org for Hugo
 
 [DNB Hugo](https://github.com/dnb-org) are the elements that enhance and simplify your daily work with [Hugo, the world's fastest framework for building websites](https://gohugo.io/). Included are:
 

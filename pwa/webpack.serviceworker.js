@@ -30,10 +30,10 @@ export const mode = 'production';
 export const devtool = 'source-map';
 export const target = 'webworker';
 export const entry = {
-  main: join(__dirname, 'assets/js', 'service-worker.js'),
+  main: join(__dirname, 'pwa/assets/js', 'service-worker.js'),
 };
 export const output = {
-  path: join(__dirname, 'static'),
+  path: join(__dirname, 'pwa/static'),
   filename: '[name].[fullhash].js',
   clean: true,
 };

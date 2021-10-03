@@ -1,17 +1,11 @@
 {
   "name": "@dnb-org-hugo-components/auditor",
-  "description": "SEO and performance checks for Hugo",
   "version": "0.0.7",
-  "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
-  "bugs": {
-    "url": "https://github.com/dnb-org/components/issues"
-  },
-  "homepage": "https://github.com/dnb-org/components/tree/master/functions",
   "license": "MIT",
-  "private": true,
-  "scripts": {
-    "release": "standard-version --release-as patch -a -t \"functions/v\" --releaseCommitMessageFormat \"chore(release): functions/v{{currentTag}}\" && ./bin/release-hook-postrelease.sh",
-    "release-major": "standard-version --release-as major -a -t \"functions/v\" --releaseCommitMessageFormat \"chore(release): functions/v{{currentTag}}\" && ./bin/release-hook-postrelease.sh",
-    "release-next": "standard-version --release-as minor -a -t \"functions/v\" --releaseCommitMessageFormat \"chore(release): functions/v{{currentTag}}\" && ./bin/release-hook-postrelease.sh"
-  }
+  "description": "SEO and performance checks for Hugo",
+  "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
+  "homepage": "https://github.com/dnb-org/components/tree/master/functions",
+  "bugs": "https://github.com/dnb-org/components/issues",
+
+  "private": true
 }

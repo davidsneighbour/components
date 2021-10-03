@@ -1,17 +1,10 @@
 {
   "name": "@dnb-org-hugo-components/security",
   "version": "1.0.0",
+  "license": "MIT",
   "description": "Security related features for Hugo.",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
   "homepage": "https://github.com/dnb-org/components/tree/master/security",
-  "license": "MIT",
-  "scripts": {
-    "release": "standard-version --release-as patch -a -t \"security/v\" --releaseCommitMessageFormat \"chore(release): security/v{{currentTag}}\" && git push --follow-tags origin main",
-    "release-next": "standard-version --release-as minor -a -t \"security/v\" --releaseCommitMessageFormat \"chore(release): security/v{{currentTag}}\" && git push --follow-tags origin main",
-    "release-major": "standard-version --release-as major -a -t \"security/v\" --releaseCommitMessageFormat \"chore(release): security/v{{currentTag}}\" && git push --follow-tags origin main"
-  },
-  "bugs": {
-    "url": "https://github.com/dnb-org/components/issues"
-  },
+  "bugs": "https://github.com/dnb-org/components/issues",
   "private": true
 }

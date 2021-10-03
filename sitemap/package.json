@@ -1,17 +1,10 @@
 {
   "name": "@dnb-org-hugo-components/sitemap",
   "version": "1.0.8",
+  "license": "MIT",
   "description": "A sitemap for Hugo",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
   "homepage": "https://github.com/dnb-org/components/tree/master/sitemap",
-  "license": "MIT",
-  "scripts": {
-    "release": "standard-version --release-as patch -a -t \"sitemap/v\" --releaseCommitMessageFormat \"chore(release): sitemap/v{{currentTag}}\" && ./bin/release-hook-postrelease.sh",
-    "release-next": "standard-version --release-as minor -a -t \"sitemap/v\" --releaseCommitMessageFormat \"chore(release): sitemap/v{{currentTag}}\" && ./bin/release-hook-postrelease.sh",
-    "release-major": "standard-version --release-as major -a -t \"sitemap/v\" --releaseCommitMessageFormat \"chore(release): sitemap/v{{currentTag}}\" && ./bin/release-hook-postrelease.sh"
-  },
-  "bugs": {
-    "url": "https://github.com/dnb-org/components/issues"
-  },
+  "bugs": "https://github.com/dnb-org/components/issues",
   "private": true
 }

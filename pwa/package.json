@@ -1,29 +1,10 @@
 {
   "name": "@dnb-org-hugo-components/pwa",
-  "description": "PWA for Hugo",
   "version": "1.1.16",
-  "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
-  "bugs": {
-    "url": "https://github.com/dnb-org/components/issues"
-  },
-  "devDependencies": {
-    "@dnb-org/all": "3.3.0",
-    "workbox-cacheable-response": "6.3.0",
-    "workbox-core": "6.3.0",
-    "workbox-expiration": "6.3.0",
-    "workbox-precaching": "6.3.0",
-    "workbox-routing": "6.3.0",
-    "workbox-strategies": "6.3.0",
-    "workbox-webpack-plugin": "6.3.0"
-  },
-  "homepage": "https://github.com/dnb-org/components/tree/master/pwa",
   "license": "MIT",
-  "private": true,
-  "scripts": {
-    "build": "npm run build:serviceworker",
-    "build:serviceworker": "cross-env NODE_ENV=production webpack --config webpack.serviceworker.js",
-    "release": "standard-version --release-as patch -a -t \"pwa/v\" --releaseCommitMessageFormat \"chore(release): pwa/v{{currentTag}}\" && git push --follow-tags origin main",
-    "release-major": "standard-version --release-as major -a -t \"pwa/v\" --releaseCommitMessageFormat \"chore(release): pwa/v{{currentTag}}\" && git push --follow-tags origin main",
-    "release-next": "standard-version --release-as minor -a -t \"pwa/v\" --releaseCommitMessageFormat \"chore(release): pwa/v{{currentTag}}\" && git push --follow-tags origin main"
-  }
+  "description": "PWA for Hugo",
+  "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
+  "homepage": "https://github.com/dnb-org/components/tree/master/pwa",
+  "bugs": "https://github.com/dnb-org/components/issues",
+  "private": true
 }

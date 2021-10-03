@@ -1,17 +1,11 @@
 {
   "name": "@dnb-org-hugo-components/opensearch",
-  "description": "Opensearch configuration for Hugo",
   "version": "1.0.12",
-  "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
-  "bugs": {
-    "url": "https://github.com/dnb-org/components/issues"
-  },
-  "homepage": "https://github.com/dnb-org/components/tree/master/favicon",
   "license": "MIT",
-  "private": true,
-  "scripts": {
-    "release": "standard-version --release-as patch -a -t \"opensearch/v\" --releaseCommitMessageFormat \"chore(release): opensearch/v{{currentTag}}\" && git push --follow-tags origin main",
-    "release-major": "standard-version --release-as major -a -t \"opensearch/v\" --releaseCommitMessageFormat \"chore(release): opensearch/v{{currentTag}}\" && git push --follow-tags origin main",
-    "release-next": "standard-version --release-as minor -a -t \"opensearch/v\" --releaseCommitMessageFormat \"chore(release): opensearch/v{{currentTag}}\" && git push --follow-tags origin main"
-  }
+  "description": "Opensearch configuration for Hugo",
+  "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
+  "homepage": "https://github.com/dnb-org/components/tree/master/favicon",
+  "bugs": "https://github.com/dnb-org/components/issues",
+
+  "private": true
 }
