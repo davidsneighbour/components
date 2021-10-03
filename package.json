@@ -23,7 +23,7 @@
   },
   "scripts": {
     "build": "npm run build:serviceworker",
-    "build:serviceworker": "cross-env NODE_ENV=production webpack --config webpack.serviceworker.js",
+    "build:serviceworker": "cross-env NODE_ENV=production webpack --config pwa/webpack.serviceworker.js",
     "release": "standard-version --release-as patch -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./.bin/release-hook-postrelease.sh",
     "release:minor": "standard-version --release-as minor -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./.bin/release-hook-postrelease.sh"
   },
