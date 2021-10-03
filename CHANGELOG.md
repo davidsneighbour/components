@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.4](https://github.com/dnb-org/components/compare/v1.3.3...v1.3.4) (2021-10-03)
+
+
+### Build System
+
+* add components golang module files to release process ([15de04b](https://github.com/dnb-org/components/commit/15de04b914804f0f192b78e9c47ad1ee9ef77a96))
+
 ### 1.3.3 (2021-10-03)
 
 
