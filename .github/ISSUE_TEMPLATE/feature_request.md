@@ -2,7 +2,7 @@
 name: Feature request
 about: Suggest an idea for this project
 title: ''
-labels: 'is:unconfirmed, type:enhancement'
+labels: 'state:unconfirmed, type:enhancement'
 assignees: 'davidsneighbour'
 
 ---

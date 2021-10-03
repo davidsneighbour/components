@@ -5,6 +5,24 @@ version: 2
 updates:
 
   - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "friday"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+    labels:
+      - "type:dependencies"
+
+  - package-ecosystem: "npm"
     directory: "/auditor"
     schedule:
       interval: "weekly"
@@ -19,6 +37,8 @@ updates:
     open-pull-requests-limit: 999
     pull-request-branch-name:
       separator: "/"
+    labels:
+      - "type:dependencies"
 
   - package-ecosystem: "npm"
     directory: "/functions"
@@ -35,6 +55,8 @@ updates:
     open-pull-requests-limit: 999
     pull-request-branch-name:
       separator: "/"
+    labels:
+      - "type:dependencies"
 
   - package-ecosystem: "npm"
     directory: "/netlification"
@@ -51,6 +73,8 @@ updates:
     open-pull-requests-limit: 999
     pull-request-branch-name:
       separator: "/"
+    labels:
+      - "type:dependencies"
 
   - package-ecosystem: "npm"
     directory: "/opensearch"
@@ -67,6 +91,8 @@ updates:
     open-pull-requests-limit: 999
     pull-request-branch-name:
       separator: "/"
+    labels:
+      - "type:dependencies"
 
   - package-ecosystem: "npm"
     directory: "/pwa"
@@ -83,6 +109,8 @@ updates:
     open-pull-requests-limit: 999
     pull-request-branch-name:
       separator: "/"
+    labels:
+      - "type:dependencies"
 
   - package-ecosystem: "npm"
     directory: "/renderhooks"
@@ -99,6 +127,8 @@ updates:
     open-pull-requests-limit: 999
     pull-request-branch-name:
       separator: "/"
+    labels:
+      - "type:dependencies"
 
   - package-ecosystem: "npm"
     directory: "/robots"
@@ -115,6 +145,8 @@ updates:
     open-pull-requests-limit: 999
     pull-request-branch-name:
       separator: "/"
+    labels:
+      - "type:dependencies"
 
   - package-ecosystem: "npm"
     directory: "/search-algolia"
@@ -131,6 +163,26 @@ updates:
     open-pull-requests-limit: 999
     pull-request-branch-name:
       separator: "/"
+    labels:
+      - "type:dependencies"
+
+  - package-ecosystem: "npm"
+    directory: "/security"
+    schedule:
+      interval: "weekly"
+      day: "friday"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+    labels:
+      - "type:dependencies"
 
   - package-ecosystem: "npm"
     directory: "/sitemap"
@@ -147,6 +199,8 @@ updates:
     open-pull-requests-limit: 999
     pull-request-branch-name:
       separator: "/"
+    labels:
+      - "type:dependencies"
 
   - package-ecosystem: "npm"
     directory: "/social"
@@ -163,3 +217,5 @@ updates:
     open-pull-requests-limit: 999
     pull-request-branch-name:
       separator: "/"
+    labels:
+      - "type:dependencies"
