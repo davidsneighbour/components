@@ -1,4 +1,4 @@
-import defaultStandardVersion from "@dnb-org/standard-version-config";
+const defaultStandardVersion = require("@dnb-org/standard-version-config");
 
 const localStandardVersion = {
     // for available options see https://github.com/conventional-changelog/conventional-changelog-config-spec/blob/master/versions/2.1.0/README.md
@@ -72,7 +72,7 @@ const localStandardVersion = {
     ],
   };
 
-export default {
+module.exports = {
     ...defaultStandardVersion,
     ...localStandardVersion
 };
