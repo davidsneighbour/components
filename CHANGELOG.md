@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.5](https://github.com/dnb-org/components/compare/v1.3.4...v1.3.5) (2021-10-03)
+
+
+### Build System
+
+* **fix:** remove golang module handling for non existant files ([4ffd7eb](https://github.com/dnb-org/components/commit/4ffd7eb4e3b1a465c5e8d38382a52cfe5a884d8c))
+* **fix:** shellcheck related script fixes ([e2b3f37](https://github.com/dnb-org/components/commit/e2b3f374f7bd74ff35a55a8ef63629412d981bf5))
+
 ### [1.3.4](https://github.com/dnb-org/components/compare/v1.3.3...v1.3.4) (2021-10-03)
 
 
