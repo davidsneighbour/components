@@ -1,18 +1,10 @@
 {
-  "name": "@dnb-org/renderhooks",
+  "name": "@dnb-org-hugo-components/renderhooks",
   "description": "Render hooks for Hugo",
   "version": "1.0.14",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
   "bugs": {
     "url": "https://github.com/dnb-org/components/issues"
-  },
-  "commitlint": {
-    "extends": [
-      "@dnb-org/commitlint"
-    ]
-  },
-  "devDependencies": {
-    "@dnb-org/all": "3.3.0"
   },
   "homepage": "https://github.com/dnb-org/components/tree/master/renderhooks",
   "license": "MIT",
@@ -21,8 +13,5 @@
     "release": "standard-version --release-as patch -a -t \"renderhooks/v\" --releaseCommitMessageFormat \"chore(release): renderhooks/v{{currentTag}}\" && git push --follow-tags origin main",
     "release-major": "standard-version --release-as major -a -t \"renderhooks/v\" --releaseCommitMessageFormat \"chore(release): renderhooks/v{{currentTag}}\" && git push --follow-tags origin main",
     "release-next": "standard-version --release-as minor -a -t \"renderhooks/v\" --releaseCommitMessageFormat \"chore(release): renderhooks/v{{currentTag}}\" && git push --follow-tags origin main"
-  },
-  "browserslist": [
-    "extends @dnb-org/browserslist-config"
-  ]
+  }
 }

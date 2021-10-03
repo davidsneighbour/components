@@ -1,5 +1,5 @@
 {
-  "name": "@dnb-component/security",
+  "name": "@dnb-org-hugo-components/security",
   "version": "1.0.0",
   "description": "Security related features for Hugo.",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
@@ -13,11 +13,5 @@
   "bugs": {
     "url": "https://github.com/dnb-org/components/issues"
   },
-  "devDependencies": {
-    "@dnb-org/all": "3.3.0"
-  },
-  "private": true,
-  "browserslist": [
-    "extends @dnb-org/browserslist-config"
-  ]
+  "private": true
 }

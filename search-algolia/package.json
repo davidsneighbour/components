@@ -1,5 +1,5 @@
 {
-  "name": "@dnb-org/search-algolia",
+  "name": "@dnb-org-hugo-components/search-algolia",
   "version": "1.0.12",
   "description": "Algolia search for Hugo",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
@@ -13,46 +13,5 @@
   "bugs": {
     "url": "https://github.com/dnb-org/components/issues"
   },
-  "devDependencies": {
-    "@dnb-org/all": "3.3.0"
-  },
-  "private": true,
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ],
-    "rules": {
-      "body-max-line-length": [
-        0,
-        "always",
-        100
-      ],
-      "type-enum": [
-        0,
-        "always",
-        [
-          "feat",
-          "fix",
-          "layouts",
-          "refactor",
-          "test",
-          "chore",
-          "wip",
-          "content"
-        ]
-      ]
-    }
-  },
-  "remarkConfig": {
-    "plugins": [
-      "remark-preset-lint-dnb",
-      [
-        "remark-lint-write-good",
-        false
-      ]
-    ]
-  },
-  "browserslist": [
-    "extends @dnb-org/browserslist-config"
-  ]
+  "private": true
 }
