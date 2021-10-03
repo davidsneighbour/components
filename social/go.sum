@@ -1,8 +1,4 @@
-github.com/dnb-org/components/functions v1.1.1 h1:thktVTIBpUuOlp7AfZTONXRfKPKZLiRuxZ6Ro0peNQg=
-github.com/dnb-org/components/functions v1.1.1/go.mod h1:+GMAcQaK260wZ6ioNPbQY/ruWdBxFxj9PPw7o5p7eu0=
-github.com/dnb-org/components/functions v1.1.6 h1:nELszpVHT5XusJPFwK0iKN1l5WVJ9TV3TO9EvpZh8oE=
-github.com/dnb-org/components/functions v1.1.6/go.mod h1:+GMAcQaK260wZ6ioNPbQY/ruWdBxFxj9PPw7o5p7eu0=
-github.com/dnb-org/debug v1.3.0 h1:w9jTmF/3UHFdyu9nzEmLfhqok2wlV9Ol0E55Wa4yQ9k=
-github.com/dnb-org/debug v1.3.0/go.mod h1:0z/MDK1qgyqHmMM8mSrexsoPSTpJgIsNu3r6nw5zHAU=
+github.com/dnb-org/components/functions v1.4.0 h1:UnYBE+5yWelZE7aME2ZViDuVns4P58amecRpNws/ZcM=
+github.com/dnb-org/components/functions v1.4.0/go.mod h1:+GMAcQaK260wZ6ioNPbQY/ruWdBxFxj9PPw7o5p7eu0=
 github.com/dnb-org/debug v1.3.1 h1:d2LKuraEp/JmbtWgX9jUfkOzt85QDgGtZnZJel3ulK4=
 github.com/dnb-org/debug v1.3.1/go.mod h1:0z/MDK1qgyqHmMM8mSrexsoPSTpJgIsNu3r6nw5zHAU=
