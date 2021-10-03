@@ -6,7 +6,7 @@ const localStandardVersion = {
       prerelease: "./.bin/release-hook-prerelease.sh",
     },
   bumpFiles: [
-      {filename: ".version", type: "text"},
+      {filename: ".version", type: "plain-text"},
         {          filename: "package.json",          type: "json",        },
         {          filename: "auditor/package.json",          type: "json",        },
         {          filename: "functions/package.json",          type: "json",        },
