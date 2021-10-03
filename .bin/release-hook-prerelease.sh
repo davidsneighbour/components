@@ -16,6 +16,10 @@ fi
 hugo mod get -u ./...
 hugo mod tidy
 
+# create pwa files
+npm run build
+git add pwa/static
+
 if test -f "$SCRIPTPATH"/replacements; then
   while read -ra __; do
     go mod edit -replace "${__[0]}"="${__[1]}"
