@@ -1,6 +1,6 @@
 {
   "name": "@dnb-org-hugo-components/sitemap",
-  "version": "1.3.9",
+  "version": "1.3.10",
   "license": "MIT",
   "description": "A sitemap for Hugo",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
