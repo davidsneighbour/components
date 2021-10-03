@@ -5,55 +5,20 @@ const localStandardVersion = {
     scripts: {
       prerelease: "./.bin/release-hook-prerelease.sh",
     },
-    bumpFiles: [
-        {
-          filename: "package.json",
-          type: "json",
-        },
-        {
-          filename: "auditor/package.json",
-          type: "json",
-        },
-        {
-          filename: "functions/package.json",
-          type: "json",
-        },
-        {
-          filename: "netlificationpackage.json",
-          type: "json",
-        },
-        {
-          filename: "opensearch/package.json",
-          type: "json",
-        },
-        {
-          filename: "pwa/package.json",
-          type: "json",
-        },
-        {
-          filename: "renderhooks/package.json",
-          type: "json",
-        },
-        {
-          filename: "robots/package.json",
-          type: "json",
-        },
-        {
-          filename: "search-algolia/package.json",
-          type: "json",
-        },
-        {
-          filename: "security/package.json",
-          type: "json",
-        },
-        {
-          filename: "sitemap/package.json",
-          type: "json",
-        },
-        {
-          filename: "social/package.json",
-          type: "json",
-        },
+  bumpFiles: [
+      {filename: ".version", type: "text"},
+        {          filename: "package.json",          type: "json",        },
+        {          filename: "auditor/package.json",          type: "json",        },
+        {          filename: "functions/package.json",          type: "json",        },
+        {          filename: "netlificationpackage.json",          type: "json",        },
+        {          filename: "opensearch/package.json",          type: "json",        },
+        {          filename: "pwa/package.json",          type: "json",        },
+        {          filename: "renderhooks/package.json",          type: "json",        },
+        {          filename: "robots/package.json",          type: "json",        },
+        {          filename: "search-algolia/package.json",          type: "json",        },
+        {          filename: "security/package.json",          type: "json",        },
+        {          filename: "sitemap/package.json",      type: "json",    },
+    {          filename: "social/package.json",          type: "json",        },
     ],
     types: [
       { type: "build", section: "Build System" },
