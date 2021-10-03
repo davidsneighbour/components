@@ -5,6 +5,6 @@ authors:
   given-names: "Patrick"
   orcid: "https://orcid.org/0000-0001-6250-2135"
 title: "DNB Org Hugo Components"
-version: 0.0.0
-date-released: 2021-10-02
+version: 1.4.0
+date-released: 2021-10-03
 url: "https://github.com/dnb-org/components"
