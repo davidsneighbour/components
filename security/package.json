@@ -1,6 +1,6 @@
 {
   "name": "@dnb-org-hugo-components/security",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "license": "MIT",
   "description": "Security related features for Hugo.",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
