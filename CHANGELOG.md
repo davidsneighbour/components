@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.6](https://github.com/dnb-org/components/compare/v1.3.5...v1.3.6) (2021-10-03)
+
+
+### Build System
+
+* add notes to build script ([c806d81](https://github.com/dnb-org/components/commit/c806d8173a38490282002cf8e3e955fd7933c0dc))
+* add version number for build scripts ([7c5737c](https://github.com/dnb-org/components/commit/7c5737c88368efc0d22df1c33b6bad992ce4d6d7))
+
 ### [1.3.5](https://github.com/dnb-org/components/compare/v1.3.4...v1.3.5) (2021-10-03)
 
 
