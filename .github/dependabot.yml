@@ -219,3 +219,39 @@ updates:
       separator: "/"
     labels:
       - "type:dependencies"
+
+  - package-ecosystem: "gomod"
+    directory: "/search-algolia"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+    labels:
+      - "type:dependencies"
+
+  - package-ecosystem: "gomod"
+    directory: "/social"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+    labels:
+      - "type:dependencies"
