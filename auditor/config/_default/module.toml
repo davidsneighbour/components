@@ -1,0 +1,21 @@
+[hugoVersion]
+extended = true
+min = "0.64"
+
+[[mounts]]
+source = 'layouts'
+target = 'layouts'
+
+[[imports]]
+path = "github.com/csswizardry/ct"
+disable = false
+ignoreConfig = true
+ignoreImports = false
+
+[[imports.mounts]]
+source = 'ct.css'
+target = 'assets/css/libs/ct.css'
+
+[[imports.mounts]]
+source = 'ct.css'
+target = 'static/css/libs/ct.css'
