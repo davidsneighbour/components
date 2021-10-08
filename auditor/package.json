@@ -2,9 +2,9 @@
   "name": "@dnb-org-hugo-components/auditor",
   "version": "1.4.2",
   "license": "MIT",
-  "description": "SEO and performance checks for Hugo",
+  "description": "SEO, technical audit and performance checks for Hugo",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
-  "homepage": "https://github.com/dnb-org/components/tree/master/functions",
+  "homepage": "https://github.com/dnb-org/components/tree/master/auditor",
   "bugs": "https://github.com/dnb-org/components/issues",
   "private": true
 }

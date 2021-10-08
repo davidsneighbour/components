@@ -10,7 +10,7 @@ target = 'layouts'
 path = "github.com/csswizardry/ct"
 disable = false
 ignoreConfig = true
-ignoreImports = false
+ignoreImports = true
 
 [[imports.mounts]]
 source = 'ct.css'
