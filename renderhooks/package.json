@@ -1,6 +1,6 @@
 {
   "name": "@dnb-org-hugo-components/renderhooks",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "license": "MIT",
   "description": "Render hooks for Hugo",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
