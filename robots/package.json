@@ -1,6 +1,6 @@
 {
   "name": "@dnb-org-hugo-components/robots",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "license": "MIT",
   "description": "Configurable robots.txt for Hugo",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
