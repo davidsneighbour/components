@@ -1,6 +1,6 @@
 {
   "name": "@dnb-org-hugo-components/functions",
-  "version": "1.4.6",
+  "version": "1.4.7",
   "license": "MIT",
   "description": "Template functions for Hugo",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",

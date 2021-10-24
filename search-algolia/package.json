@@ -1,6 +1,6 @@
 {
   "name": "@dnb-org-hugo-components/search-algolia",
-  "version": "1.4.6",
+  "version": "1.4.7",
   "license": "MIT",
   "description": "Algolia search for Hugo",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
