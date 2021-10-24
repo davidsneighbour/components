@@ -1,6 +1,6 @@
 {
   "name": "@dnb-org-hugo-components/auditor",
-  "version": "1.4.4",
+  "version": "1.4.5",
   "license": "MIT",
   "description": "SEO, technical audit and performance checks for Hugo",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
