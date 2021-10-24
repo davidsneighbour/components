@@ -1,0 +1,16 @@
+{{- with site.Params.giscus -}}
+<script src="{{- .src | default "https://giscus.app/client.js" -}}"
+  data-repo="{{- .dataRepo -}}"
+  data-repo-id="{{- .dataRepoId -}}"
+  data-category="{{- .dataCategory -}}"
+  data-category-id="{{- .dataCategoryId -}}"
+  data-mapping="{{- .dataMapping | default "title" -}}"
+  data-reactions-enabled="{{- .dataReactionsEnabled | default "1" -}}"
+  data-emit-metadata="{{- .dataEmitMetadata | default "0" -}}"
+  data-theme="{{- .dataTheme | default "light" -}}"
+  data-lang="{{- .dataLang | default "en" -}}"
+  crossorigin="anonymous"
+  async
+  defer>
+</script>
+{{- end -}}

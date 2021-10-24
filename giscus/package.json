@@ -1,0 +1,10 @@
+{
+  "name": "@dnb-org-hugo-components/giscus",
+  "version": "0.0.0",
+  "license": "MIT",
+  "description": "Giscus comment system for GoHugo",
+  "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
+  "homepage": "https://github.com/dnb-org/components/tree/master/giscus",
+  "bugs": "https://github.com/dnb-org/components/issues",
+  "private": true
+}
