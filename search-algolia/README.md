@@ -20,19 +20,7 @@ path = "github.com/dnb-org/components/search-algolia"
 
 The next time you run `hugo` it will download the latest version of the module.
 
-To make this component work you need to add some lines to your config.toml. 
-
-```toml
-[outputFormats]
-
-[outputFormats.Algolia]
-baseName = "algolia"
-isPlainText = true
-mediaType = "application/json"
-notAlternative = true
-```
-
-Add Algolia to your home output formats:
+To make this component work you need to add Algolia to your home output formats:
 
 ```toml
 [outputs]
