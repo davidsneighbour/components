@@ -12,6 +12,7 @@ see
 {{- $manifest = merge $manifest (dict "start_url" ($config.start_url | default "/?source=pwa")) -}}
 {{- $manifest = merge $manifest (dict "description" ($config.description | default site.Params.Description)) -}}
 
+{{/* - TODO maybe only do sizes 192 and 512, see https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs - */}}
 {{- $sizes := slice 36 48 72 96 144 192 256 384 512 -}}
 {{- $icon := resources.Get "favicon/favicon.png" -}}
 {{- if ne nil $icon -}}
