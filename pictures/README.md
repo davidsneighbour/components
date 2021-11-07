@@ -1,0 +1,1 @@
+New pictures component. For now please check out [dnb-org/shortcodes/pictures](https://github.com/dnb-org/shortcodes/tree/main/pictures) which introduces the component in shortcode form. This component will apply the principles of the shortcode in partials form and will be available soon. 

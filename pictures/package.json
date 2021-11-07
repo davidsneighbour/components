@@ -1,0 +1,10 @@
+{
+  "name": "@dnb-org-gohugo-components/pictures",
+  "version": "1.4.8",
+  "license": "MIT",
+  "description": "Responsive and SEO optimised images for GoHugo",
+  "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
+  "homepage": "https://github.com/dnb-org/components/tree/master/pictures",
+  "bugs": "https://github.com/dnb-org/components/issues",
+  "private": true
+}
