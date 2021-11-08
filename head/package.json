@@ -1,0 +1,10 @@
+{
+  "name": "@dnb-org-gohugo-components/head",
+  "version": "1.4.8",
+  "license": "MIT",
+  "description": "head tags for GoHugo",
+  "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
+  "homepage": "https://github.com/dnb-org/components/tree/master/head",
+  "bugs": "https://github.com/dnb-org/components/issues",
+  "private": true
+}
