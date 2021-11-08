@@ -1,6 +1,6 @@
 {
   "name": "@dnb-org-hugo-components/netlification",
-  "version": "1.4.8",
+  "version": "1.4.9",
   "license": "MIT",
   "description": "Tools for Hugo on Netlify",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
