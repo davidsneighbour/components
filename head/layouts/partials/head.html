@@ -26,9 +26,6 @@ https://htmlhead.dev/
 {{- partial "func/hook.html" ( dict "hook" "head-pre-css" "context" . ) -}}
 {{- partialCached "head/style.html" . -}}
 {{- partial "func/hook.html" ( dict "hook" "head-post-css" "context" . ) -}}
-{{- with site.GoogleAnalytics -}}
-  {{- template "_internal/google_analytics.html" . -}}
-{{- end -}}
 {{- partial "head/translations.html" . -}}
 {{- partial "head/seo.html" . -}}
 {{- partial "head/series.html" . -}}
