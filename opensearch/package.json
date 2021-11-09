@@ -1,6 +1,6 @@
 {
   "name": "@dnb-org-hugo-components/opensearch",
-  "version": "1.4.12",
+  "version": "1.4.13",
   "license": "MIT",
   "description": "Opensearch configuration for Hugo",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",

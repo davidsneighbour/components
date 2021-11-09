@@ -1,6 +1,6 @@
 {
   "name": "@dnb-org-gohugo-components/head",
-  "version": "1.4.12",
+  "version": "1.4.13",
   "license": "MIT",
   "description": "head tags for GoHugo",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
