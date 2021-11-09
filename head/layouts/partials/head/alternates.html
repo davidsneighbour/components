@@ -1,3 +1,5 @@
-{{ range .AlternativeOutputFormats -}}
-  <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}" title="{{ .Title }}">
-{{ end -}}
+{{ with .AlternativeOutputFormats }}
+  {{ range . -}}
+    <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}" title="{{ .Title }}">
+  {{ end -}}
+{{ end }}
