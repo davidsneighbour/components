@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.15](https://github.com/dnb-org/components/compare/head/v1.4.14...head/v1.4.15) (2021-11-15)
+
+
+### Build System
+
+* **fix:** add go.sum only if it exists ([33e3fe3](https://github.com/dnb-org/components/commit/33e3fe3714f7f911246bdcf847c83b52926eff48))
+
 ### [1.4.14](https://github.com/dnb-org/components/compare/head/v1.4.13...head/v1.4.14) (2021-11-15)
 
 
