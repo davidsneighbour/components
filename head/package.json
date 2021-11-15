@@ -6,5 +6,14 @@
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
   "homepage": "https://github.com/dnb-org/components/tree/master/head",
   "bugs": "https://github.com/dnb-org/components/issues",
+  "devDependencies": {
+    "@dnb-org/standard-version-config": "3.3.7"
+  },
+  "scripts": {
+    "release": "npm run release:patch",
+    "release:major": "standard-version --release-as major -a -t \"head/v\" --releaseCommitMessageFormat \"chore(release): head/v{{currentTag}}\" && ./bin/release-hook-postrelease.sh",
+    "release:minor": "standard-version --release-as minor -a -t \"head/v\" --releaseCommitMessageFormat \"chore(release): head/v{{currentTag}}\" && ./bin/release-hook-postrelease.sh",
+    "release:patch": "standard-version --release-as patch -a -t \"head/v\" --releaseCommitMessageFormat \"chore(release): head/v{{currentTag}}\" && ./bin/release-hook-postrelease.sh"
+  },
   "private": true
 }
