@@ -11,17 +11,9 @@
   "homepage": "https://github.com/dnb-org/components#readme",
   "repository": "dnb-org/components",
   "bugs": "https://github.com/dnb-org/components/issues",
-  "devDependencies": {
-    "@dnb-org/all": "3.3.10",
-    "workbox-cacheable-response": "6.3.0",
-    "workbox-core": "6.3.0",
-    "workbox-expiration": "6.3.0",
-    "workbox-precaching": "6.3.0",
-    "workbox-routing": "6.3.0",
-    "workbox-strategies": "6.3.0",
-    "workbox-webpack-plugin": "6.3.0"
-  },
   "scripts": {
+    "exec": "lerna exec --no-bail --profile --profile-location=logs/profile/",
+    "update": "npm run exec -- 'npm-check-updates -u'",
     "build": "npm run build:serviceworker",
     "build:serviceworker": "cross-env NODE_ENV=production webpack --config pwa/webpack.serviceworker.js",
     "release": "standard-version --release-as patch -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./.bin/release-hook-postrelease.sh",
@@ -43,5 +35,9 @@
   ],
   "stylelint": {
     "extends": "@dnb-org/stylelint-config"
+  },
+  "devDependencies": {
+    "lerna": "^4.0.0",
+    "lerna-wizard": "1.1.1"
   }
 }

@@ -1,0 +1,20 @@
+{
+  "packages": [
+    "auditor",
+    "errors",
+    "functions",
+    "giscus",
+    "head",
+    "netlification",
+    "opensearch",
+    "pictures",
+    "pwa",
+    "renderhooks",
+    "robots",
+    "search-algolia",
+    "security",
+    "sitemap",
+    "social"
+  ],
+  "version": "0.0.0"
+}
