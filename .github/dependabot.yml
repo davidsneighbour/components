@@ -41,7 +41,61 @@ updates:
       - "type:dependencies"
 
   - package-ecosystem: "npm"
+    directory: "/errors"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+    labels:
+      - "type:dependencies"
+
+  - package-ecosystem: "npm"
     directory: "/functions"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+    labels:
+      - "type:dependencies"
+
+  - package-ecosystem: "npm"
+    directory: "/giscus"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+    labels:
+      - "type:dependencies"
+
+  - package-ecosystem: "npm"
+    directory: "/head"
     schedule:
       interval: "weekly"
       day: "sunday"
@@ -78,6 +132,24 @@ updates:
 
   - package-ecosystem: "npm"
     directory: "/opensearch"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+    labels:
+      - "type:dependencies"
+
+  - package-ecosystem: "npm"
+    directory: "/pictures"
     schedule:
       interval: "weekly"
       day: "sunday"
@@ -257,7 +329,61 @@ updates:
       - "type:dependencies"
 
   - package-ecosystem: "gomod"
+    directory: "/errors"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+    labels:
+      - "type:dependencies"
+
+  - package-ecosystem: "gomod"
     directory: "/functions"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+    labels:
+      - "type:dependencies"
+
+  - package-ecosystem: "gomod"
+    directory: "/giscus"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+    labels:
+      - "type:dependencies"
+
+  - package-ecosystem: "gomod"
+    directory: "/head"
     schedule:
       interval: "weekly"
       day: "sunday"
@@ -294,6 +420,24 @@ updates:
 
   - package-ecosystem: "gomod"
     directory: "/opensearch"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+    labels:
+      - "type:dependencies"
+
+  - package-ecosystem: "gomod"
+    directory: "/pictures"
     schedule:
       interval: "weekly"
       day: "sunday"
