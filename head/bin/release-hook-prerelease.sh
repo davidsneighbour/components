@@ -24,7 +24,9 @@ hugo mod get -u ./...
 hugo mod tidy
 
 git add go.mod
-git add go.sum
+if test -f "$SCRIPTPATH"/go.sum; then
+  git add go.sum
+fi
 
 if test -f "$SCRIPTPATH"/replacements; then
   while read -ra __; do
