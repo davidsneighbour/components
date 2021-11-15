@@ -12,7 +12,7 @@
   "repository": "dnb-org/components",
   "bugs": "https://github.com/dnb-org/components/issues",
   "devDependencies": {
-    "@dnb-org/all": "3.3.10",
+    "@dnb-org/all": "3.3.12",
     "workbox-cacheable-response": "6.3.0",
     "workbox-core": "6.3.0",
     "workbox-expiration": "6.3.0",
