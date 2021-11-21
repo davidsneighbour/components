@@ -14,7 +14,7 @@
   "devDependencies": {
     "@dnb-org/all": "3.3.10",
     "workbox-cacheable-response": "6.3.0",
-    "workbox-core": "6.3.0",
+    "workbox-core": "6.4.1",
     "workbox-expiration": "6.3.0",
     "workbox-precaching": "6.3.0",
     "workbox-routing": "6.3.0",
