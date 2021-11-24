@@ -10,6 +10,7 @@ const localStandardVersion = {
     { filename: "package.json", type: "json" },
     { filename: "auditor/package.json", type: "json" },
     { filename: "functions/package.json", type: "json" },
+    { filename: "head/package.json", type: "json" },
     { filename: "netlification/package.json", type: "json" },
     { filename: "opensearch/package.json", type: "json" },
     { filename: "pwa/package.json", type: "json" },
