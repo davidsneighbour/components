@@ -6,7 +6,10 @@
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
   "homepage": "https://github.com/dnb-org/components/tree/main/pwa",
   "bugs": "https://github.com/dnb-org/components/issues",
-  "private": true,
+  "dependencies": {
+    "json-schema": ">=0.4.0",
+    "mem": ">=4.0.0"
+  },
   "devDependencies": {
     "@dnb-org/browserslist-config": "^3.4.0",
     "@dnb-org/eslint-config": "^3.4.14",
@@ -29,5 +32,6 @@
     "build:serviceworker": "cross-env NODE_ENV=production webpack --config webpack.serviceworker.js",
     "release": "standard-version --release-as patch -a -t \"pwa/v\" --releaseCommitMessageFormat \"chore(release): pwa/v{{currentTag}}\" && bin/release-hook-postrelease.sh",
     "release:minor": "standard-version --release-as minor -a -t \"pwa/v\" --releaseCommitMessageFormat \"chore(release): pwa/v{{currentTag}}\" && bin/release-hook-postrelease.sh"
-  }
+  },
+  "private": true
 }
