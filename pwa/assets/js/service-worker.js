@@ -1,7 +1,11 @@
-// console.log('Hello from service-worker.js');
+console.log("Hello from service-worker.js");
 
 import { registerRoute, setCatchHandler } from "workbox-routing";
-import { CacheFirst, NetworkFirst, StaleWhileRevalidate } from "workbox-strategies";
+import {
+  CacheFirst,
+  NetworkFirst,
+  StaleWhileRevalidate,
+} from "workbox-strategies";
 import { matchPrecache, precacheAndRoute } from "workbox-precaching";
 // Used for filtering matches based on status code, header, or both
 import { CacheableResponsePlugin } from "workbox-cacheable-response";
@@ -11,14 +15,14 @@ import { setCacheNameDetails } from "workbox-core";
 
 setCacheNameDetails({
   prefix: "dnb-org-pwa",
-  suffix: "v1"
+  suffix: "v1",
 });
 
 registerRoute(
-  ({ request }) => request.destination === "script" ||
-    request.destination === "style",
+  ({ request }) =>
+    request.destination === "script" || request.destination === "style",
   new StaleWhileRevalidate({
-    cacheName: "static-resources"
+    cacheName: "static-resources",
   })
 );
 
@@ -33,9 +37,9 @@ registerRoute(
     plugins: [
       // Ensure that only requests that result in a 200 status are cached
       new CacheableResponsePlugin({
-        statuses: [200]
-      })
-    ]
+        statuses: [200],
+      }),
+    ],
   })
 );
 
@@ -53,9 +57,9 @@ registerRoute(
     plugins: [
       // Ensure that only requests that result in a 200 status are cached
       new CacheableResponsePlugin({
-        statuses: [200]
-      })
-    ]
+        statuses: [200],
+      }),
+    ],
   })
 );
 
@@ -70,14 +74,14 @@ registerRoute(
     plugins: [
       // Ensure that only requests that result in a 200 status are cached
       new CacheableResponsePlugin({
-        statuses: [200]
+        statuses: [200],
       }),
       // Don't cache more than 50 items, and expire them after 30 days
       new ExpirationPlugin({
         maxEntries: 50,
-        maxAgeSeconds: 60 * 60 * 24 * 30 // 30 Days
-      })
-    ]
+        maxAgeSeconds: 60 * 60 * 24 * 30, // 30 Days
+      }),
+    ],
   })
 );
 
