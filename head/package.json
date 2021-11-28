@@ -7,7 +7,7 @@
   "homepage": "https://github.com/dnb-org/components/tree/master/head",
   "bugs": "https://github.com/dnb-org/components/issues",
   "devDependencies": {
-    "@dnb-org/standard-version-config": "3.3.7"
+    "@dnb-org/standard-version-config": "3.4.0"
   },
   "scripts": {
     "release": "npm run release:patch",
