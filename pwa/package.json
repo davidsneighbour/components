@@ -1,10 +1,10 @@
 {
   "name": "@dnb-org-hugo-components/pwa",
-  "version": "1.4.14",
+  "version": "1.4.15",
   "license": "MIT",
   "description": "PWA for Hugo",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
-  "homepage": "https://github.com/dnb-org/components/tree/master/pwa",
+  "homepage": "https://github.com/dnb-org/components/tree/main/pwa",
   "bugs": "https://github.com/dnb-org/components/issues",
   "private": true,
   "devDependencies": {
@@ -13,6 +13,8 @@
     "@dnb-org/prettier-config": "^3.4.3",
     "@dnb-org/standard-version-config": "^3.4.0",
     "@dnb-org/tools": "^3.4.0",
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1",
     "workbox-cacheable-response": "^6.4.1",
     "workbox-core": "^6.4.1",
     "workbox-expiration": "^6.4.1",
