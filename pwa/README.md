@@ -1,14 +1,14 @@
 ---
-lastmod: "2021-11-28T08:50:38.793Z"
+lastmod: "2021-11-28T11:45:34.398Z"
 ---
 
-## DNB Hugo Component / PWA
+# DNB Hugo Component / PWA
 
-This is a Hugo theme component with helpers to convert your static [GoHugo](https://gohugo.io/) website into a PWA.
+This is a Hugo theme component with helpers to convert your static [GoHugo](https://gohugo.io/) website into a [PWA](https://web.dev/progressive-web-apps/).
 
 This is work in progress and while many parts are already working, some changes to the setup will occur. Please watch the releases of this repository to be alerted about changes.
 
-### Features
+## Features
 
 - :heavy_check_mark: Favicon for apps and sites
 - :heavy_check_mark: simple PWA setup
@@ -19,9 +19,9 @@ This is work in progress and while many parts are already working, some changes 
 - :x: improve configuration of implemented functionality in the service worker
 - :x: add detailed documentation for all configuration options
 
-### Installing
+## Installing
 
-#### Setup module and output formats
+### Setup module and output formats
 
 First, if not already done, enable modules in your _own_ repository:
 
@@ -66,7 +66,7 @@ home = [ ... others ... , "manifest"]
 
 You already should have an `[output]` section, add `"manifest"` to it. Do not add it anywhere other than in the `home` directive.
 
-#### Setup layouts
+### Setup layouts
 
 In your themes header (before `</head>`):
 
@@ -89,11 +89,11 @@ Notes:
 - both layouts can be cached and contain no page-individual information
 - check out the [todo section of the readme](#todo) for missing parts or open an issue.
 
-#### Detailed configuration
+### Detailed configuration
 
 ... to be written ...
 
-### Updating
+## Updating
 
 Hugo itself will check on a regular base for updates. To force an update of this module run one of the following commands on your CLI.
 
@@ -101,6 +101,8 @@ Hugo itself will check on a regular base for updates. To force an update of this
 hugo mod get -u github.com/dnb-org/components/pwa # or
 hugo mod get -u # update all modules
 ```
+
+<!--- COMPONENTS BEGIN --->
 
 ### Other components
 
@@ -118,6 +120,10 @@ hugo mod get -u # update all modules
 | [sitemap](https://github.com/dnb-org/components/tree/main/sitemap)               |                                                            |
 | [social](https://github.com/dnb-org/components/tree/main/social)                 |                                                            |
 
+<!--- COMPONENTS END --->
+
+<!--- ELEMENTS BEGIN --->
+
 ### Other elements
 
 [Hugo elements by David's Neighbour](https://github.com/dnb-org) are modules that enhance and simplify your daily work with [Hugo, the world's fastest framework for building websites](https://gohugo.io/). Included are:
@@ -131,3 +137,5 @@ hugo mod get -u # update all modules
 | [libraries](https://github.com/dnb-org/libraries)           | Libraries are a collection of often used external packages, conveniently configured as modules for Hugo.          |
 | [shortcodes](https://github.com/dnb-org/shortcodes)         | Shortcodes are content particles that helpfully solve repeated tasks, like presentation, galleries and so on.     |
 | [testcontent](https://github.com/dnb-org/testcontent)       | Testcontent is a collection of testing content. Obviously.                                                        |
+
+<!--- ELEMENTS BEGIN --->
