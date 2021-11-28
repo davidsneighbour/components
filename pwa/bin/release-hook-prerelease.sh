@@ -3,9 +3,6 @@
 # declare path to this script
 SCRIPTPATH="$( cd "$(dirname "$0")" >/dev/null 2>&1 || exit ; pwd -P )"
 
-# TODO read component names into array
-# TODO read replacement configuration into array
-
 # remove replacement scripts
 if test -f "$SCRIPTPATH"/replacements; then
   while read -ra __; do
@@ -18,7 +15,7 @@ hugo mod tidy
 
 # create pwa files
 npm run build
-git add pwa/static
+git add static
 
 if test -f "$SCRIPTPATH"/replacements; then
   while read -ra __; do
@@ -26,11 +23,5 @@ if test -f "$SCRIPTPATH"/replacements; then
   done < "$SCRIPTPATH"/replacements
 fi
 
-if test -f "$SCRIPTPATH"/components; then
-  while read -ra __; do
-    GOMOD=${__[0]}/go.mod
-    if test -f "$GOMOD"; then git add "$GOMOD"; fi;
-    GOSUM=${__[0]}/go.sum
-    if test -f "$GOSUM"; then git add "$GOSUM"; fi;
-  done < "$SCRIPTPATH"/components
-fi
+if test -f go.mod; then git add "$GOMOD"; fi;
+if test -f go.sum; then git add "$GOSUM"; fi;
