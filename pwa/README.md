@@ -1,7 +1,3 @@
----
-lastmod: "2021-11-28T11:45:34.398Z"
----
-
 # DNB Hugo Component / PWA
 
 This is a Hugo theme component with helpers to convert your static [GoHugo](https://gohugo.io/) website into a [PWA](https://web.dev/progressive-web-apps/).
@@ -104,22 +100,27 @@ hugo mod get -u # update all modules
 
 <!--- COMPONENTS BEGIN --->
 
-### Other components
+---
+lastmod: '2021-11-28T01:29:09.514Z'
+---
+## Other components in DNB Hugo components
 
-| Component                                                                        | Description                                                |
-| :------------------------------------------------------------------------------- | :--------------------------------------------------------- |
-| [auditor](https://github.com/dnb-org/components/tree/main/auditor)               |                                                            |
-| [functions](https://github.com/dnb-org/components/tree/main/functions)           |                                                            |
-| [netlification](https://github.com/dnb-org/components/tree/main/netlification)   | a collection of tools that optimize your site on Netlify   |
-| [opensearch](https://github.com/dnb-org/components/tree/main/opensearch)         | configuration for Open Search                              |
-| [pwa](https://github.com/dnb-org/components/tree/main/pwa)                       | Automatically turns your site into a PWA                   |
-| [renderhooks](https://github.com/dnb-org/components/tree/main/renderhooks)       | render hooks for Markdown markup                           |
-| [robots](https://github.com/dnb-org/components/tree/main/robots)                 | configure the content of your robots.txt with front matter |
-| [search-algolia](https://github.com/dnb-org/components/tree/main/search-algolia) |                                                            |
-| [security](https://github.com/dnb-org/components/tree/main/security)             | Security related features for Hugo.                        |
-| [sitemap](https://github.com/dnb-org/components/tree/main/sitemap)               |                                                            |
-| [social](https://github.com/dnb-org/components/tree/main/social)                 |                                                            |
-
+| Component | Description |
+| :--- | :--- |
+| [auditor](https://github.com/dnb-org/components/tree/main/auditor) | |
+| [functions](https://github.com/dnb-org/components/tree/main/functions) | |
+| [internals](https://github.com/dnb-org/components/tree/main/internals) | Better internal templates for GoHugo |
+| [giscus](https://github.com/dnb-org/components/tree/main/giscus) | The Giscus comment system layout for GoHugo. |
+| [netlification](https://github.com/dnb-org/components/tree/main/netlification) | a collection of tools that optimize your site on Netlify |
+| [opensearch](https://github.com/dnb-org/components/tree/main/opensearch) | configuration for Open Search |
+| [pwa](https://github.com/dnb-org/components/tree/main/pwa) | Automatically turns your site into a PWA |
+| [renderhooks](https://github.com/dnb-org/components/tree/main/renderhooks) | render hooks for Markdown markup |
+| [robots](https://github.com/dnb-org/components/tree/main/robots) | configure the content of your robots.txt with front matter |
+| [search-algolia](https://github.com/dnb-org/components/tree/main/search-algolia) | |
+| [search-lunrjs](https://github.com/dnb-org/components/tree/main/search-lunrjs) | |
+| [sitemap](https://github.com/dnb-org/components/tree/main/sitemap) | |
+| [social](https://github.com/dnb-org/components/tree/main/social) | |
+| [welcomments](https://github.com/dnb-org/components/tree/main/welcomments) | |
 <!--- COMPONENTS END --->
 
 <!--- ELEMENTS BEGIN --->
