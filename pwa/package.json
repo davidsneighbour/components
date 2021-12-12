@@ -15,7 +15,7 @@
     "@dnb-org/eslint-config": "^3.4.14",
     "@dnb-org/prettier-config": "^3.4.3",
     "@dnb-org/standard-version-config": "^3.4.0",
-    "@dnb-org/tools": "^3.4.0",
+    "@dnb-org/tools": "^3.4.3",
     "replace-between": "^0.0.8",
     "webpack": "^5.64.4",
     "webpack-cli": "^4.9.1",
