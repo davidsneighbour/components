@@ -1,1 +1,1 @@
-This repository is history. It contained a bunch of components for GoHugo. Those components all live in their own repositories now. A list of available components can be found for instance [here](https://github.com/dnb-org/dnb-hugo-hooks#other-gohugo-components-by-dnb-org)
+This repository is history. It contained a bunch of components for GoHugo. Those components all live in their own repositories now. A list of available components can be found for instance [here](https://github.com/dnb-org/dnb-hugo-hooks#other-gohugo-components-by-dnb-org).
