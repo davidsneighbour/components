@@ -20,7 +20,7 @@
     "webpack": "^5.64.4",
     "webpack-cli": "^4.9.1",
     "workbox-cacheable-response": "^6.4.1",
-    "workbox-core": "^6.4.1",
+    "workbox-core": "^7.0.0",
     "workbox-expiration": "^6.4.1",
     "workbox-precaching": "^6.4.1",
     "workbox-routing": "^6.4.1",
