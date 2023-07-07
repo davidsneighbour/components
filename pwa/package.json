@@ -22,7 +22,7 @@
     "workbox-cacheable-response": "^6.4.1",
     "workbox-core": "^6.4.1",
     "workbox-expiration": "^6.4.1",
-    "workbox-precaching": "^6.4.1",
+    "workbox-precaching": "^7.0.0",
     "workbox-routing": "^6.4.1",
     "workbox-strategies": "^6.4.1",
     "workbox-webpack-plugin": "^6.4.1"
