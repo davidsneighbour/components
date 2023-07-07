@@ -37,7 +37,7 @@
     "extends": "@dnb-org/stylelint-config"
   },
   "devDependencies": {
-    "lerna": "^4.0.0",
+    "lerna": "^7.1.1",
     "lerna-wizard": "1.1.1"
   }
 }
